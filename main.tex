@@ -5,9 +5,8 @@
 \usepackage{amsmath}
 \usepackage{subcaption}
 
-\graphicspath{{figures/}} % assumes all images are stored in figures/ folder
-
-\title{Debris Field Loading during Tsunami Events}
+\graphicspath{{figures/}}
+\title{Experimental Study of Group Effects in Tsunami Debris Impact and Damming Forces}
 \date{September 2025}
 
 \begin{document}
@@ -16,21 +15,35 @@
 
 \section{Introduction}
 \begin{itemize}
-    \item Tsunami-driven debris fields impose both \textbf{short-duration impact loads} and \textbf{sustained damming loads} on coastal infrastructure.
-    \item Predicting these forces is challenging because they depend on highly nonlinear fluid–structure–debris interactions.
+    \item Tsunami-driven debris fields impose both short-duration impact loads and sustained damming loads on coastal infrastructure.
+    \item Predicting these forces is challenging because they depend on highly nonlinear fluid--structure--debris interactions.
     \item Debris characteristics that influence loading include:
     \begin{itemize}
-        \item Orientation (longitudinal, transverse, random).
+        \item Orientation (longitudinal, transverse, random; see Figs.~\ref{fig:configurations} and \ref{fig:configurations_random}).
         \item Size distribution (single-size vs multi-size).
-        \item \textbf{Surface area density} (ratio of debris area to water surface area).
+        \item Surface area density (ratio of tightly packed debris area to debris spread area).
     \end{itemize}
-    \item This study investigates debris loading mechanisms through large-scale flume experiments, focusing on how debris configuration and surface area density influence impact and damming forces.
+
 \end{itemize}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Configurations.jpg}
+    \caption{Regular configurations.}
+    \label{fig:configurations}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.48\textwidth]{configurations_rand.jpg}
+    \caption{Random configurations.}
+    \label{fig:configurations_random}
+\end{figure}
 
 \section{Testing Methodology}
 \begin{itemize}
     \item Experiments were conducted in a tsunami flume equipped with a rigid mid-flume structure.
-    \item Two wave types were tested: \textbf{unbroken solitary waves} (primary focus) and \textbf{broken solitary waves} (discarded in this summary due to negligible forces).
+    \item Two wave types were tested: unbroken solitary waves (primary focus) and broken solitary waves. This paper focuses on the unbroken solitary wave tests. 
     \item Debris fields were generated in three configurations:
     \begin{itemize}
         \item Regular longitudinal (aligned with flow).
@@ -39,180 +52,155 @@
     \end{itemize}
     \item Force records were decomposed using Butterworth filters:
     \begin{itemize}
-        \item \textbf{High-pass} filtering to isolate short-duration impact peaks (Fig.~\ref{fig:high_low_pass}).
-        \item \textbf{Low-pass} filtering to capture long-duration damming forces (Fig.~\ref{fig:high_low_pass}).
+        \item High-pass filtering to isolate short-duration impact peaks (Fig.~\ref{fig:high_low_pass}).
+        \item Low-pass filtering to capture long-duration damming forces (Fig.~\ref{fig:high_low_pass}).
     \end{itemize}
 \end{itemize}
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{high_low_pass.png}
-    \caption{Force decomposition via Butterworth filters. High-pass isolates impact peaks; low-pass extracts damming loads.}
+    \caption{Force decomposition using Butterworth filters.}
     \label{fig:high_low_pass}
 \end{figure}
 
-\section{Peak Force Identification}
+\section{Impact Force Identification}
 \begin{itemize}
-    \item Video evidence and filtered signals revealed that debris impact occurs in two distinct stages:
+    \item Video evidence and filtered signals revealed that debris impact occurs in two stages:
     \begin{itemize}
-        \item \textbf{First impact}: initial contact with the unsubmerged portion of the structure (Fig.~\ref{fig:video_impacts}a).
-        \item \textbf{Later impacts}: delayed, submerged strikes driven by overtopping, suction, and debris recirculation (Fig.~\ref{fig:video_impacts}b).
+        \item First impact: initial strike on the unsubmerged structure (Fig.~\ref{fig:first_impact}).
+        \item Later impacts: submerged strikes caused by overtopping, suction, and recirculation (Fig.~\ref{fig:second_impact}).
     \end{itemize}
-    \item This staged behavior was consistent across debris types and configurations, highlighting the importance of distinguishing between early and late peaks.
+    \item This behavior was consistent across debris types and configurations, highlighting the need to distinguish between first and late peaks.
 \end{itemize}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.6\textwidth]{first_impact.jpg}
+    \caption{Initial unsubmerged strike.}
+    \label{fig:first_impact}
+\end{figure}
 
 \begin{figure}[htbp]
     \centering
-    \begin{subfigure}{0.48\textwidth}
-        \includegraphics[width=\linewidth]{first_impact.jpg}
-        \caption{Initial unsubmerged debris strike.}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.48\textwidth}
-        \includegraphics[width=\linewidth]{second_impact.jpg}
-        \caption{Later submerged strike caused by overtopping/suction.}
-    \end{subfigure}
-    \caption{Sequential debris impact stages observed in video recordings.}
-    \label{fig:video_impacts}
+    \includegraphics[width=0.6\textwidth]{second_impact.jpg}
+    \caption{Later submerged strike.}
+    \label{fig:second_impact}
 \end{figure}
 
-\section{Results: Impact Forces (Unbroken Waves)}
+\section{Results: Impact Forces (Unbroken Wave)}
 
 \subsection{Regular Configurations}
 \begin{itemize}
-    \item \textbf{First impact peaks} increased almost linearly with the number of debris elements, reflecting simultaneous group impacts when debris aligned with the structure (Fig.~\ref{fig:firstpeak_regular_split}, Fig.~\ref{fig:firstpeak_regular_remap}).
-    \item \textbf{Later impacts} exhibited nonlinear growth, saturating at higher debris counts due to hydrodynamic cushioning and interference effects (Fig.~\ref{fig:laterpeak_regular_split}, Fig.~\ref{fig:laterpeak_regular_remap}).
-    \item Longitudinal layouts produced the highest impact forces, while transverse layouts yielded smaller peaks due to water cushioning between debris and the structure (Fig.~\ref{fig:firstpeak_regular_split}).
-    \item The role of \textbf{surface area density} is critical:
-    \begin{itemize}
-        \item At equal density, larger debris groups were more spread out across the flume width.
-        \item For example, 24 pieces at the same density as 8 pieces occupied a greater span than the structure, reducing the probability that all would strike simultaneously (Fig.~\ref{fig:laterpeak_regular_remap}).
-    \end{itemize}
-    \item For the \textbf{24T and 16T2 tests}, the surface area of the debris field exceeded that of the structure.
-    \begin{itemize}
-        \item Video analysis confirmed that only part of the debris actually contacted the structure.
-        \item The force data for these trials was therefore \textbf{remapped and corrected} to reflect the effective impact area rather than nominal debris count (Fig.~\ref{fig:firstpeak_regular_remap}, Fig.~\ref{fig:laterpeak_regular_remap}).
-    \end{itemize}
+    \item First impact peaks increased linearly with debris number (Fig.~\ref{fig:firstpeak_regular_remap}).
+    \item Later impacts showed nonlinear growth, saturating at higher debris counts (Fig.~\ref{fig:laterpeak_regular_remap}).
+    \item Longitudinal layouts produced the highest impact forces, while transverse layouts yielded smaller peaks due to water cushioning.
+    \item For the 24T and 16T2 tests, debris field area exceeded the structure area. Only part of the debris contacted the structure, so the data was remapped to reflect the effective area (Figs.~\ref{fig:firstpeak_regular_remap}, \ref{fig:laterpeak_regular_remap}).
 \end{itemize}
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.8\textwidth]{FirstPeak_Regular_SplitByTrial.png}
-    \caption{First peak forces in regular arrangements (split by trial). Nearly linear scaling with debris count observed.}
-    \label{fig:firstpeak_regular_split}
-\end{figure}
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{FirstPeak_Regular_RemappedT.png}
-    \caption{First peak forces in regular arrangements (remapped to normalized time). Includes corrected data for 24T and 16T2 trials where debris exceeded structure area.}
+    \caption{First peak forces in regular arrangements (remapped).}
     \label{fig:firstpeak_regular_remap}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{LaterPeak_Regular_SplitByTrial.png}
-    \caption{Later peak forces in regular arrangements (split by trial). Nonlinear growth and saturation effects evident.}
-    \label{fig:laterpeak_regular_split}
-\end{figure}
-
-\begin{figure}[htbp]
-    \centering
     \includegraphics[width=0.8\textwidth]{LaterPeak_Regular_RemappedT.png}
-    \caption{Later peak forces in regular arrangements (remapped to normalized time). Variability increases with debris spreading beyond structure width.}
+    \caption{Later peak forces in regular arrangements (remapped).}
     \label{fig:laterpeak_regular_remap}
 \end{figure}
 
 \subsection{Random Configurations}
 \begin{itemize}
-    \item Random debris fields produced more scattered and generally smaller peaks compared to regular arrangements (Fig.~\ref{fig:random_peaks_first}).
-    \item Multi-size fields consistently yielded lower impact magnitudes because smaller blocks contributed less momentum (Figs.~\ref{fig:random_peaks_first}, \ref{fig:boxplot_8}, \ref{fig:boxplot_16}, \ref{fig:boxplot_24}).
-    \item The influence of \textbf{surface area density} was pronounced:
+    \item Random fields produced scattered and smaller peaks compared to regular ones (Fig.~\ref{fig:random_peaks_first}). 
+    \item Multi-size fields yielded lower impacts because smaller blocks carried less momentum (Figs.~\ref{fig:random_peaks_first}, \ref{fig:boxplot_8}, \ref{fig:boxplot_16}, \ref{fig:boxplot_24}).
+    \item Surface area density effects:
     \begin{itemize}
-        \item At low density, debris was widely dispersed, lowering the chance of structural contact.
-        \item At high density, debris filled the flume width, forcing many pieces away from the structure (Fig.~\ref{fig:random_peaks_first}).
-        \item Thus, for large debris groups at the same nominal density as smaller groups, the probability of impact decreased once the debris field spanned wider than the structure (Figs.~\ref{fig:boxplot_8}, \ref{fig:boxplot_16}, \ref{fig:boxplot_24}).
+        \item Increasing density dispersed debris more widely.
+        \item At higher counts (16, 24), spreading reduced the chance of simultaneous impacts.
+        \item For 8 debris pieces, density differences were minimal.
+        \item For 16 and 24 pieces, increasing density correlated with stronger impacts (Figs.~\ref{fig:boxplot_16}, \ref{fig:boxplot_24}).
     \end{itemize}
 \end{itemize}
-
+   
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{First_Peak_Random_Single_vs_Multi_ByDensityGradient.png}
-    \caption{First peak forces in random debris fields. Multi-size cases yield smaller peaks across surface area density gradients.}
+    \caption{First peak forces in random fields.}
     \label{fig:random_peaks_first}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{Boxplot_Density_vs_PeakValues_8Debris.png}
-    \caption{First peak forces for random debris fields with 8 pieces, shown as boxplots of surface area density. Comparison between single-size and multi-size cases.}
+    \caption{First peaks, 8 pieces.}
     \label{fig:boxplot_8}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{Boxplot_Density_vs_PeakValues_16Debris.png}
-    \caption{First peak forces for random debris fields with 16 pieces, shown as boxplots of surface area density. Comparison between single-size and multi-size cases.}
+    \caption{First peaks, 16 pieces.}
     \label{fig:boxplot_16}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{Boxplot_Density_vs_PeakValues_24Debris.png}
-    \caption{First peak forces for random debris fields with 24 pieces, shown as boxplots of surface area density. Comparison between single-size and multi-size cases.}
+    \caption{First peaks, 24 pieces.}
     \label{fig:boxplot_24}
 \end{figure}
 
 \section{Results: Damming Forces (Unbroken Waves)}
 \begin{itemize}
-    \item Damming forces, extracted by low-pass filtering, reflected sustained blockage effects (Figs.~\ref{fig:damming_regular_split}, \ref{fig:damming_regular_remap}).
-    \item \textbf{Single-size debris}: increasing surface area density led to stable jams and steadily increasing damming loads (Fig.~\ref{fig:damming_regular_split}).
-    \item \textbf{Multi-size debris}: smaller blocks prevented stable blockages, keeping damming forces consistently lower (Fig.~\ref{fig:damming_random}).
-    \item Regular longitudinal and transverse cases produced comparable damming magnitudes, showing geometry was less critical than surface area density (Figs.~\ref{fig:damming_regular_split}, \ref{fig:damming_regular_remap}).
-    \item Density had a pronounced effect for single-size debris but only weak influence for multi-size (Fig.~\ref{fig:damming_random}).
+    \item Damming forces, extracted by low-pass filtering, reflected sustained blockage (Figs.~\ref{fig:damming_regular_remap}, \ref{fig:damming_random}).
+    \item Single-size debris: increasing density led to stable jams and higher damming loads.
+    \item Multi-size debris: smaller blocks prevented stable blockages, keeping forces lower (Fig.~\ref{fig:damming_random}).
+    \item Longitudinal and transverse cases produced similar damming magnitudes, showing geometry was less critical than density (Fig.~\ref{fig:damming_regular_remap}).
 \end{itemize}
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{Damming_Regular_L_T_SplitByTrial.png}
-    \caption{Damming forces in regular arrangements (split by trial). Surface area density increases lead to higher sustained loads.}
-    \label{fig:damming_regular_split}
-\end{figure}
-
-\begin{figure}[htbp]
-    \centering
     \includegraphics[width=0.8\textwidth]{Damming_Regular_L_T_SplitByTrial_Remapped.png}
-    \caption{Damming forces in regular arrangements (remapped to normalized time). Consistent density effects across trials, with corrections applied to 24T and 16T2.}
+    \caption{Damming forces in regular arrangements.}
     \label{fig:damming_regular_remap}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{Damming_Random_Single_vs_Multi_ByDensityGradient.png}
-    \caption{Damming forces in random debris fields. Single-size cases develop strong jams; multi-size cases disrupted by small blocks.}
+    \caption{Damming forces in random fields.}
     \label{fig:damming_random}
 \end{figure}
 
+% \section{Flow Velocities}
+% The mean flow velocity in the flume was confirmed to be XYZ. This section is reserved for later analysis.
+
 \section{Conclusions}
 \begin{itemize}
-    \item Longitudinal debris groups generated the largest impact peaks, while transverse groups were dominated by damming loads (Figs.~\ref{fig:firstpeak_regular_split}, \ref{fig:damming_regular_split}).
-    \item Random and multi-size debris fields produced smaller and more variable forces due to reduced momentum transfer and disrupted blockage (Figs.~\ref{fig:random_peaks_first}, \ref{fig:damming_random}).
-    \item \textbf{Surface area density effects:}
-    \begin{itemize}
-        \item Increasing debris count at fixed density forced the debris field to span more of the flume width.
-        \item Once the debris spread exceeded the structure’s width, the probability of impact declined, leading to nonlinear or saturated growth of peak forces (Figs.~\ref{fig:laterpeak_regular_remap}, \ref{fig:boxplot_24}).
-    \end{itemize}
-    \item For 24T and 16T2 regular trials, debris spread exceeded the structure’s width. Video evidence confirmed partial impact, and data was corrected through remapping (Figs.~\ref{fig:firstpeak_regular_remap}, \ref{fig:laterpeak_regular_remap}).
-    \item First impacts scaled with debris count under aligned conditions, while later impacts were strongest in small groups and irregular in larger ones (Figs.~\ref{fig:firstpeak_regular_split}, \ref{fig:laterpeak_regular_split}).
-    \item Damming loads in multi-size fields were consistently weaker, highlighting the role of small blocks in preventing stable jams (Fig.~\ref{fig:damming_random}).
+    \item Longitudinal debris groups generated the largest impact peaks, while transverse groups were dominated by damming loads.
+    \item Random and multi-size fields produced smaller and more variable forces.
+    \item Surface area density strongly influenced impact probability once debris spread exceeded structure width.
+    \item For 24T and 16T2 trials, partial contact required remapping.
+    \item First impacts scaled with debris count under aligned conditions, while later impacts saturated at higher counts.
+    \item Multi-size fields weakened damming loads due to disrupted jamming.
+\end{itemize}
+
+\section{Limitations}
+\begin{itemize}
+    \item Due to high impact forces, loading could not be recorded at the front of the flume. All measured forces are reaction forces and include structural vibrations.
+    \item Flume geometry amplified some effects, such as water cushioning, as flow was obstructed by the side walls.
+    \item The relative width of debris and structure limited the representativeness of some tests.
+    \item Practical limits on debris quantity constrained the range of tested cases.
 \end{itemize}
 
 \section{References}
-Bonus, J., Arduino, P., Motley, M., and Eberhard, M. (2022). ``Multi-Scale Numerical Simulation of Tsunami-Driven Debris-Field Impacts.'' In \textit{Ports 2022}, 328–39. https://doi.org/10.1061/9780784484395.033.
+Bonus, J., Arduino, P., Motley, M., and Eberhard, M. (2022). ``Multi-Scale Numerical Simulation of Tsunami-Driven Debris-Field Impacts.'' In \textit{Ports 2022}, 328--39. https://doi.org/10.1061/9780784484395.033.
 
-Derschum, C., Nistor, I., Stolle, J., and Goseberg, N. (2018). ``Debris Impact under Extreme Hydrodynamic Conditions Part 1: Hydrodynamics and Impact Geometry.'' \textit{Coastal Engineering}, 141: 24–35. https://doi.org/10.1016/j.coastaleng.2018.08.016.
+Derschum, C., Nistor, I., Stolle, J., and Goseberg, N. (2018). ``Debris Impact under Extreme Hydrodynamic Conditions Part 1: Hydrodynamics and Impact Geometry.'' \textit{Coastal Engineering}, 141: 24--35. https://doi.org/10.1016/j.coastaleng.2018.08.016.
 
-Mascarenas, D., Motley, M. R., Eberhard, M. O., Arduino, P., and Serrone, A. (2022). ``Quantifying and Understanding Structural Loading from Wave-Driven Debris Fields.'' In \textit{Ports 2022}, 523–34. https://doi.org/10.1061/9780784484395.052.
+Mascarenas, D., Motley, M. R., Eberhard, M. O., Arduino, P., and Serrone, A. (2022). ``Quantifying and Understanding Structural Loading from Wave-Driven Debris Fields.'' In \textit{Ports 2022}, 523--34. https://doi.org/10.1061/9780784484395.052.
 
 Shekhar, K., Winter, A. O., Alam, M. S., Arduino, P., Miller, G. R., Motley, M. R., Eberhard, M. O., Barbosa, A. R., Lomonaco, P., and Cox, D. T. (2020). ``Conceptual evaluation of tsunami debris field damming and impact forces.'' \textit{Journal of Waterway, Port, Coastal, and Ocean Engineering}, 146(6), 04020039.
 
