@@ -66,31 +66,40 @@
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.65\textwidth]{Reg_Lift_U_1_L_D__Masters_NHERIDeprisImpact2_goodtests_Reg_Lift_U_1_L_Trial04_Peak.png}
-    \caption{Force time history for 1L debris.}
-    \label{fig:timehist_1L_peak}
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Reg_Lift_U_1_L_D__Masters_NHERIDeprisImpact2_goodtests_Reg_Lift_U_1_L_Trial04_Peak.png}
+        \caption{Force time history for 1L debris.}
+        \label{fig:timehist_1L_peak}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Reg_Lift_U_24_L_D__Masters_NHERIDeprisImpact2_goodtests_Reg_Lift_U_24_L_Trial04_Peak.png}
+        \caption{Force time history for 24L debris.}
+        \label{fig:timehist_24L_peak}
+    \end{subfigure}
+    \caption{Force time histories for (a) 1L debris and (b) 24L debris.}
+    \label{fig:timehist_combined}
 \end{figure}
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.65\textwidth]{Reg_Lift_U_24_L_D__Masters_NHERIDeprisImpact2_goodtests_Reg_Lift_U_24_L_Trial04_Peak.png}
-    \caption{Force time history for 24L debris.}
-    \label{fig:timehist_24L_peak}
-\end{figure}
-
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.65\textwidth]{Reg_Lift_U_1_L_D__Masters_NHERIDeprisImpact2_goodtests_Reg_Lift_U_1_L_Trial04_Damming.png}
-    \caption{Damming force time history for 1L debris.}
-    \label{fig:timehist_1L_damming}
-\end{figure}
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.65\textwidth]{Reg_Lift_U_24_L_D__Masters_NHERIDeprisImpact2_goodtests_Reg_Lift_U_24_L_Trial04_Damming.png}
-    \caption{Damming force time history for 24L debris.}
-    \label{fig:timehist_24L_damming}
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Reg_Lift_U_1_L_D__Masters_NHERIDeprisImpact2_goodtests_Reg_Lift_U_1_L_Trial04_Damming.png}
+        \caption{Damming force time history for 1L debris.}
+        \label{fig:timehist_1L_damming}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Reg_Lift_U_24_L_D__Masters_NHERIDeprisImpact2_goodtests_Reg_Lift_U_24_L_Trial04_Damming.png}
+        \caption{Damming force time history for 24L debris.}
+        \label{fig:timehist_24L_damming}
+    \end{subfigure}
+    \caption{Damming force time histories for (a) 1L debris and (b) 24L debris.}
+    \label{fig:timehist_damming_combined}
 \end{figure}
 
 
@@ -106,17 +115,23 @@
 \end{itemize}
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.6\textwidth]{first_impact.jpg}
-    \caption{Initial unsubmerged strike.}
-    \label{fig:first_impact}
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{first_impact.jpg}
+        \caption{Initial unsubmerged strike.}
+        \label{fig:first_impact}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{second_impact.jpg}
+        \caption{Later submerged strike.}
+        \label{fig:second_impact}
+    \end{subfigure}
+    \caption{Impact events: (a) initial unsubmerged strike and (b) later submerged strike.}
+    \label{fig:impact_combined}
 \end{figure}
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.6\textwidth]{second_impact.jpg}
-    \caption{Later submerged strike.}
-    \label{fig:second_impact}
-\end{figure}
 
 \section{Results: Impact Forces}
 
@@ -147,7 +162,7 @@
 \begin{itemize}
     \item Random debris fields produced more scattered and generally smaller peaks compared to regular arrangements. The overall variability of the data increased (Fig.~\ref{fig:random_peaks_first}). 
     \item Multi-size fields consistently yielded lower impact magnitudes because smaller blocks contributed less momentum (Figs.~\ref{fig:random_peaks_first}, \ref{fig:boxplot_8}, \ref{fig:boxplot_16}, \ref{fig:boxplot_24}). Multi-impact vs.\ single-impact scenarios became more relevant with larger debris groups, as multiple smaller blocks often struck separately rather than together.
-    \item The influence of surface area density was critical in shaping impact likelihood and synchronization:
+    \item The influence of surface area density was critical in impact likelihood and synchronization:
     \begin{itemize}
         \item At low debris counts (e.g., 8 pieces), differences between densities were minimal, since the debris did not spread widely enough across the flume to significantly alter impact probability (Fig.~\ref{fig:boxplot_8}).
         \item At higher counts (16 and 24 pieces), debris were forced to span the full flume width. This spreading meant that not all blocks could align with the structure, reducing the chance of simultaneous impacts.
