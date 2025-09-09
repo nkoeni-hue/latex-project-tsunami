@@ -16,7 +16,7 @@
 \section{Introduction}
 \begin{itemize}
     \item Tsunami-driven debris fields impose both short-duration impact loads and sustained damming loads on coastal infrastructure.
-    \item Predicting these forces is challenging because they depend on highly nonlinear fluid--structure--debris interactions.
+    \item Predicting these forces is challenging because they depend on  nonlinear fluid--structure--debris interactions.
     \item Debris characteristics that influence loading include:
     \begin{itemize}
         \item Orientation (longitudinal, transverse, random; see Figs.~\ref{fig:configurations} and \ref{fig:configurations_random}).
@@ -67,14 +67,14 @@
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.65\textwidth]{Reg_Lift_U_1_L_D__Masters_NHERIDeprisImpact2_goodtests_Reg_Lift_U_1_L_Trial04_Peak.png}
-    \caption{Force time history for 1L debris under unbroken wave.}
+    \caption{Force time history for 1L debris.}
     \label{fig:timehist_1L_peak}
 \end{figure}
 
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.65\textwidth]{Reg_Lift_U_24_L_D__Masters_NHERIDeprisImpact2_goodtests_Reg_Lift_U_24_L_Trial04_Peak.png}
-    \caption{Force time history for 24L debris under unbroken wave.}
+    \caption{Force time history for 24L debris.}
     \label{fig:timehist_24L_peak}
 \end{figure}
 
@@ -118,7 +118,7 @@
     \label{fig:second_impact}
 \end{figure}
 
-\section{Results: Impact Forces (Unbroken Wave)}
+\section{Results: Impact Forces}
 
 \subsection{Regular Configurations}
 \begin{itemize}
@@ -126,6 +126,8 @@
     \item Later impacts showed nonlinear growth, saturating at higher debris counts (Fig.~\ref{fig:laterpeak_regular_remap}).
     \item Longitudinal layouts produced the highest impact forces, while transverse layouts yielded smaller peaks due to water cushioning.
     \item For the 24T and 16T2 tests, debris field area exceeded the structure area. Only part of the debris contacted the structure, so the data was remapped to reflect the effective area (Figs.~\ref{fig:firstpeak_regular_remap}, \ref{fig:laterpeak_regular_remap}).
+    \item Remapping makes the 24T case comparable to a 12T case, the total debris count still altered the flume hydrodynamics. This explains why the remapped forces (e.g., for 24T) appear lower than the corresponding smaller-group tests.
+
 \end{itemize}
 
 \begin{figure}[htbp]
@@ -141,20 +143,19 @@
     \caption{Later peak forces in regular arrangements (remapped).}
     \label{fig:laterpeak_regular_remap}
 \end{figure}
-
 \subsection{Random Configurations}
 \begin{itemize}
-    \item Random fields produced scattered and smaller peaks compared to regular ones (Fig.~\ref{fig:random_peaks_first}). 
-    \item Multi-size fields yielded lower impacts because smaller blocks carried less momentum (Figs.~\ref{fig:random_peaks_first}, \ref{fig:boxplot_8}, \ref{fig:boxplot_16}, \ref{fig:boxplot_24}).
-    \item Surface area density effects:
+    \item Random debris fields produced more scattered and generally smaller peaks compared to regular arrangements. The overall variability of the data increased (Fig.~\ref{fig:random_peaks_first}). 
+    \item Multi-size fields consistently yielded lower impact magnitudes because smaller blocks contributed less momentum (Figs.~\ref{fig:random_peaks_first}, \ref{fig:boxplot_8}, \ref{fig:boxplot_16}, \ref{fig:boxplot_24}). Multi-impact vs.\ single-impact scenarios became more relevant with larger debris groups, as multiple smaller blocks often struck separately rather than together.
+    \item The influence of surface area density was critical in shaping impact likelihood and synchronization:
     \begin{itemize}
-        \item Increasing density dispersed debris more widely.
-        \item At higher counts (16, 24), spreading reduced the chance of simultaneous impacts.
-        \item For 8 debris pieces, density differences were minimal.
-        \item For 16 and 24 pieces, increasing density correlated with stronger impacts (Figs.~\ref{fig:boxplot_16}, \ref{fig:boxplot_24}).
+        \item At low debris counts (e.g., 8 pieces), differences between densities were minimal, since the debris did not spread widely enough across the flume to significantly alter impact probability (Fig.~\ref{fig:boxplot_8}).
+        \item At higher counts (16 and 24 pieces), debris were forced to span the full flume width. This spreading meant that not all blocks could align with the structure, reducing the chance of simultaneous impacts.
+        \item As density increased in these larger groups, more blocks were able to cluster in front of the structure, increasing the probability of impact and producing stronger peaks (Figs.~\ref{fig:boxplot_16}, \ref{fig:boxplot_24}).
+        \item The resulting trends were nonlinear: adding more debris did not guarantee higher peaks, since dispersion could offset the momentum contribution of additional blocks.
     \end{itemize}
 \end{itemize}
-   
+
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{First_Peak_Random_Single_vs_Multi_ByDensityGradient.png}
@@ -183,13 +184,17 @@
     \label{fig:boxplot_24}
 \end{figure}
 
-\section{Results: Damming Forces (Unbroken Waves)}
+
+\section{Results: Damming Forces}
 \begin{itemize}
     \item Damming forces, extracted by low-pass filtering, reflected sustained blockage (Figs.~\ref{fig:damming_regular_remap}, \ref{fig:damming_random}).
-    \item Single-size debris: increasing density led to stable jams and higher damming loads.
-    \item Multi-size debris: smaller blocks prevented stable blockages, keeping forces lower (Fig.~\ref{fig:damming_random}).
-    \item Longitudinal and transverse cases produced similar damming magnitudes, showing geometry was less critical than density (Fig.~\ref{fig:damming_regular_remap}).
+    \item Single-size debris: increasing density led to stable jams and higher damming loads, as expected from tighter packing and reduced bypassing flow.
+    \item Multi-size debris: smaller blocks prevented stable blockages, keeping forces lower and making density effects minimal (Fig.~\ref{fig:damming_random}).
+    \item Longitudinal vs.\ transverse: while the overall magnitudes were comparable, transverse cases produced higher damming loads once debris counts exceeded eight. This supports the broader trend that longitudinal arrangements dominate impact peaks, while transverse arrangements dominate damming.
+    \item Nonlinear behavior was observed, with damming forces saturating at higher debris counts. This parallels the nonlinear growth seen in the later submerged impact stage. This saturation is partly due to the complete blockage being achieved and partly due to debris pieces recirculating.
 \end{itemize}
+
+
 
 \begin{figure}[htbp]
     \centering
@@ -206,15 +211,15 @@
 \end{figure}
 
 % \section{Flow Velocities}
-% The mean flow velocity in the flume was confirmed to be XYZ. This section is reserved for later analysis.
+% The mean flow velocity in the flume was confirmed to be XYZ. 
 
 \section{Conclusions}
 \begin{itemize}
-    \item Longitudinal debris groups generated the largest impact peaks, while transverse groups were dominated by damming loads.
+    \item Longitudinal debris groups generated the largest impact peaks, while transverse groups dominated damming loads.
     \item Random and multi-size fields produced smaller and more variable forces.
     \item Surface area density strongly influenced impact probability once debris spread exceeded structure width.
     \item For 24T and 16T2 trials, partial contact required remapping.
-    \item First impacts scaled with debris count under aligned conditions, while later impacts saturated at higher counts.
+    \item First impacts scaled with debris count, while later impacts saturated at higher counts.
     \item Multi-size fields weakened damming loads due to disrupted jamming.
 \end{itemize}
 
@@ -225,14 +230,13 @@
     \item The relative width of debris and structure limited the representativeness of some tests.
     \item Practical limits on debris quantity constrained the range of tested cases.
 \end{itemize}
-
 \section{References}
-Bonus, J., Arduino, P., Motley, M., and Eberhard, M. (2022). ``Multi-Scale Numerical Simulation of Tsunami-Driven Debris-Field Impacts.'' In \textit{Ports 2022}, 328--39. https://doi.org/10.1061/9780784484395.033.
+Bonus, J., Arduino, P., Motley, M., and Eberhard, M. (2022). ``Multi-Scale Numerical Simulation of Tsunami-Driven Debris-Field Impacts.'' In Ports 2022, 328--39. https://doi.org/10.1061/9780784484395.033.
 
-Derschum, C., Nistor, I., Stolle, J., and Goseberg, N. (2018). ``Debris Impact under Extreme Hydrodynamic Conditions Part 1: Hydrodynamics and Impact Geometry.'' \textit{Coastal Engineering}, 141: 24--35. https://doi.org/10.1016/j.coastaleng.2018.08.016.
+Derschum, C., Nistor, I., Stolle, J., and Goseberg, N. (2018). ``Debris Impact under Extreme Hydrodynamic Conditions Part 1: Hydrodynamics and Impact Geometry.'' Coastal Engineering, 141: 24--35. https://doi.org/10.1016/j.coastaleng.2018.08.016.
 
-Mascarenas, D., Motley, M. R., Eberhard, M. O., Arduino, P., and Serrone, A. (2022). ``Quantifying and Understanding Structural Loading from Wave-Driven Debris Fields.'' In \textit{Ports 2022}, 523--34. https://doi.org/10.1061/9780784484395.052.
+Mascarenas, D., Motley, M. R., Eberhard, M. O., Arduino, P., and Serrone, A. (2022). ``Quantifying and Understanding Structural Loading from Wave-Driven Debris Fields.'' In Ports 2022, 523--34. https://doi.org/10.1061/9780784484395.052.
 
-Shekhar, K., Winter, A. O., Alam, M. S., Arduino, P., Miller, G. R., Motley, M. R., Eberhard, M. O., Barbosa, A. R., Lomonaco, P., and Cox, D. T. (2020). ``Conceptual evaluation of tsunami debris field damming and impact forces.'' \textit{Journal of Waterway, Port, Coastal, and Ocean Engineering}, 146(6), 04020039.
+Shekhar, K., Winter, A. O., Alam, M. S., Arduino, P., Miller, G. R., Motley, M. R., Eberhard, M. O., Barbosa, A. R., Lomonaco, P., and Cox, D. T. (2020). ``Conceptual evaluation of tsunami debris field damming and impact forces.'' Journal of Waterway, Port, Coastal, and Ocean Engineering, 146(6), 04020039.
 
 \end{document}
