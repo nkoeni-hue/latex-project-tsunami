@@ -170,39 +170,38 @@
         \item The resulting trends were nonlinear: adding more debris did not guarantee higher peaks, since dispersion could offset the momentum contribution of additional blocks.
     \end{itemize}
 \end{itemize}
-% Gradient plot for random damming forces
+
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{Damming_Random_Single_vs_Multi_ByDensityGradient.png}
-    \caption{Normalized damming forces in random debris fields, separated by Single and Multi debris arrangements.}
-    \label{fig:random_damming_gradient}
+    \includegraphics[width=0.8\textwidth]{First_Peak_Random_Single_vs_Multi_ByDensityGradient.png}
+    \caption{First impact forces in random fields.}
+    \label{fig:random_peaks_first}
 \end{figure}
 
-% Per-debris boxplots for selected debris counts
 \begin{figure}[htbp]
     \centering
     \begin{subfigure}[b]{0.32\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{Boxplot_Density_vs_Damming_8Debris.png}
-        \caption{Damming forces, 8 debris pieces.}
-        \label{fig:boxplot_damming_8}
+        \includegraphics[width=\textwidth]{Boxplot_Density_vs_PeakValues_8Debris.png}
+        \caption{First impacts, 8 pieces.}
+        \label{fig:boxplot_8}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.32\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{Boxplot_Density_vs_Damming_16Debris.png}
-        \caption{Damming forces, 16 debris pieces.}
-        \label{fig:boxplot_damming_16}
+        \includegraphics[width=\textwidth]{Boxplot_Density_vs_PeakValues_16Debris.png}
+        \caption{First impacts, 16 pieces.}
+        \label{fig:boxplot_16}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.32\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{Boxplot_Density_vs_Damming_24Debris.png}
-        \caption{Damming forces, 24 debris pieces.}
-        \label{fig:boxplot_damming_24}
+        \includegraphics[width=\textwidth]{Boxplot_Density_vs_PeakValues_24Debris.png}
+        \caption{First impacts, 24 pieces.}
+        \label{fig:boxplot_24}
     \end{subfigure}
-    \caption{Normalized damming forces for different debris counts.}
-    \label{fig:boxplots_damming_side_by_side}
+    \caption{Normalized first impact values for different debris counts.}
+    \label{fig:boxplots_side_by_side}
 \end{figure}
 
 \begin{figure}[htbp]
@@ -255,13 +254,40 @@
     \caption{Damming forces in regular configurations.}
     \label{fig:damming_regular_remap}
 \end{figure}
-
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{Damming_Random_Single_vs_Multi_ByDensityGradient.png}
-    \caption{Damming forces in random fields.}
-    \label{fig:damming_random}
+    \caption{Normalized damming forces in random debris fields, separated by Single and Multi debris configurations.}
+    \label{fig:random_damming_gradient}
 \end{figure}
+
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Boxplot_Density_vs_Damming_8Debris.png}
+        \caption{Damming forces, 8 debris pieces.}
+        \label{fig:boxplot_damming_8}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Boxplot_Density_vs_Damming_16Debris.png}
+        \caption{Damming forces, 16 debris pieces.}
+        \label{fig:boxplot_damming_16}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Boxplot_Density_vs_Damming_24Debris.png}
+        \caption{Damming forces, 24 debris pieces.}
+        \label{fig:boxplot_damming_24}
+    \end{subfigure}
+    \caption{Normalized damming forces for different debris counts.}
+    \label{fig:boxplots_damming_side_by_side}
+\end{figure}
+
 
 % \section{Flow Velocities}
 % The mean flow velocity in the flume was confirmed to be XYZ. 
