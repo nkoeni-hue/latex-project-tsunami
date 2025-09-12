@@ -213,28 +213,21 @@
 
 \begin{figure}[htbp]
     \centering
-    \begin{subfigure}[b]{0.32\textwidth}
+    \begin{subfigure}[b]{0.48\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{Boxplot_Density_vs_LaterPeakValues_8Debris.png}
-        \caption{Later impacts, 8 pieces.}
-        \label{fig:boxplot_later_8}
+        \includegraphics[width=\textwidth]{Impact_FirstPeaks_densities combined.png}
+        \caption{First impact peaks.}
+        \label{fig:first_peaks_combined}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[b]{0.32\textwidth}
+    \begin{subfigure}[b]{0.48\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{Boxplot_Density_vs_LaterPeakValues_16Debris.png}
-        \caption{Later impacts, 16 pieces.}
-        \label{fig:boxplot_later_16}
+        \includegraphics[width=\textwidth]{Impact_LaterPeaks_densities combined.png}
+        \caption{Later impact peaks.}
+        \label{fig:later_peaks_combined}
     \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.32\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{Boxplot_Density_vs_LaterPeakValues_24Debris.png}
-        \caption{Later impacts, 24 pieces.}
-        \label{fig:boxplot_later_24}
-    \end{subfigure}
-    \caption{Normalized later impact values for different debris counts.}
-    \label{fig:boxplots_later_side_by_side}
+    \caption{Normalized impact values (median per trial) across densities for different debris numbers. Single and Multi types are distinguished by marker shape.}
+    \label{fig:impact_peaks_combined}
 \end{figure}
 
 \section{Results: Damming Reaction Forces}
@@ -246,6 +239,7 @@
     \item Nonlinear behavior was observed, with damming forces saturating at higher debris counts. This parallels the nonlinear growth seen in the later submerged impact stage. This saturation is partly due to the complete blockage being achieved and partly due to debris pieces recirculating.
 \end{itemize}
 
+% According to \cite{bonusEvaluationFluidDrivenDebris}, 
 
 
 \begin{figure}[htbp]
@@ -310,12 +304,7 @@
     \item Practical limits on debris quantity constrained the range of tested cases.
 \end{itemize}
 \section{References}
-Bonus, J., Arduino, P., Motley, M., and Eberhard, M. (2022). ``Multi-Scale Numerical Simulation of Tsunami-Driven Debris-Field Impacts.'' In Ports 2022, 328--39. https://doi.org/10.1061/9780784484395.033.
-
-Derschum, C., Nistor, I., Stolle, J., and Goseberg, N. (2018). ``Debris Impact under Extreme Hydrodynamic Conditions Part 1: Hydrodynamics and Impact Geometry.'' Coastal Engineering, 141: 24--35. https://doi.org/10.1016/j.coastaleng.2018.08.016.
-
-Mascarenas, D., Motley, M. R., Eberhard, M. O., Arduino, P., and Serrone, A. (2022). ``Quantifying and Understanding Structural Loading from Wave-Driven Debris Fields.'' In Ports 2022, 523--34. https://doi.org/10.1061/9780784484395.052.
-
-Shekhar, K., Winter, A. O., Alam, M. S., Arduino, P., Miller, G. R., Motley, M. R., Eberhard, M. O., Barbosa, A. R., Lomonaco, P., and Cox, D. T. (2020). ``Conceptual evaluation of tsunami debris field damming and impact forces.'' Journal of Waterway, Port, Coastal, and Ocean Engineering, 146(6), 04020039.
+\bibliographystyle{plain}  % or abbrv, alpha, apa, ieee, etc.
+\bibliography{Thesis}  % matches your .bib file name
 
 \end{document}
