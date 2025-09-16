@@ -113,6 +113,7 @@
     \end{itemize}
     \item This behavior was consistent across debris types and configurations, highlighting the need to distinguish between first and late peaks.
 \end{itemize}
+
 \begin{figure}[htbp]
     \centering
     \begin{subfigure}[b]{0.48\textwidth}
@@ -122,6 +123,7 @@
         \label{fig:first_impact}
     \end{subfigure}
     \hfill
+    
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
         \includegraphics[width=\textwidth]{second_impact.jpg}
@@ -144,20 +146,57 @@
     \item Remapping makes the 24T case comparable to a 12T case, the total debris count still altered the flume hydrodynamics. This explains why the remapped forces (e.g., for 24T) appear lower than the corresponding smaller-group tests.
 
 \end{itemize}
-
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{FirstPeak_Regular_RemappedT.png}
-    \caption{First peak forces in regular configurations (remapped).}
-    \label{fig:firstpeak_regular_remap}
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{FirstPeak_Regular_SplitByTrial.png}
+        \caption{Original.}
+        \label{fig:firstpeak_regular_original}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{FirstPeak_Regular_RemappedT.png}
+        \caption{Remapped.}
+        \label{fig:firstpeak_regular_remap}
+    \end{subfigure}
+    \caption{First peak forces in regular configurations: (a) original trials, (b) remapped trials.}
+    \label{fig:firstpeak_regular_split}
 \end{figure}
 
+% \begin{figure}[htbp]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{FirstPeak_Regular_RemappedT.png}
+%     \caption{First peak forces in regular configurations (remapped).}
+%     \label{fig:firstpeak_regular_remap}
+% \end{figure}
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{LaterPeak_Regular_RemappedT.png}
-    \caption{Later peak forces in regular configurations (remapped).}
-    \label{fig:laterpeak_regular_remap}
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{LaterPeak_Regular_SplitByTrial.png}
+        \caption{Original.}
+        \label{fig:laterpeak_regular_original}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{LaterPeak_Regular_RemappedT.png}
+        \caption{Remapped.}
+        \label{fig:laterpeak_regular_remap}
+    \end{subfigure}
+    \caption{Later peak forces in regular configurations: (a) original trials, (b) remapped trials.}
+    \label{fig:laterpeak_regular_split}
 \end{figure}
+
+% \begin{figure}[htbp]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{LaterPeak_Regular_RemappedT.png}
+%     \caption{Later peak forces in regular configurations (remapped).}
+%     \label{fig:laterpeak_regular_remap}
+% \end{figure}
+
 \subsection{Random Configurations}
 \begin{itemize}
     \item Random debris fields produced more scattered and generally smaller peaks compared to regular configurations. The overall variability of the data increased (Fig.~\ref{fig:random_peaks_first}). 
@@ -218,14 +257,39 @@
 \end{itemize}
 
 % According to \cite{bonusEvaluationFluidDrivenDebris}, 
-
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Damming_Regular_SplitByTrial.png}
+        \caption{Original.}
+        \label{fig:damming_regular_original}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Damming_Regular_L_T_SplitByTrial_Remapped.png}
+        \caption{Remapped.}
+        \label{fig:damming_regular_remap}
+    \end{subfigure}
+    \caption{Damming forces in regular configurations: (a) original trials, (b) remapped trials.}
+    \label{fig:damming_regular_split}
+\end{figure}
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{Damming_Regular_L_T_SplitByTrial_Remapped.png}
-    \caption{Damming forces in regular configurations.}
-    \label{fig:damming_regular_remap}
+    \includegraphics[width=0.8\textwidth]{Damming_Regular_RemappedT_MediansWide.png}
+    \caption{Median normalized damming forces for regular trials with Wide markers.}
+    \label{fig:damming_medians_wide}
 \end{figure}
+
+% \begin{figure}[htbp]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{Damming_Regular_L_T_SplitByTrial_Remapped.png}
+%     \caption{Damming forces in regular configurations.}
+%     \label{fig:damming_regular_remap}
+% \end{figure}
+
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{Damming_Random_Single_vs_Multi_ByDensityGradient.png}
