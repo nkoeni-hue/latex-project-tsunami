@@ -69,17 +69,17 @@
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
         \includegraphics[width=\textwidth]{Reg_Lift_U_1_L_D__Masters_NHERIDeprisImpact2_goodtests_Reg_Lift_U_1_L_Trial04_Peak.png}
-        \caption{Force time history for 1L debris.}
+        \caption{1L debris.}
         \label{fig:timehist_1L_peak}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
         \includegraphics[width=\textwidth]{Reg_Lift_U_24_L_D__Masters_NHERIDeprisImpact2_goodtests_Reg_Lift_U_24_L_Trial04_Peak.png}
-        \caption{Force time history for 24L debris.}
+        \caption{24L debris.}
         \label{fig:timehist_24L_peak}
     \end{subfigure}
-    \caption{Force time histories for (a) 1L debris and (b) 24L debris.}
+    \caption{Force time histories.}
     \label{fig:timehist_combined}
 \end{figure}
 
@@ -88,17 +88,17 @@
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
         \includegraphics[width=\textwidth]{Reg_Lift_U_1_L_D__Masters_NHERIDeprisImpact2_goodtests_Reg_Lift_U_1_L_Trial04_Damming.png}
-        \caption{Damming force time history for 1L debris.}
+        \caption{1L debris.}
         \label{fig:timehist_1L_damming}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
         \includegraphics[width=\textwidth]{Reg_Lift_U_24_L_D__Masters_NHERIDeprisImpact2_goodtests_Reg_Lift_U_24_L_Trial04_Damming.png}
-        \caption{Damming force time history for 24L debris.}
+        \caption{24L debris.}
         \label{fig:timehist_24L_damming}
     \end{subfigure}
-    \caption{Damming force time histories for (a) 1L debris and (b) 24L debris.}
+    \caption{Damming force time histories.}
     \label{fig:timehist_damming_combined}
 \end{figure}
 
@@ -108,7 +108,7 @@
     \item Video evidence and filtered signals revealed that debris impact occurs in two stages:
     \begin{itemize}
         \item First impact: initial impact on the unsubmerged structure (Fig.~\ref{fig:first_impact}). 
-        \item Later impacts: submerged impacts caused by overtopping, suction, and recirculation (Fig.~\ref{fig:second_impact}).
+        \item Later impacts: submerged impacts caused by debris recirculation (Fig.~\ref{fig:second_impact}).
         \item  The first impact is characterized by one simultaneous impact while later impacts show to be more scattered and chaotic especially for high debris numbers (Fig.~\ref{fig:timehist_24L_peak}).
     \end{itemize}
     \item This behavior was consistent across debris types and configurations, highlighting the need to distinguish between first and late peaks.
@@ -119,7 +119,7 @@
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
         \includegraphics[width=\textwidth]{first_impact.jpg}
-        \caption{Initial unsubmerged impact.}
+        \caption{First unsubmerged impact.}
         \label{fig:first_impact}
     \end{subfigure}
     \hfill
@@ -161,14 +161,14 @@
         \caption{Remapped.}
         \label{fig:firstpeak_regular_remap}
     \end{subfigure}
-    \caption{First peak forces in regular configurations: (a) original trials, (b) remapped trials.}
+    \caption{First peak forces in regular configurations split by orientation and width.}
     \label{fig:firstpeak_regular_split}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{FirstPeak_Regular_RemappedT_MediansTrend.png}
-    \caption{Median normalized first peak values with Wide markers and trend lines.}
+    \caption{Median normalized first impact values (adjusted debris count) showing a clear linear trend between debris increase and Normalized Impact Reaction Force.}
     \label{fig:firstpeak_medians_trend}
 \end{figure}
 
@@ -200,7 +200,7 @@
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{LaterPeak_Regular_RemappedT_MediansTrend.png}
-    \caption{Median normalized later peak values with Wide markers and trend lines.}
+    \caption{Median normalized later impact  (adjusted debris count) showing linear increase with added debris. The longitudinal case reaching a saturation after 8 debris pieces while the transverse case has not reached saturation in this experimental setup. }
     \label{fig:laterpeak_medians_trend}
 \end{figure}
 
@@ -227,21 +227,21 @@
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{First_Peak_Random_Single_vs_Multi_ByDensityGradient.png}
-    \caption{First impact forces in random fields.}
+    \caption{First impact forces in random fields. Single sized debris fields consistently yielding higher impact forces than multi sized debris fields. Surface Area density furthermore affects impact magnitude with lower densities resulting in lower peak forces.  }
     \label{fig:random_peaks_first}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.7\textwidth]{Impact_FirstPeaks_densities_combined.png}
-    \caption{First impact peaks. }
+    \caption{Median impact forces show: the more debris pieces the higher the impact reaction force. Single sized debris fields yield higher impact forces. }
     \label{fig:first_peaks_combined}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{Later_Peak_Random_Single_vs_Multi_ByDensityGradient.png}
-    \caption{Later impact forces in random fields.}
+    \caption{Later impact forces in random debris fields show only a slight increase in reaction force from increasing debris count. The effect of density is present in single sized debris fields. In multi sized debris fields density shows no effect. }
     \label{fig:random_peaks_later}
 \end{figure}
 
@@ -249,15 +249,28 @@
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.7\textwidth]{Impact_LaterPeaks_densities_combined.png}
-    \caption{Later impact peaks.}
+    \caption{Later impact peaks. I think this plot should not be in here.}
     \label{fig:later_peaks_combined}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{Impact_probabilities.png}
-    \caption{Impact probabilities across random trials.}
+    \caption{Impact probabilities across random trials show that increasing the width of the debris field will proportionally decrease the percentage of debris impacting the structure.}
     \label{fig:impact_probabilities}
+\end{figure}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.75\textwidth]{First_Peak_Median_Single_vs_Multi_Adjusted.png}
+    \caption{Median normalized first impact peaks in random fields after adjustment by structure width. Single-sized debris fields generate higher impact peaks than multi-sized fields, with increasing debris count raising the force until saturation.}
+    \label{fig:random_first_median_adjusted}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.75\textwidth]{Later_Peak_Median_Single_vs_Multi_Adjusted.png}
+    \caption{Median normalized later impact peaks in random fields after adjustment by structure width. Later peaks show weaker scaling with debris count compared to first peaks, with multi-size fields producing lower forces.}
+    \label{fig:random_later_median_adjusted}
 \end{figure}
 
 
@@ -293,7 +306,7 @@
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{Damming_Regular_RemappedT_Medians.png}
-    \caption{Median normalized damming forces for regular trials with Wide markers.}
+    \caption{Median normalized damming forces for regular trials show that Transverse debris dominates the damming reaction force as debris count increases.}
     \label{fig:damming_medians_wide}
 \end{figure}
 
@@ -307,13 +320,13 @@
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{Damming_Random_Single_vs_Multi_ByDensityGradient.png}
-    \caption{Normalized damming forces in random debris fields, separated by Single and Multi debris configurations.}
+    \caption{Normalized damming forces in random debris fields. Single sized debris fields consistently yielding higher impact forces than multi sized debris fields. Surface Area density furthermore affects impact magnitude for single sized debris fields, while having little to no effect on multi sized debris fields.}
     \label{fig:random_damming_gradient}
 \end{figure}
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.6\textwidth]{figures/Damming_Peaks_densities_combined.png}
-    \caption{Normalized damming .}
+    \caption{Medial Normalized damming reaction forces show that for low densities the difference between multi and single sized debris fields is minimal. Increasing density will exacerbate the difference between multi and single sized debris pieces. Increasind density will also lead to increasing damming reaction force.}
     \label{fig:damming_peaks}
 \end{figure}
 
