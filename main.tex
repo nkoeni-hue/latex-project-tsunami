@@ -30,7 +30,7 @@ Building on these findings, more recent experimental work has directly addressed
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{Configurations.jpg}
+    \includegraphics[width=0.9\textwidth]{Configurations.jpg}
     \caption{Regular configurations.}
     \label{fig:configurations}
 \end{figure}
@@ -42,18 +42,19 @@ Building on these findings, more recent experimental work has directly addressed
     \label{fig:configurations_random}
 \end{figure}
 
-\begin{figure}[htbp] \centering \includegraphics[width=0.8\textwidth]{high_low_pass.png} \caption{Force decomposition using Butterworth filters.} \label{fig:high_low_pass} \end{figure}
+\begin{figure}[htbp] \centering \includegraphics[width=0.9\textwidth]{high_low_pass.png} \caption{Force decomposition using Butterworth filters.} \label{fig:high_low_pass} \end{figure}
 
 \section{Testing Methodology}
 The experiments were conducted in the Large Wave Flume at the NHERI (O.H. Hinsdale) Wave Research Laboratory at Oregon State University, a 104 m long, 3.7 m wide, and 4.6 m tall facility. A full-height piston-driven wavemaker generated tsunami-like waves in water depths of up to 2.0 m. Bathymetry followed layouts from \citep{winterTsunamiLikeWaveForces2020} and \citep{Shekhar2020}.
 
 Wave paddle motions were prescribed using an error function displacement, which produces highly repeatable unbroken solitary waves. Repeatability was prioritized, as it ensured consistent wave conditions for comparing debris configurations. The still water level was set at 2.0 m, corresponding to a 0.25 m depth at the structure with no air gap beneath the base. The test structure was a 1.016 m square base × 0.615 m tall box constructed from sheet metal and steel framing (similar to \citep{winterTsunamiLikeWaveForces2020}), positioned 43.8 m from the wavemaker. It was mounted on low-friction bearings attached to a wall-mounted frame, allowing measurement of streamwise (x) and transverse (y) reactions.
 
-The internal frame used 0.038 m hollow steel sections (HSS) for stiffness, with additional aluminum-encased stiffeners to improve rotational resistance and load transfer. Eight load cells were installed: two streamwise, two transverse, and four vertical pancake cells, all sampled at 1200 Hz. Steel legs, 0.25 m in height, were placed below the structure but were not load bearing.
+The internal frame used hollow steel sections for stiffness, with additional aluminum-encased stiffeners to improve rotational resistance and load transfer. Eight load cells were installed: two streamwise, two transverse, and four vertical pancake cells, all sampled at 1200 Hz. Steel legs, 0.25 m in height, were placed below the structure but were not load bearing.
  
 The debris pieces were high-density polyethylene (HDPE), measuring 0.50 m × 0.051 m × 0.102 m and weighing approximately 2.52 kg. The submerged portion of each piece was 0.05 m, corresponding to its draft in water. Configurations included longitudinal, transverse, and random arrangements, with debris held 2 m upstream of the structure and released using lift frames modeled after \citep{Shekhar2020}.
 
 Force time histories were decomposed with Butterworth filters: high-pass filtering isolated short-duration impact peaks, while low-pass filtering captured sustained damming forces (Figure \ref{fig:high_low_pass}). Representative examples (Figures \ref{fig:timehist_combined}–\ref{fig:timehist_damming_combined}) demonstrate that debris quantity and arrangement strongly influence both magnitude and duration of loading. The repeatability of unbroken solitary waves provided a consistent baseline for isolating and evaluating debris-induced loading mechanisms.
+
 \begin{figure}[h!]
     \centering
     \begin{subfigure}[b]{0.9\textwidth}
@@ -202,7 +203,7 @@ The unaltered gradient plots show these differences most clearly. In the first i
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{Later_Peak_Random_Single_vs_Multi_ByDensityGradient.png}
+    \includegraphics[width=0.9\textwidth]{Later_Peak_Random_Single_vs_Multi_ByDensityGradient.png}
     \caption{Later impact forces in random debris fields. Reaction forces increase slightly with debris count. Density affects single-size debris fields but has negligible effect in multi-size fields.}
     \label{fig:random_peaks_later}
 \end{figure}
@@ -211,7 +212,7 @@ An adjustment became necessary because debris frame exceeded the structure’s w
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{Impact_probabilities.png}
+    \includegraphics[width=0.9\textwidth]{Impact_probabilities.png}
     \caption{Impact probabilities across random trials. A larger frame-to-structure width ratio proportionally reduces the fraction of debris impacting the structure.}
     \label{fig:impact_probabilities}
 \end{figure}
@@ -239,7 +240,7 @@ In random configurations, damming forces followed a different pattern compared t
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{Damming_Random_Single_vs_Multi_ByDensityGradient.png}
+    \includegraphics[width=0.9\textwidth]{Damming_Random_Single_vs_Multi_ByDensityGradient.png}
     \caption{Normalized damming forces in random debris fields. Single-size debris fields consistently produce higher forces than multi-size fields. Surface area density increases damming loads in single-size fields but has minimal effect in multi-size fields}
     \label{fig:random_damming_gradient}
 \end{figure}
