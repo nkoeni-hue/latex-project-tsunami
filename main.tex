@@ -154,7 +154,7 @@ smaller-group tests.
     \begin{subfigure}[t]{0.9\textwidth}
         \centering
         \includegraphics[width=\textwidth]{FirstPeak_Regular_RemappedT.png}
-        \caption{Debris count adjusted using weighting of impact likelihood.}
+        \caption{Debris count adjusted using total of pieces impacting structure.}
         \label{fig:firstpeak_regular_remap}
     \end{subfigure}
     \caption{First peak forces in regular configurations for longitudinal and transverse orientations.}
@@ -173,7 +173,7 @@ smaller-group tests.
     \begin{subfigure}[t]{0.9\textwidth}
         \centering
         \includegraphics[width=\textwidth]{LaterPeak_Regular_RemappedT.png}
-        \caption{Debris count adjusted using weighting of impact likelihood.}
+        \caption{Debris count adjusted using total of pieces impacting structure.}
         \label{fig:laterpeak_regular_remap}
     \end{subfigure}
     \caption{Later peak forces  in regular configurations for longitudinal and transverse orientations.}
@@ -195,7 +195,7 @@ Damming forces were extracted from low-pass filtered signals, capturing the sust
     \begin{subfigure}[t]{0.9\textwidth}
         \centering
         \includegraphics[width=\textwidth]{Damming_Regular_L_T_SplitByTrial_Remapped.png}
-        \caption{Debris count adjusted using weighting of impact likelihood.}
+        \caption{Debris count adjusted using total of pieces impacting structure.}
         \label{fig:damming_regular_remap}
     \end{subfigure}
     \caption{Damming forces  in regular configurations for longitudinal and transverse orientations.}
@@ -225,7 +225,7 @@ The unaltered gradient plots show these differences most clearly. In the first i
     \label{fig:random_peaks_later}
 \end{figure}
 
-An adjustment became necessary because debris frame exceeded the structure’s width when spanning higher densities for high debris counts. This geometry meant that not all pieces would impact the structure, and some pieces were effectively excluded from impact. Video analysis confirmed this by counting the number of debris pieces making contact with the structure. From these counts, an impact probability was derived, which decreased proportionally as the frame widened relative to the structure (Figure~\ref{fig:impact_probabilities}). To account for this effect, a linear correction was applied to all trials: the effective number of impacting pieces was defined as the nominal debris count multiplied by the ratio of structure width to frame width. This correction ensured comparability between different configurations and removed artificial reductions in observed force magnitudes.
+An adjustment became necessary because debris frame exceeded the structure’s width when spanning higher densities for high debris counts. This geometry meant that not all pieces would impact the structure, and some pieces were effectively excluded from impact. Video analysis confirmed this by counting the number of debris pieces making contact with the structure. From these counts, an impact probability was derived, which decreased proportionally as the frame widened relative to the structure (Figure~\ref{fig:impact_probabilities}). To account for this effect, a linear correction was applied to all trials: the effective number of impacting pieces was defined as the nominal debris count multiplied by the ratio of structure width to Width of Debris Field. This correction ensured comparability between different configurations and removed artificial reductions in observed force magnitudes.
 
 \begin{figure}[htbp]
     \centering
@@ -283,7 +283,7 @@ The corrected median values (Figure~\ref{fig:random_damming_median_adjusted}) sh
    
     \item \textbf{Synchrony of impacts governs load peaks:} Simultaneous contacts amplified peak forces, especially in longitudinal arrangements where multiple debris pieces struck together. Random orientations reduced synchrony, leading to lower impact forces at higher debris counts.
     
-    \item \textbf{Video-derived corrections refine debris momentum:} Surface area density did not account for the debris field width exceeding the structure. Video-based impact probabilities revealed a linear-proportional relationship between structure/frame width and adjusted debris count. 
+    \item \textbf{Video-derived corrections refine debris momentum:} Surface area density did not account for the debris field width exceeding the structure. Video-based impact probabilities revealed a linear-proportional relationship between structure/Width of Debris Field and adjusted debris count. 
 
 
     \item \textbf{Two-stage impact behavior is consistent:} Initial unsubmerged impacts produced sharp, short-duration peaks, while later submerged impacts were more chaotic, prolonged, and nonlinear in their scaling with debris count.
@@ -324,7 +324,7 @@ Several limitations of this study should be acknowledged. First, because of the 
 \caption{Random Single - Sized debris configurations: Force statistics (N)}
 \begin{tabular}{lccccccc}
 \toprule
-\textbf{Debris Count} & \textbf{Frame Width (m)} & \textbf{Min} & \textbf{Q$_{25}$} & \textbf{Median} & \textbf{Q$_{75}$} & \textbf{Max} & \textbf{IQR} \\
+\textbf{Debris Count} & \textbf{Width of Debris Field (m)} & \textbf{Min} & \textbf{Q$_{25}$} & \textbf{Median} & \textbf{Q$_{75}$} & \textbf{Max} & \textbf{IQR} \\
 \midrule
 8 & 0.75 & 318.97 & 331.16 & 367.12 & 484.36 & 516.78 & 153.20 \\
 8 & 1.00 & 236.24 & 284.84 & 340.64 & 408.94 & 488.05 & 124.10 \\
@@ -344,7 +344,7 @@ Several limitations of this study should be acknowledged. First, because of the 
 \caption{Random Multi - Sized debris configurations: Force statistics (N)}
 \begin{tabular}{lccccccc}
 \toprule
-\textbf{Debris Count} & \textbf{Frame Width (m)} & \textbf{Min} & \textbf{Q$_{25}$} & \textbf{Median} & \textbf{Q$_{75}$} & \textbf{Max} & \textbf{IQR} \\
+\textbf{Debris Count} & \textbf{Width of Debris Field (m)} & \textbf{Min} & \textbf{Q$_{25}$} & \textbf{Median} & \textbf{Q$_{75}$} & \textbf{Max} & \textbf{IQR} \\
 \midrule
 8 & 0.75 & 249.25 & 299.65 & 399.53 & 453.30 & 615.08 & 153.65 \\
 8 & 1.00 & 160.32 & 235.97 & 327.54 & 450.15 & 707.13 & 214.18 \\
