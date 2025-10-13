@@ -133,6 +133,32 @@ Video evidence combined with filtered force records revealed that debris impacts
     \label{fig:impact_combined}
     
 \end{figure}
+
+\section{In Air Tests} 
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{l c c c c c c}
+\hline
+Test Type & Mode & Median $f$ [Hz] & Std $f$ [Hz] & Median $\zeta$ [\%] & Median $\zeta$ & Std $\zeta$ \\
+\hline
+in-air & Mode 1 & 9.83 & 0.045 & 2.08 & 0.0208 & 0.0037 \\
+in-air & Mode 2 & 13.87 & 0.146 & 1.20 & 0.0120 & 0.0052 \\
+in-air & Mode 3 & 19.94 & 0.084 & 0.91 & 0.0091 & 0.0020 \\
+1L longitudinal test & Mode 1 & 9.26 & 0.136 & 6.43 & 0.0643 & 0.0159 \\
+1L longitudinal test & Mode 2 & 10.32 & 0.385 & 6.51 & 0.0651 & 0.0148 \\
+1L longitudinal test & Mode 3 & 19.58 & 0.160 & 1.66 & 0.0166 & 0.0023 \\
+\hline
+\end{tabular}
+\caption{Median natural frequencies and damping ratios (\% and absolute) for each test condition.}
+\label{tab:mode_summary}
+\end{table}
+
+
+
+\section{Single Debris Tests} 
+The 
+
 \section{Results: Regular Configurations}
 
 \subsection{Impact Forces} In regular configurations, the first impact peaks scaled approximately linearly with the number of debris pieces (Figure~\ref{fig:firstpeak_regular_split}). This relationship was clear across both longitudinal and transverse layouts. Later impacts, by contrast, exhibited nonlinear behavior, showing growth that eventually saturated as debris counts increased (Figure~\ref{fig:laterpeak_regular_split}). This saturation suggests that once a certain number of pieces are present, additional debris no longer contributes significantly to impact loading because not all debris strike the structure simultaneously.
@@ -297,7 +323,6 @@ Several limitations of this study should be acknowledged. First, because of the 
 \bibliographystyle{plainnat}  
 \bibliography{Thesis}
 \section{Annex}
-
 \begin{table}[h!]
 \centering
 \caption{Regular configurations: Force statistics (N)}
@@ -321,10 +346,10 @@ Several limitations of this study should be acknowledged. First, because of the 
 
 \begin{table}[h!]
 \centering
-\caption{Random Single - Sized debris configurations: Force statistics (N)}
+\caption{Random Single-Sized debris configurations: Force statistics (N)}
 \begin{tabular}{lccccccc}
 \toprule
-\textbf{Debris Count} & \textbf{Width of Debris Field (m)} & \textbf{Min} & \textbf{Q$_{25}$} & \textbf{Median} & \textbf{Q$_{75}$} & \textbf{Max} & \textbf{IQR} \\
+\textbf{Debris Count} & \textbf{Width (m)} & \textbf{Min} & \textbf{Q$_{25}$} & \textbf{Median} & \textbf{Q$_{75}$} & \textbf{Max} & \textbf{IQR} \\
 \midrule
 8 & 0.75 & 318.97 & 331.16 & 367.12 & 484.36 & 516.78 & 153.20 \\
 8 & 1.00 & 236.24 & 284.84 & 340.64 & 408.94 & 488.05 & 124.10 \\
@@ -341,10 +366,10 @@ Several limitations of this study should be acknowledged. First, because of the 
 
 \begin{table}[h!]
 \centering
-\caption{Random Multi - Sized debris configurations: Force statistics (N)}
+\caption{Random Multi-Sized debris configurations: Force statistics (N)}
 \begin{tabular}{lccccccc}
 \toprule
-\textbf{Debris Count} & \textbf{Width of Debris Field (m)} & \textbf{Min} & \textbf{Q$_{25}$} & \textbf{Median} & \textbf{Q$_{75}$} & \textbf{Max} & \textbf{IQR} \\
+\textbf{Debris Count} & \textbf{Width (m)} & \textbf{Min} & \textbf{Q$_{25}$} & \textbf{Median} & \textbf{Q$_{75}$} & \textbf{Max} & \textbf{IQR} \\
 \midrule
 8 & 0.75 & 249.25 & 299.65 & 399.53 & 453.30 & 615.08 & 153.65 \\
 8 & 1.00 & 160.32 & 235.97 & 327.54 & 450.15 & 707.13 & 214.18 \\
@@ -357,5 +382,64 @@ Several limitations of this study should be acknowledged. First, because of the 
 \end{tabular}
 \end{table}
 
+
+\begin{table}[h!]
+\centering
+\caption{Regular configurations: Damming force statistics (N)}
+\begin{tabular}{cccccccc}
+\toprule
+\textbf{Debris Count} & \textbf{Min} & \textbf{Q$_{25}$} & \textbf{Median} & \textbf{Q$_{75}$} & \textbf{Max} & \textbf{IQR} \\
+\midrule
+1 & 227.38 & 234.83 & 250.04 & 277.48 & 296.16 & 42.65 \\
+1 & 213.19 & 217.32 & 235.43 & 272.40 & 278.61 & 55.08 \\
+8 & 274.34 & 354.89 & 440.39 & 467.67 & 538.81 & 112.78 \\
+8 & 370.29 & 409.17 & 463.73 & 482.75 & 514.36 & 73.58 \\
+16 & 477.39 & 634.32 & 644.50 & 688.14 & 763.35 & 53.81 \\
+16 & 400.58 & 432.87 & 537.93 & 606.28 & 645.49 & 173.41 \\
+16 & 489.87 & 856.34 & 891.55 & 935.63 & 1108.87 & 79.28 \\
+16 & 261.94 & 279.81 & 298.75 & 366.90 & 494.05 & 87.09 \\
+24 & 448.78 & 486.28 & 529.06 & 562.54 & 623.60 & 76.26 \\
+24 & 427.53 & 444.17 & 547.07 & 691.70 & 799.90 & 247.53 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\caption{Random Single-Sized debris configurations: Damming force statistics (N)}
+\begin{tabular}{cccccccc}
+\toprule
+\textbf{Debris Count} & \textbf{Width (m)} & \textbf{Min} & \textbf{Q$_{25}$} & \textbf{Median} & \textbf{Q$_{75}$} & \textbf{Max} & \textbf{IQR} \\
+\midrule
+8 & 0.75 & 415.03 & 474.29 & 537.17 & 631.63 & 696.04 & 157.34 \\
+8 & 1.00 & 312.70 & 349.20 & 403.20 & 483.63 & 580.62 & 134.43 \\
+16 & 1.00 & 461.45 & 561.72 & 634.55 & 808.89 & 892.72 & 247.17 \\
+16 & 1.25 & 338.60 & 478.26 & 562.87 & 597.09 & 628.93 & 118.83 \\
+16 & 1.50 & 313.93 & 353.38 & 421.91 & 528.32 & 626.21 & 174.94 \\
+24 & 1.25 & 406.77 & 484.70 & 523.35 & 578.01 & 817.46 & 93.31 \\
+24 & 1.50 & 324.74 & 403.21 & 447.65 & 534.82 & 660.63 & 131.62 \\
+24 & 2.00 & 299.56 & 343.45 & 384.97 & 407.82 & 656.45 & 64.37 \\
+24 & 3.65 & 209.92 & 286.28 & 334.97 & 424.47 & 507.03 & 138.19 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\caption{Random Multi-Sized debris configurations: Damming force statistics (N)}
+\begin{tabular}{cccccccc}
+\toprule
+\textbf{Debris Count} & \textbf{Width (m)} & \textbf{Min} & \textbf{Q$_{25}$} & \textbf{Median} & \textbf{Q$_{75}$} & \textbf{Max} & \textbf{IQR} \\
+\midrule
+8 & 0.75 & 238.19 & 258.69 & 355.83 & 488.00 & 585.86 & 229.32 \\
+8 & 1.00 & 251.01 & 330.85 & 403.40 & 422.94 & 496.17 & 92.10 \\
+16 & 1.00 & 310.06 & 339.79 & 376.89 & 451.63 & 595.93 & 111.83 \\
+16 & 1.25 & 271.42 & 327.93 & 349.34 & 385.01 & 558.91 & 57.08 \\
+16 & 1.50 & 303.26 & 350.25 & 387.00 & 405.22 & 526.45 & 54.97 \\
+24 & 1.25 & 342.03 & 374.84 & 424.28 & 445.80 & 502.72 & 70.95 \\
+24 & 1.50 & 319.81 & 342.89 & 435.02 & 513.73 & 527.27 & 170.85 \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \end{document}
