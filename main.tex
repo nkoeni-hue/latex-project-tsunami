@@ -14,7 +14,7 @@
 
 \maketitle
 \begin{abstract}
-Tsunami-driven debris fields create complex and highly variable loading on coastal infrastructure, combining short-duration forces related to debris impact with longer-lasting forces stemming from damming of the flow. For a simple structure, this study investigates conceptually how the magnitudes of the reaction forces due to debris-structure interaction vary according to the number of debris in the group, as well as the debris orientation, area density, and size distribution. The group effects were evaluated by conducting 10 trials each for 27 configuations govern these mechanisms through large-scale flume experiments at Oregon State University’s NHERI Wave Research Laboratory. Configurations included longitudinal, transverse, and random debris fields, with both single- and multi-sized pieces subjected to tsunami-like solitary waves. High-frequency force peaks were isolated using Butterworth filters to capture impacts, while low-pass components characterized sustained damming loads. Results show that longitudinal debris arrangements amplify impact forces, whereas transverse fields produce stronger damming forces. Random and multi-size debris fields yielded smaller, more variable loads, with larger pieces dominating the structural response. The findings highlight the importance of group effects in debris–structure interactions and provide new insight into the scaling and variability of impact and damming mechanisms relevant for tsunami-resilient design.
+Tsunami-driven debris fields create complex and highly variable loading on coastal infrastructure, combining short-duration forces related to debris impact with longer-lasting forces stemming from damming of the flow. For a simple structure, this study investigates conceptually how the magnitudes of the reaction forces due to debris-structure interaction vary according to the number of debris in the group, as well as the debris orientation, area density, and size distribution. The group effects were evaluated by conducting 10 trials each for 26 configuations govern these mechanisms through large-scale flume experiments at Oregon State University’s NHERI Wave Research Laboratory. Configurations included longitudinal, transverse, and random debris fields, with both single- and multi-sized pieces subjected to tsunami-like solitary waves. High-frequency force peaks were isolated using Butterworth filters to capture impacts, while low-pass components characterized sustained damming loads. Results show that longitudinal debris arrangements amplify impact forces, whereas transverse fields produce stronger damming forces. Random and multi-size debris fields yielded smaller, more variable loads, with larger pieces dominating the structural response. The findings highlight the importance of group effects in debris–structure interactions and provide new insight into the scaling and variability of impact and damming mechanisms relevant for tsunami-resilient design.
 \end{abstract}
 
 \section{Introduction}
@@ -62,7 +62,21 @@ Building on these findings, more recent experimental work has directly addressed
 
 
 \section{Testing Methodology}
-The experiments were conducted in the Large Wave Flume at the NHERI (O.H. Hinsdale) Wave Research Laboratory at Oregon State University, a 104 m long, 3.7 m wide, and 4.6 m tall facility. A full-height piston-driven wavemaker generated tsunami-like waves in water depths of up to 2.0 m. Bathymetry followed layouts from \citep{winterTsunamiLikeWaveForces2020} and \citep{Shekhar2020}.
+The experiments were conducted in the Large Wave Flume at the NHERI (O.H. Hinsdale) Wave Research Laboratory at Oregon State University, a 104 m long, 3.7 m wide, and 4.6 m tall facility. A full-height piston-driven wavemaker generated tsunami-like waves in water depths of up to 2.0 m. Bathymetry followed layouts from \citep{winterTsunamiLikeWaveForces2020} and \citep{Shekhar2020} and can be seen in {\ref{fig:waveflume}.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=1.2\textwidth]{WaveFlume.pdf}
+  \caption{ Flume instrumentation adapted from \citep{winterTsunamiLikeWaveForces2020}.}
+  \label{fig:waveflume}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{WavemakerDisp.pdf}
+  \caption{Wavemaker displacement for the broken and unbroken wave.}
+  \label{fig:wavemakerdisp}
+\end{figure}
 
 Wave paddle motions were prescribed using an error function displacement, which produces highly repeatable unbroken solitary waves. Repeatability was prioritized, as it ensured consistent wave conditions for comparing debris configurations. The still water level was set at 2.0 m, corresponding to a 0.25 m depth at the structure with no air gap beneath the base. The test structure was a 1.016 m square base × 0.615 m tall box constructed from sheet metal and steel framing (similar to \citep{winterTsunamiLikeWaveForces2020}), positioned 43.8 m from the wavemaker. It was mounted on low-friction bearings attached to a wall-mounted frame, allowing measurement of streamwise (x) and transverse (y) reactions.
 
@@ -135,6 +149,8 @@ Video evidence combined with filtered force records revealed that debris impacts
 \end{figure}
 
 \section{In Air Tests} 
+
+A total of 5 single-piece configurations (10 tests each) have been conducted in order to evaluate the effect of size on 
 
 \begin{figure}[ht]
     \centering
@@ -234,6 +250,20 @@ Damming forces were extracted from low-pass filtered signals, capturing the sust
     \end{subfigure}
     \caption{Damming forces  in regular configurations for longitudinal and transverse orientations.}
     \label{fig:damming_regular_split}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/Normalized_FirstPeak.png}
+    \caption{Normalized first peak force per trial. Colors indicate debris counts, and markers denote orientations.}
+    \label{fig:first_peak}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/Normalized_LaterPeak.png}
+    \caption{Normalized later peak force per trial. Colors indicate debris counts, and markers denote orientations.}
+    \label{fig:later_peak}
 \end{figure}
 
 \section{Results: Random Configurations}
