@@ -8,7 +8,7 @@
 
 \graphicspath{{figures/}}
 \title{Group Effects of Idealized Debris Fields Driven by Tsunami-like Wave}
-\date{September 2025}
+\date{October 2025}
 
 \begin{document}
 
@@ -134,14 +134,14 @@ Video evidence combined with filtered force records revealed that debris impacts
 \end{figure}
 
 \section{In Air Tests} 
-A total of 32 in-air swing tests were conducted to characterize the dynamic behavior of the test structure. Each test involved a single debris piece of identical dimensions, released from varying drop-off heights. Frequency spectra obtained through Fast Fourier Transform (FFT) analysis revealed three dominant amplification peaks, identified as the principal modes of the structure, as summarized in Table \ref{tab:mode_summary}. The same modes were subsequently confirmed for the 1 L configuration in water, where the natural frequencies decreased as expected due to potential added mass contributions. Isolating the modes in the reaction force signal further allowed the determination of damping ratios for each mode through logarithmic decrement analysis, revealing an increase in damping when the structure was submerged, consistent with additional energy dissipation from fluid–structure interaction.
+A total of 32 in-air swing tests were carried out to characterize the dynamic behavior of the test structure. This behavior can be seen for both the In-Water and the In-Air tests in \ref{fig:normalized_forces_structure}. Each test used a single debris piece of identical dimensions, released from different drop-off heights. The reaction force signal recorded by the load cells at the back of the structure showed oscillatory behavior which corresponds to the dynamic response of several elements of the structure. Frequency spectra obtained through Fast Fourier Transform (FFT) analysis revealed three main amplification peaks, identified as the primary vibration modes of the structure, as summarized in Table \ref{tab:mode_summary}. These same modes were later confirmed for the 1 L configuration in water, where the natural frequencies decreased as expected due to added mass effects. By isolating the modes in the reaction force signal, damping ratios were determined for each mode using the logarithmic decrement method. The results showed an increase in damping when the structure was submerged, consistent with greater energy loss caused by fluid–structure interaction. The in-air (pendulum) tests showed very low variability between trials in identifying the modes and damping ratios, while the in-water tests had higher standard deviations.
 
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=\linewidth]{figures/plot_normalized_forces_in_air_vs_in_water_zoom.png}
-    \caption{Normalized force responses for the Pendulum test and 1L configurations. Each subplot is normalized by its respective maximum force.}
-    \label{fig:normalized_forces}
+    \caption{Normalized force responses for the In Air/Pendulum test and 1L configurations. Each subplot is normalized by its respective maximum force.}
+    \label{fig:normalized_forces_structure}
 \end{figure}
 
 
@@ -151,9 +151,9 @@ A total of 32 in-air swing tests were conducted to characterize the dynamic beha
 \hline
 Test Type & Mode & Median $f$ [Hz] & Std $f$ [Hz] & Median $\zeta$ [\%] & Median $\zeta$ & Std $\zeta$ \\
 \hline
-in-air & Mode 1 & 9.83 & 0.045 & 2.08 & 0.0208 & 0.0037 \\
-in-air & Mode 2 & 13.87 & 0.146 & 1.20 & 0.0120 & 0.0052 \\
-in-air & Mode 3 & 19.94 & 0.084 & 0.91 & 0.0091 & 0.0020 \\
+In-air & Mode 1 & 9.83 & 0.045 & 2.08 & 0.0208 & 0.0037 \\
+In-air & Mode 2 & 13.87 & 0.146 & 1.20 & 0.0120 & 0.0052 \\
+In-air & Mode 3 & 19.94 & 0.084 & 0.91 & 0.0091 & 0.0020 \\
 1L longitudinal test & Mode 1 & 9.26 & 0.136 & 6.43 & 0.0643 & 0.0159 \\
 1L longitudinal test & Mode 2 & 10.32 & 0.385 & 6.51 & 0.0651 & 0.0148 \\
 1L longitudinal test & Mode 3 & 19.58 & 0.160 & 1.66 & 0.0166 & 0.0023 \\
@@ -171,14 +171,20 @@ A total of 5 single-piece configurations (10 trials each) have been conducted in
 
 \begin{figure}[htbp]
     \centering
-    \begin{subfigure}[t]{0.9\textwidth}
         \centering
         \includegraphics[width=\textwidth]{FirstPeak_Regular_SplitByTrial_single.png}
         \caption{Debris count in initial configurations.}
         \label{fig:laterpeak_regular_original}
-    \end{subfigure}
-    \caption{Comparison of debris count at the first peak for regular configurations.}
+    \caption{Comparison of debris size at the first peak for regular configurations.}
     \label{fig:firstpeak_regular}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    % Quadratic Fit across All First-Peak Values
+    \includegraphics[width=0.7\textwidth]{QuadraticFit_FirstPeak_AllData.png}
+    \caption{Quadratic fit through all normalized first-peak values. Scatter points represent individual trial measurements, and the black dashed line shows the quadratic trend.}
+    \label{fig:quadraticFit_firstPeak}
 \end{figure}
 
 \section{Results: Regular Configurations}
