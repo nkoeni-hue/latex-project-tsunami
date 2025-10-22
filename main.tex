@@ -45,21 +45,6 @@ Building on these findings, more recent experimental work has directly addressed
 \begin{figure}[htbp] \centering \includegraphics[width=0.9\textwidth]{high_low_pass.png} \caption{Force decomposition using Butterworth filters.} \label{fig:high_low_pass} \end{figure}
 
 
-\begin{figure}[htbp]
-    \centering
-    \begin{subfigure}[t]{0.9\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{FirstPeak_Regular_SplitByTrial_single.png}
-        \caption{Debris count in initial configurations.}
-        \label{fig:laterpeak_regular_original}
-    \end{subfigure}
-    \caption{Comparison of debris count at the first peak for regular configurations.}
-    \label{fig:firstpeak_regular}
-\end{figure}
-
-
-
-
 
 \section{Testing Methodology}
 The experiments were conducted in the Large Wave Flume at the NHERI (O.H. Hinsdale) Wave Research Laboratory at Oregon State University, a 104 m long, 3.7 m wide, and 4.6 m tall facility. A full-height piston-driven wavemaker generated tsunami-like waves in water depths of up to 2.0 m. Bathymetry followed layouts from \citep{winterTsunamiLikeWaveForces2020} and \citep{Shekhar2020} and can be seen in {\ref{fig:waveflume}.
@@ -149,8 +134,8 @@ Video evidence combined with filtered force records revealed that debris impacts
 \end{figure}
 
 \section{In Air Tests} 
+A total of 32 in-air swing tests were conducted to characterize the dynamic behavior of the test structure. Each test involved a single debris piece of identical dimensions, released from varying drop-off heights. Frequency spectra obtained through Fast Fourier Transform (FFT) analysis revealed three dominant amplification peaks, identified as the principal modes of the structure, as summarized in Table \ref{tab:mode_summary}. The same modes were subsequently confirmed for the 1 L configuration in water, where the natural frequencies decreased as expected due to potential added mass contributions. Isolating the modes in the reaction force signal further allowed the determination of damping ratios for each mode through logarithmic decrement analysis, revealing an increase in damping when the structure was submerged, consistent with additional energy dissipation from fluid–structure interaction.
 
-The test structure has been characterized by performing a total of 32 in-air tests. The tests have been performed by 
 
 \begin{figure}[ht]
     \centering
@@ -181,7 +166,20 @@ in-air & Mode 3 & 19.94 & 0.084 & 0.91 & 0.0091 & 0.0020 \\
 
 
 \section{Single Debris Trials} 
-A total of 5 single-piece configurations (10 trials each) have been conducted in order to evaluate the effect of size on 
+
+A total of 5 single-piece configurations (10 trials each) have been conducted in order to evaluate the effect of debris size on the Reaction Force.  
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[t]{0.9\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{FirstPeak_Regular_SplitByTrial_single.png}
+        \caption{Debris count in initial configurations.}
+        \label{fig:laterpeak_regular_original}
+    \end{subfigure}
+    \caption{Comparison of debris count at the first peak for regular configurations.}
+    \label{fig:firstpeak_regular}
+\end{figure}
 
 \section{Results: Regular Configurations}
 
@@ -197,7 +195,7 @@ smaller-group tests.
     \begin{subfigure}[t]{0.9\textwidth}
         \centering
         \includegraphics[width=\textwidth]{FirstPeak_Regular_SplitByTrial.png}
-        \caption{Debris count in initial configurations shown in Figure~\ref{fig:configurations}.}
+        \caption{Debris count in initial configurations as shown in Figure~\ref{fig:configurations}.}
         \label{fig:firstpeak_regular_original}
     \end{subfigure}
     \hfill
@@ -216,7 +214,7 @@ smaller-group tests.
     \begin{subfigure}[t]{0.9\textwidth}
         \centering
         \includegraphics[width=\textwidth]{LaterPeak_Regular_SplitByTrial.png}
-        \caption{Debris count in initial configurations shown in Figure~\ref{fig:configurations}.}
+        \caption{Debris count in initial configurations as shown in Figure~\ref{fig:configurations}.}
         \label{fig:laterpeak_regular_original}
     \end{subfigure}
     \hfill
