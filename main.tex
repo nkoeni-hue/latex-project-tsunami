@@ -40,15 +40,7 @@ The experiments were conducted in the Large Wave Flume at the NHERI (O.H. Hinsda
   \label{fig:waveflume}
 \end{figure}
 
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.8\textwidth]{WavemakerDisp.pdf}
-  \caption{Wavemaker displacement for the broken and unbroken wave from \citep{winterTsunamiLikeWaveForces2020} .}
-  \label{fig:wavemakerdisp}
-\end{figure}
-
-
-Wave paddle motions were prescribed using an error function displacement as can be seen in Figure \ref{fig:wavemakerdisp}, which produces highly repeatable unbroken solitary waves. The wave velocity near the structure was measured using an Acoustic Doppler Velocimeter (ADV) and found to be approximately 1.3 m/s. Debris velocity, determined through video-based tracking, averaged around 0.8 m/s.
+Wave paddle motions were prescribed using an error function displacement , which produces highly repeatable unbroken solitary waves. The wave velocity near the structure was measured using an Acoustic Doppler Velocimeter (ADV) and found to be approximately 1.3 m/s. Debris velocity, determined through video-based tracking, averaged around 0.8 m/s.
 Repeatability was prioritized, as it ensured consistent wave conditions for comparing debris configurations. The still water level was set at 2.0 m, corresponding to a 0.25 m depth at the structure with no air gap beneath the base. The test structure was a 1.016 m square base × 0.615 m tall box constructed from sheet metal and steel framing (similar to \citep{winterTsunamiLikeWaveForces2020}), positioned 43.8 m from the wavemaker. It was mounted on low-friction bearings attached to a wall-mounted frame, allowing measurement of streamwise (x) and transverse (y) reactions.
 
 The internal frame used hollow steel sections for stiffness, with additional aluminum-encased stiffeners to improve rotational resistance and load transfer. Eight load cells were installed: two streamwise, two transverse, and four vertical pancake cells, all sampled at 1200 Hz. Steel legs, 0.25 m in height, were placed below the structure but were not load bearing. Front and back view of the structure can be seen in Figure \ref{fig:teststructure_views}.
@@ -97,8 +89,11 @@ The debris pieces were made of high-density polyethylene (HDPE), measuring 0.50 
 \small
 \begin{tabular}{l r c r r}
 \hline
-\textbf{Config.} & \textbf{Count} & \textbf{Orient.} & \textbf{Length (L) (m)} & \textbf{Length (T) (m)} \\
+\textbf{Config.} & \textbf{Count} & \textbf{Orient.} & \textbf{Length (m)} & \textbf{Width (m)} \\
 \hline
+0.25L & 0.25  & L & 0.125 & 0.102 \\
+0.5L & 0.5  & L & 0.25 & 0.102 \\
+0.5T & 0.5  & L &  0.102 & 0.25 \\
 1L & 1  & L & 0.50 & 0.102 \\
 1T & 1  & T & 0.102 & 0.50 \\
 8L & 8  & L & 1.00 & 0.408 \\
@@ -120,17 +115,17 @@ The debris pieces were made of high-density polyethylene (HDPE), measuring 0.50 
 \small
 \begin{tabular}{l r c r r r}
 \hline
-\textbf{Config.} & \textbf{Count} & \textbf{Orient.} & \textbf{Length (L) (m)} & \textbf{Length (T) (m)} & \textbf{Packing ratio ($\xi$)} \\
+\textbf{Config.} & \textbf{Count} & \textbf{Orient.} & \textbf{Length (m)} & \textbf{Width (m)} & \textbf{Packing ratio ($\xi$)} \\
 \hline
-1 & 8  & L & 0.75 & 0.75 & 0.73 \\
-2 & 8  & L & 1.00 & 1.00 & 0.41 \\
-3 & 16 & L & 1.00 & 1.00 & 0.82 \\
-4 & 16 & L & 1.25 & 1.25 & 0.52 \\
-5 & 16 & L & 1.50 & 1.50 & 0.36 \\
-6 & 24 & L & 1.25 & 1.25 & 0.78 \\
-7 & 24 & L & 1.50 & 1.50 & 0.54 \\
-8 & 24 & L & 2.00 & 2.00 & 0.31 \\
-9 & 24 & L & 3.70 & 2.00 & 0.17 \\
+8-0.73 & 8  & L & 0.75 & 0.75 & 0.73 \\
+8-0.41 & 8  & L & 1.00 & 1.00 & 0.41 \\
+16-0.82 & 16 & L & 1.00 & 1.00 & 0.82 \\
+16-0.52 & 16 & L & 1.25 & 1.25 & 0.52 \\
+16-0.36 & 16 & L & 1.50 & 1.50 & 0.36 \\
+24-0.78 & 24 & L & 1.25 & 1.25 & 0.78 \\
+24-0.54 & 24 & L & 1.50 & 1.50 & 0.54 \\
+24-0.31 & 24 & L & 2.00 & 2.00 & 0.31 \\
+24-0.17 & 24 & L & 3.70 & 2.00 & 0.17 \\
 \hline
 \end{tabular}
 \label{tab:random-debris-compact}
@@ -142,15 +137,15 @@ The debris pieces were made of high-density polyethylene (HDPE), measuring 0.50 
 {\small
 \begin{tabular}{l r r r r r}
 \hline
-\textbf{Config.} & \textbf{Debris Count} & \textbf{\# 1/4} & \textbf{\# 1/2 } & \textbf{\# Full} \\
+\textbf{Config.} & \textbf{Effective Debris Count}& \textbf{\# 0.25} & \textbf{\# 0.5 } & \textbf{\# 1} \\
 \hline
-1 & 8   & 0  & 8  & 4 \\
-2 & 8  & 0  & 8  & 4 \\
-3 & 16 & 16 & 8  & 8 \\
-4 & 16  & 16 & 8  & 8 \\
-5 & 16  & 16 & 8  & 8 \\
-6 & 24  & 16 & 8  & 16 \\
-7 & 24  & 16 & 8  & 16 \\
+8-0.73-M & 8   & 0  & 8  & 4 \\
+8-0.41-M & 8  & 0  & 8  & 4 \\
+16-0.82-M & 16 & 16 & 8  & 8 \\
+16-0.52-M & 16  & 16 & 8  & 8 \\
+16-0.36-M & 16  & 16 & 8  & 8 \\
+24-0.78-M & 24  & 16 & 8  & 16 \\
+24-0.54-M & 24  & 16 & 8  & 16 \\
 \hline
 \end{tabular}
 }
@@ -368,20 +363,6 @@ Damming forces were extracted from low-pass filtered signals, capturing the sust
     \label{fig:damming_regular_split}
 \end{figure}
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.8\textwidth]{figures/Normalized_FirstPeak.png}
-    \caption{Normalized first peak force per trial. Colors indicate debris counts, and markers denote orientations.}
-    \label{fig:first_peak}
-\end{figure}
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.8\textwidth]{figures/Normalized_LaterPeak.png}
-    \caption{Normalized later peak force per trial. Colors indicate debris counts, and markers denote orientations.}
-    \label{fig:later_peak}
-\end{figure}
-
 \subsection{Random Configurations}
 Random debris fields with irregular orientations are analyzed by impact and damming forces as functions of debris count and packing ratio. Debris was initially arranged within a rectangular frame; at lower packing ratios, increasing the debris count caused the frame to extend beyond the structure’s width. Subsequent adjustments account for this using video-derived impact probabilities. The analysis includes corrected median values and a size-based assessment that isolates the contributions of the largest debris pieces in multi-size fields, revealing the limited influence of smaller pieces on structural loading.
 
@@ -592,6 +573,22 @@ Several limitations of this study should be acknowledged. First, because of the 
 16 & 1.50 & 303.26 & 350.25 & 387.00 & 405.22 & 526.45 & 54.97 \\
 24 & 1.25 & 342.03 & 374.84 & 424.28 & 445.80 & 502.72 & 70.95 \\
 24 & 1.50 & 319.81 & 342.89 & 435.02 & 513.73 & 527.27 & 170.85 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\caption{Regular configurations Single debris tests: Damming Reaction Force (N)}
+\begin{tabular}{cccccccc}
+\toprule
+\textbf{Config.} & \textbf{Orient.} & \textbf{Min} & \textbf{Q$_{25}$} & \textbf{Median} & \textbf{Q$_{75}$} & \textbf{Max} & \textbf{IQR} \\
+\midrule
+0.25 &  & 4.21 & 6.93 & 8.46 & 10.64 & 24.63 & 3.71 \\
+0.50 & L & 14.04 & 39.91 & 50.75 & 59.14 & 66.48 & 19.23 \\
+0.50 & T & 6.71 & 8.07 & 10.78 & 13.11 & 13.38 & 5.04 \\
+1.00 & L & 107.21 & 167.04 & 193.31 & 197.95 & 205.69 & 30.91 \\
+1.00 & T & 50.38 & 81.25 & 171.64 & 344.53 & 742.75 & 263.29 \\
 \bottomrule
 \end{tabular}
 \end{table}
