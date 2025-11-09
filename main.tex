@@ -72,16 +72,16 @@ The internal frame used hollow steel sections for stiffness, with additional alu
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=1.4\textwidth]{Configurations.pdf}
-    \caption{Regular configurations.}
+    \includegraphics[width=1.1\textwidth]{Configurations.pdf}
+    \caption{Schematics of regular debris configurations.}
     \label{fig:configurations}
 \end{figure}
 
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=1.5\textwidth]{configurations_rand.pdf}
-    \caption{Random configurations.}
+    \includegraphics[width=1.1\textwidth]{configurations_rand.pdf}
+    \caption{Schematics of random debris configurations.}
     \label{fig:configurations_random}
 \end{figure}
 
@@ -90,7 +90,7 @@ The debris pieces were made of high-density polyethylene (HDPE), measuring 0.50 
 
 \begin{table}[h!]
 \centering
-\caption{Regular debris configurations with longitudinal (L) and transverse (T) field widths. W denotes wide configurations.}
+\caption{Properties of regular debris fields.}
 \small
 \begin{tabular}{l r c r r}
 \hline
@@ -116,7 +116,7 @@ The debris pieces were made of high-density polyethylene (HDPE), measuring 0.50 
 
 \begin{table}[h!]
 \centering
-\caption{Random Debris Configurations and Longitudinal (L) and Transverse (T) field widths.}
+\caption{Properties of random debris fields.}
 \small
 \begin{tabular}{l r c r r r}
 \hline
@@ -142,7 +142,7 @@ The debris pieces were made of high-density polyethylene (HDPE), measuring 0.50 
 {\small
 \begin{tabular}{l r r r r r}
 \hline
-\textbf{Config.} & \textbf{Effective Debris Count}& \textbf{\# 0.25} & \textbf{\# 0.5 } & \textbf{\# 1} \\
+\textbf{Config.} & \textbf{Effective Debris Count}& \textbf{\# 0.25 (Quarter)} & \textbf{\# 0.5 (Half)} & \textbf{\# 1 (Full)} \\
 \hline
 8-0.73-M & 8   & 0  & 8  & 4 \\
 8-0.41-M & 8  & 0  & 8  & 4 \\
@@ -305,10 +305,10 @@ All five single-piece configurations (10 trials each) were conducted to evaluate
 \section{Group effects}
 \subsection{Regular Configurations}
 \subsubsection{Impact Reaction Forces} 
-Figure~\ref{fig:firstpeak_regular_split} and Figure~\ref{fig:laterpeak_regular_split} show the impact reaction forces from the first and second impacts. The boxplot whiskers represent the minimum and maximum values, the boxes indicate the interquartile range (IQR), and the solid line within each box marks the median value.
+Figure~\ref{fig:firstpeak_regular_split} and Figure~\ref{fig:laterpeak_regular_remap} show the impact reaction forces from the first and second impacts. The boxplot whiskers represent the minimum and maximum values, the boxes indicate the interquartile range (IQR), and the solid line within each box marks the median value.
 For specific cases such as the 24T-W and 16T-W tests, the width of the debris field exceeded the structure’s width. Consequently, not all debris pieces made contact with the structure. To address this limitation, the data was adjusted to reflect the amount of pieces impacting the structure.  Remapping makes the 24T-W case comparable to a 12T case, the total debris count still altered the flume hydrodynamics. This explains why the forces for the adjusted debris count appear lower than the corresponding smaller-group tests. 
 
-In regular configurations, the first impacts scaled approximately linearly with the number of debris pieces (Figure~\ref{fig:firstpeak_regular_split}). This relationship was clear across both longitudinal and transverse configurations. Later impacts, by contrast, exhibited nonlinear behavior, showing growth that eventually saturated as debris counts increased (Figure~\ref{fig:laterpeak_regular_split}). This saturation suggests that once a certain number of pieces are present, additional debris no longer contributes significantly to impact loading because not all debris strike the structure simultaneously.
+In regular configurations, the first impacts scaled approximately linearly with the number of debris pieces (Figure~\ref{fig:firstpeak_regular_split}). This relationship was clear across both longitudinal and transverse configurations. Later impacts, by contrast, exhibited nonlinear behavior, showing growth that eventually saturated as debris counts increased (Figure~\ref{fig:laterpeak_regular_remap}). This saturation suggests that once a certain number of pieces are present, additional debris no longer contributes significantly to impact loading because not all debris strike the structure simultaneously.
 
 Longitudinal configurations consistently produced the highest impact forces, while transverse configurations yielded smaller impacts probably due to water cushioning.
 
@@ -340,7 +340,7 @@ Longitudinal configurations consistently produced the highest impact forces, whi
 
 
 \subsubsection{Damming Reaction Forces} 
-Damming forces were extracted from low-pass filtered signals, capturing the sustained blockage loads. For regular debris configurations, transverse configurations produced higher damming forces than longitudinal configurations (Figure~\ref{fig:damming_regular_split}). This trend indicates that longitudinal configurations primarily influence impact peaks, whereas transverse configurations dominate sustained blockage forces. Nonlinear saturation was observed as debris counts increased: damming forces eventually plateaued, reflecting complete blockage conditions being achieved. 
+Damming forces were extracted from low-pass filtered signals, capturing the sustained blockage loads. For regular debris configurations, transverse configurations produced higher damming forces than longitudinal configurations (Figure~\ref{fig:damming_regular_remap}). This trend indicates that longitudinal configurations primarily influence impact peaks, whereas transverse configurations dominate sustained blockage forces. Nonlinear saturation was observed as debris counts increased: damming forces eventually plateaued, reflecting complete blockage conditions being achieved. 
 
 \begin{figure}[htbp]
     \centering
@@ -385,7 +385,6 @@ An adjustment became necessary because debris frame exceeded the structure’s w
 
 The corrected median plots reflect these adjustments. Figure~\ref{fig:random_first_median_adjusted} shows normalized first impact peaks after applying the width-based correction. Single-sized debris fields again produce higher forces than multi-sized fields, with forces rising until saturation as debris counts increase. In the analysis of multi-sized fields, an additional adjustment was performed to isolate the larger debris pieces equivalent to those in the single-sized configurations. The results indicate that these larger pieces generated only marginally higher impact peaks than the single-sized debris, whereas smaller pieces had a negligible effect. Thus, while smaller debris contributes to the loading response, impact forces are primarily governed by the larger pieces.
 
-The same trends were observed in the later impact peaks (Figure~\ref{fig:random_later_median_adjusted}). Single-sized debris produced consistently stronger forces, while multi-sized debris showed weaker responses. Filtering for large pieces confirmed that smaller debris added only marginally to the total force.
 
 \begin{figure}[htbp]
     \centering
@@ -405,6 +404,13 @@ In random configurations, damming forces followed a different pattern compared t
     \label{fig:random_damming_gradient}
 \end{figure}
 
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.75\textwidth]{Damming_Median_Single_vs_Multi_Adjusted.png}
+    \caption{Median normalized damming forces in random fields, adjusted by structure width. Forces are roughly 100\% higher than wave-only loading, with packing ratio effects stronger in single-size fields and weaker in multi-size fields.}
+    \label{fig:random_damming_median_adjusted}
+\end{figure}
 The corrected median values (Figure~\ref{fig:random_damming_median_adjusted}) show a noteworthy consistency: across all densities and debris counts, normalized damming forces remained close to a 100\% increase over baseline wave loading. This indicates that while packing ratio and debris size distribution influenced variability, the sustained force contribution of damming in random fields remained broadly similar across conditions. In other words, random configurations consistently doubled the baseline wave load, with single-size fields amplifying clustering effects and multi-size fields reducing them through blockage disruption.
 
 \section{Conclusions} The experiments demonstrate that debris orientation, size distribution, and packing ratio are all factors in determining the forces exerted on coastal structures. Longitudinal groups generated the largest impact peaks, while transverse groups dominated sustained damming forces. Random and multi-size fields generally produced smaller and more variable loads, highlighting their reduced capacity for synchronous impacts and stable blockages. 
