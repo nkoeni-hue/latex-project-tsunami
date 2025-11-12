@@ -167,11 +167,11 @@ A total of 29 configurations were tested in the large wave flume. These included
 \begin{figure}[htbp]
     \centering 
     \includegraphics[width=0.9\textwidth]{high_low_pass.png} 
-    \caption{Filtered and unfiltered force signals demonstrating the effect of a 4th-order Butterworth filter (cutoff = 2.5 Hz) used for force decomposition.} 
+    \caption{Filtered and unfiltered force signals demonstrating the effect of a 4th-order Butterworth filter (cutoff = 2 Hz) used for force decomposition.} 
     \label{fig:high_low_pass} 
 \end{figure}
 
-Force time histories were decomposed with Butterworth filters: high-pass filtering isolated short-duration impact forces, while low-pass filtering captured sustained damming forces (Figure \ref{fig:high_low_pass}). A fourth-order Butterworth filter with a cutoff frequency of 2.5 Hz was applied. These parameters were selected based on preliminary analyses, which showed that this most effectively isolates the damming reaction forces. Examples (Figures \ref{fig:timehist_combined}–\ref{fig:timehist_damming_combined}) show the applied filter to the 1 L case and the 24 L case. 
+Force time histories were decomposed with Butterworth filters: high-pass filtering isolated short-duration impact forces, while low-pass filtering captured sustained damming forces (Figure \ref{fig:high_low_pass}). A fourth-order Butterworth filter with a cutoff frequency of 2 Hz was applied. These parameters were selected based on preliminary analyses, which showed that this most effectively isolates the damming reaction forces. Examples (Figures \ref{fig:timehist_combined}–\ref{fig:timehist_damming_combined}) show the applied filter to the 1 L case and the 24 L case. 
 
 \begin{figure}[h!]
     \centering
@@ -300,7 +300,7 @@ All five single-piece configurations (10 trials each) were conducted to evaluate
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{FirstPeak_Regular_SplitByTrial_single.png}
-    \caption{Comparison of debris size at the first impact for regular configurations. Baseline for Normalization as indicated is the 1L median impact.}
+    \caption{Comparison of reaction forces for various debris sizes at first impact for regular configurations. The 1L median reaction serves as the baseline for normalization.}
     \label{fig:firstpeak_regular_size}
 \end{figure}
 
@@ -320,24 +320,24 @@ Longitudinal configurations consistently produced the highest impact forces, whi
     \begin{subfigure}[t]{0.9\textwidth}
         \centering
         \includegraphics[width=\textwidth]{FirstPeak_Regular_SplitByTrial.png}
-        \caption{Total number of debris pieces within the flume.}
+        \caption{Impact reaction forces versus total number of debris pieces within the flume.}
         \label{fig:firstpeak_regular_original}
     \end{subfigure}
     \hfill
     \begin{subfigure}[t]{0.9\textwidth}
         \centering
         \includegraphics[width=\textwidth]{FirstPeak_Regular_RemappedT.png}
-        \caption{Debris count of pieces causing structural impact.}
+        \caption{Impact reaction forces versus debris count of pieces making contact with the structure.}
         \label{fig:firstpeak_regular_remap}
     \end{subfigure}
-    \caption{First impact forces in regular configurations for longitudinal and transverse orientations.}
+    \caption{First impact reaction forces in regular configurations for longitudinal and transverse orientations.}
     \label{fig:firstpeak_regular_split}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.9\textwidth]{LaterPeak_Regular_RemappedT.png}
-    \caption{Debris count of pieces causing structural impact.}
+    \caption{Later impact reaction forces versus debris count of pieces making contact with the structure.}
     \label{fig:laterpeak_regular_remap}
 \end{figure}
 
@@ -348,7 +348,7 @@ Damming forces were extracted from low-pass filtered signals, capturing the sust
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.9\textwidth]{Damming_Regular_L_T_SplitByTrial_Remapped.png}
-    \caption{Debris count of pieces causing structural impact.}
+    \caption{Damming reaction forces versus debris count of pieces making contact with the structure.}
     \label{fig:damming_regular_remap}
 \end{figure}
 
@@ -366,23 +366,23 @@ The unaltered gradient plots show these differences most clearly. In the first i
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.9\textwidth]{First_Peak_Random_Single_vs_Multi_ByDensityGradient.png}
-    \caption{First impact forces in random debris fields. Single-size debris yields higher impact forces than multi-size debris; lower packing ratio reduces impacts.}
+    \caption{First impact reaction forces in random debris fields versus Effective Debris Count. Single Size and Multi Size indicated by solid and dotted lines. Shading indicates Packing Ratio.}
     \label{fig:random_peaks_first}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.9\textwidth]{Later_Peak_Random_Single_vs_Multi_ByDensityGradient.png}
-    \caption{Later impact forces in random debris fields. Reaction forces increase slightly with debris count. packing ratio affects single-size debris fields but has negligible effect in multi-size fields.}
+    \caption{Later impact reaction forces in random debris fields versus Effective Debris Count. Single Size and Multi Size indicated by solid and dotted lines. Shading indicates Packing Ratio.}
     \label{fig:random_peaks_later}
 \end{figure}
 
-An adjustment became necessary because debris frame exceeded the structure’s width when spanning higher densities for high debris counts. This geometry meant that not all pieces would impact the structure, and some pieces were effectively excluded from impact. Video analysis confirmed this by counting the number of debris pieces making contact with the structure. From these counts, an impact probability was derived, which decreased proportionally as the frame widened relative to the structure (Figure~\ref{fig:impact_probabilities}). To account for this effect, a linear correction was applied to all trials: the effective number of impacting pieces was defined as the nominal debris count multiplied by the ratio of structure width to Width of Debris Field. 
+An adjustment became necessary because debris frame exceeded the structure’s width when spanning higher densities for high debris counts. This geometry meant that not all pieces would impact the structure, and some pieces were effectively excluded from impact. Video analysis of 60 video trials confirmed this by counting the number of debris pieces making contact with the structure for each trial. From these counts, an impact probability was derived, which decreased proportionally as the frame widened relative to the structure (Figure~\ref{fig:impact_probabilities}). To account for this effect, a linear correction was applied to all trials: the effective number of impacting pieces was defined as the nominal debris count multiplied by the ratio of structure width to Width of Debris Field. 
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.9\textwidth]{Impact_probabilities.png}
-    \caption{Impact probabilities across random trials for various debris field widths.}
+    \caption{Impact probabilities across random trials for various debris field widths. Marker area reflects number of data points for each incident.}
     \label{fig:impact_probabilities}
 \end{figure}
 
@@ -392,7 +392,7 @@ The corrected median plots reflect these adjustments. Figure~\ref{fig:random_fir
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.75\textwidth]{First_Peak_Median_Single_vs_Multi_Adjusted.png}
-    \caption{Median normalized first impact reaction forces in random fields, adjusted for debris field width.}
+    \caption{Median first impact reaction forces observed in random configurations, adjusted for debris-field width.}
     \label{fig:random_first_median_adjusted}
 \end{figure}
 
@@ -403,7 +403,7 @@ In random configurations, damming forces followed a different pattern compared t
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.9\textwidth]{Damming_Random_Single_vs_Multi_ByDensityGradient.png}
-    \caption{Normalized damming forces in random debris fields. Single-size debris fields consistently produce higher forces than multi-size fields. packing ratio increases damming loads in single-size fields but has minimal effect in multi-size fields}
+    \caption{Damming reaction forces in random debris fields versus Effective Debris Count. Single Size and Multi Size indicated by solid and dotted lines. Shading indicates Packing Ratio.}
     \label{fig:random_damming_gradient}
 \end{figure}
 
@@ -411,7 +411,7 @@ In random configurations, damming forces followed a different pattern compared t
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.75\textwidth]{Damming_Median_Single_vs_Multi_Adjusted.png}
-    \caption{Median normalized damming reaction forces in random fields, adjusted for debris field width. Forces are roughly 100\% higher than wave-only loading, with packing ratio effects stronger in single-size fields and weaker in multi-size fields.}
+    \caption{Median damming reaction forces observed in random configurations, adjusted for debris-field width.}
     \label{fig:random_damming_median_adjusted}
 \end{figure}
 
@@ -443,7 +443,7 @@ Several limitations of this study should be acknowledged. First, because of the 
 \section{Annex}
 \begin{table}[h!]
 \centering
-\caption{Regular configurations: Impact Reaction Force (N)}
+\caption{Regular configurations: First Impact Reaction Force (N)}
 \begin{tabular}{lccccccc}
 \toprule
 \textbf{Debris Count} & \textbf{Orientation} & \textbf{Min} & \textbf{Q$_{25}$} & \textbf{Median} & \textbf{Q$_{75}$} & \textbf{Max} & \textbf{IQR} \\
@@ -464,7 +464,28 @@ Several limitations of this study should be acknowledged. First, because of the 
 
 \begin{table}[h!]
 \centering
-\caption{Random Single-Sized debris configurations: Impact Reaction Force (N)}
+\caption{Regular configurations: Later Impact Reaction Force (N)}
+\begin{tabular}{lccccccc}
+\toprule
+\textbf{Debris Count} & \textbf{Orientation} & \textbf{Min} & \textbf{Q$_{25}$} & \textbf{Median} & \textbf{Q$_{75}$} & \textbf{Max} & \textbf{IQR} \\
+\midrule
+1 & L & 187.45 & 352.92 & 407.25 & 490.14 & 588.13 & 137.22 \\
+1 & T & 71.24 & 184.04 & 355.62 & 522.48 & 740.99 & 338.44 \\
+8 & L & 425.69 & 609.51 & 686.46 & 903.40 & 925.69 & 293.89 \\
+8 & T & 448.46 & 587.26 & 649.83 & 728.07 & 877.14 & 140.82 \\
+16 & L & 472.00 & 587.72 & 708.77 & 844.10 & 909.97 & 256.38 \\
+16 & L & 539.53 & 586.02 & 612.58 & 652.05 & 712.59 & 66.03 \\
+16 & T & 604.18 & 716.24 & 882.20 & 1236.31 & 1545.13 & 520.07 \\
+16 & T & 308.99 & 328.09 & 335.90 & 574.36 & 675.11 & 246.27 \\
+24 & L & 513.24 & 562.21 & 652.23 & 711.64 & 960.04 & 149.42 \\
+24 & T & 685.07 & 727.81 & 819.67 & 915.27 & 1452.13 & 187.46 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\caption{Random Single-Sized debris configurations: First Impact Reaction Force (N)}
 \begin{tabular}{lccccccc}
 \toprule
 \textbf{Debris Count} & \textbf{Width (m)} & \textbf{Min} & \textbf{Q$_{25}$} & \textbf{Median} & \textbf{Q$_{75}$} & \textbf{Max} & \textbf{IQR} \\
@@ -484,7 +505,7 @@ Several limitations of this study should be acknowledged. First, because of the 
 
 \begin{table}[h!]
 \centering
-\caption{Random Multi-Sized debris configurations: Impact Reaction Force (N)}
+\caption{Random Multi-Sized debris configurations: First Impact Reaction Force (N)}
 \begin{tabular}{lccccccc}
 \toprule
 \textbf{Debris Count} & \textbf{Width (m)} & \textbf{Min} & \textbf{Q$_{25}$} & \textbf{Median} & \textbf{Q$_{75}$} & \textbf{Max} & \textbf{IQR} \\
@@ -496,6 +517,44 @@ Several limitations of this study should be acknowledged. First, because of the 
 16 & 1.50 & 175.67 & 231.79 & 359.92 & 438.89 & 630.04 & 207.10 \\
 24 & 1.25 & 334.50 & 569.18 & 737.53 & 818.95 & 1725.19 & 249.77 \\
 24 & 1.50 & 326.34 & 477.99 & 502.71 & 653.23 & 1266.47 & 175.24 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\caption{Random Single-Sized debris configurations: Later Impact Reaction Force (N)}
+\begin{tabular}{lccccccc}
+\toprule
+\textbf{Debris Count} & \textbf{Frame Width (m)} & \textbf{Min} & \textbf{Q$_{25}$} & \textbf{Median} & \textbf{Q$_{75}$} & \textbf{Max} & \textbf{IQR} \\
+\midrule
+8 & 0.75 & 564.68 & 716.61 & 749.49 & 1130.89 & 1168.10 & 414.28 \\
+8 & 1.00 & 457.17 & 463.35 & 489.94 & 866.65 & 1318.61 & 403.29 \\
+16 & 1.00 & 528.18 & 795.79 & 909.20 & 1225.13 & 1378.85 & 429.34 \\
+16 & 1.25 & 598.58 & 632.19 & 786.11 & 1068.47 & 1191.06 & 436.28 \\
+16 & 1.50 & 458.82 & 502.82 & 632.67 & 840.27 & 1234.84 & 337.45 \\
+24 & 1.25 & 458.34 & 624.04 & 760.26 & 1152.59 & 1416.20 & 528.56 \\
+24 & 1.50 & 486.57 & 555.95 & 693.26 & 889.41 & 1143.76 & 333.47 \\
+24 & 2.00 & 525.22 & 607.32 & 678.88 & 751.13 & 930.33 & 143.81 \\
+24 & 3.65 & 325.68 & 348.63 & 480.59 & 848.81 & 917.76 & 500.17 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\caption{Random Multi-Sized debris configurations: Later Impact Reaction Force (N)}
+\begin{tabular}{lccccccc}
+\toprule
+\textbf{Debris Count} & \textbf{Frame Width (m)} & \textbf{Min} & \textbf{Q$_{25}$} & \textbf{Median} & \textbf{Q$_{75}$} & \textbf{Max} & \textbf{IQR} \\
+\midrule
+8 & 0.75 & 282.42 & 490.65 & 558.65 & 577.21 & 965.09 & 86.56 \\
+8 & 1.00 & 463.94 & 502.09 & 595.74 & 920.86 & 1242.72 & 418.77 \\
+16 & 1.00 & 358.51 & 527.03 & 568.83 & 877.13 & 1234.96 & 350.10 \\
+16 & 1.25 & 311.26 & 395.53 & 664.13 & 798.89 & 952.66 & 403.37 \\
+16 & 1.50 & 626.65 & 649.03 & 757.31 & 912.40 & 1053.19 & 263.38 \\
+24 & 1.25 & 432.47 & 572.78 & 725.64 & 881.12 & 1257.22 & 308.34 \\
+24 & 1.50 & 524.27 & 569.01 & 663.56 & 853.16 & 1367.15 & 284.15 \\
 \bottomrule
 \end{tabular}
 \end{table}
