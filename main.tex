@@ -10,35 +10,37 @@
 \usepackage{amsmath}
 \usepackage{subcaption}
 \usepackage{natbib}
+\usepackage{float}
 
 
 \graphicspath{{figures/}}
 \title{Group Effects of Idealized Debris Fields Driven by Tsunami-like Wave}
-% \author{Noemie Koenig, Marc O. Eberhard, Pedro Arduino, Micheal Motley, Dakota Mascarenas}
+\author{Noemie Koenig, Marc O. Eberhard, Pedro Arduino, Michael Motley, Dakota Mascarenas}
 \date{\today}
 
 \begin{document}
 
 \maketitle
 \begin{abstract}
-Tsunami-driven debris fields create complex and highly variable loads on coastal infrastructure, combining short-duration forces related to debris impact with longer-lasting forces stemming from damming of the flow. This study investigates conceptually, for a simple structure, how the magnitudes of the reaction forces due to debris-structure interaction vary according to the number of debris in the group, as well as the debris orientation, packing ratio,\ and size distribution. The group effects were evaluated by conducting 10 trials each for 29 configurations at the Oregon State University NHERI Wave Research Laboratory large-scale flume. Configurations included longitudinal, transverse, and randomly oriented debris fields, with both single- and multi-sized pieces subjected to tsunami-like solitary waves. High-frequency components were isolated using Butterworth filters to capture impacts, whereas low-frequency components were characterized as sustained damming loads. Results show that longitudinal (L) debris configurations result in the highest impact reaction forces, whereas transverse (T) fields produced larger damming reaction forces. Random and multi-size debris fields yielded smaller, more variable loads, with larger pieces dominating the structural response. The findings highlight the importance of group effects in debris–structure interactions and provide new insight into the scaling and variability of impact and damming mechanisms relevant for tsunami-resilient design.
+Tsunami-driven debris fields create complex and highly variable loads on coastal infrastructure, combining short-duration forces related to debris impact with longer-lasting forces stemming from damming of the flow. This study investigates conceptually, for a simple structure, how the magnitudes of the reaction forces due to debris-structure interaction vary according to the number of debris in the group, as well as the debris orientation, packing ratio,\ and size distribution. The group effects were evaluated by conducting 10 trials each for 29 configurations at the Oregon State University NHERI Wave Research Laboratory large-scale flume. Configurations included longitudinal, transverse, and randomly oriented debris fields, with both single- and multi-sized pieces subjected to tsunami-like solitary waves. High-frequency components were isolated using Butterworth filters to capture impacts, whereas low-frequency components were characterized as sustained damming loads. Results show that longitudinal debris configurations result in the highest impact reaction forces, whereas transverse fields produced larger damming reaction forces. Random and multi-size debris fields yielded smaller, more variable loads, with larger pieces dominating the structural response. The findings highlight the importance of group effects in debris–structure interactions and provide new insight into the scaling and variability of impact and damming mechanisms relevant for tsunami-resilient design.
 \end{abstract}
 
 \section{Introduction}
 Tsunami-driven debris fields pose significant hazards to coastal infrastructure, as they generate both short-duration impact loads and longer-lasting damming loads. Debris-induced forces are difficult to predict, because the complex interaction between fluid, structure, and debris creates significant uncertainty in estimating waterborne debris loads and reactions. Unlike single-object impacts, debris fields produce both sharp, short-duration impact forces and longer-lasting damming forces. Understanding how debris orientation, arrangement, and initial packing ratio influence these loading mechanisms is critical for resilient coastal infrastructure design. The objective of this study is to categorize group effects within debris fields and identify the governing mechanisms of debris–structure interaction. Large-scale flume experiments were conducted with systematically varied initial conditions, including debris orientation (longitudinal, transverse, and random), packing ratio, and size distribution (single-size vs.\ multi-size). The results highlight clear differences in impact amplification, damming behavior, and the role of randomness in debris loading.
 
-Longitudinal debris alignments (i.e., oriented parallel to the incoming flow) tend to produce larger impacts than transverse configurations, while random fields display greater variability in impact magnitudes. Similarly, single-size debris groups behave differently than multi-size fields, particularly in their ability to form blockages and generate damming forces. Finally packing ratio, defined as the ratio of tightly packed debris area to the total spread area, controls the degree of clogging and thus the overall magnitude of structural loading.
 
 \section{Previous Research} Post-tsunami surveys found that debris-driven damage has been a recurring failure mechanism. Reinforced concrete failures were observed during the 2004 Indian Ocean and 2011 Tohoku tsunamis, where large floating debris caused extensive structural damage \citep{Leonard2011,Akiyama2013}. Recent reviews highlight the need for deeper study of how debris becomes mobilized and transfers momentum to structures, along with probabilistic approaches that reflect debris variability and source proximity, and more attention to the cumulative effects of repeated impacts and damming as debris clusters form \citep{nistorTsunamiDrivenDebrisMotion2017}.
+
 Foundational studies approached debris impact from different perspectives. Haehnel and Daly \citep{Haehnel2004} performed flume experiments with flood-driven wooden debris and introduced single-degree-of-freedom (SDOF) formulations to reproduce collision behavior. Naito et al. \citep{Naito2016} prioritized a design-oriented framework where the Energy Grade Line (EGL) method was proposed to estimate debris velocities, impact forces, and critical impact elevations for coastal structures. Building on these efforts, Stolle et al. \citep{Stolle2018,Stolle2019} conducted flume experiments that demonstrated how impact and damming loads can be separated through signal decomposition and suggested an added mass term to better represent hydrodynamic effects. Recent research also highlights the importance of  fully submerged debris, which can alter the magnitude and timing of structural loading. Deschamps et al. \citep{deschampsNegativelyBuoyantDebris2025} investigated negatively buoyant debris under tsunami-like flows, showing that debris that sinks or stays near the bed can generate distinct impact and damming forces compared with floating debris, emphasizing the need to consider a full range of buoyancy conditions in structural load assessments.
+
 Geometry and flow interaction have also been shown to matter, with scaled shipping container experiments demonstrating that debris impact velocity is reduced relative to the bore front due to stagnation and streamline effects near the structure \citep{Derschum2018}. Several studies have examined how debris is transported and accumulates in wave-driven flows, highlighting patterns of movement, clustering, and blockage formation. Laboratory investigations, such as Yao et al. \citep{Yao2014}, focused on the motion of model debris under solitary waves, providing insight into transport pathways and the stochastic nature of debris accumulation. Schmocker and Hager \citep{Schmocker2011}  demonstrated that accumulation occurs in two phases: an initial debris blockage that causes a major backwater rise, followed by formation of a debris carpet that extends downstream with only minor additional rise. They also observed the stochastic nature of debris blockage. These studies provide valuable insight into debris behavior during inundation but generally do not quantify the resulting structural loads.
 
-Building on these findings, more recent experimental work has directly addressed multi-debris impacts and damming on structures. Shekhar et al. \citep{Shekhar2020} used scaled, neutrally buoyant debris pieces to study how  clusters interact with a vertical test structure under tsunami-like flows, capturing both the initial impact and subsequent low-frequency damming forces. Doyle et al. extended that work measuring damming forces under varying debris, structure densities and orientations, while also evaluating the applicability of ASCE 7-22 tsunami load provisions \citep{Doyle2024}. Complementary studies have used flume experiments to improve numerical models of debris and their effects on structures \citep{Bonus2022, bonusTsunamiDebrisMotion2025}. Bonus et al. (2025) compared simulations with scaled flume tests, helping to refine predictions of debris movement, and comparing numerical modeling approaches.
+Building on these findings, more recent experimental work has directly addressed multi-debris impacts and damming on structures. Shekhar et al. \citep{Shekhar2020} used scaled, neutrally buoyant debris pieces to study how  clusters interact with a vertical test structure under tsunami-like flows, capturing both the initial impact and subsequent low-frequency damming forces. Doyle et al. extended that work measuring damming forces under varying debris, structure densities and orientations, while also evaluating the applicability of ASCE 7-22 tsunami load provisions \citep{Doyle2024}. Complementary studies have used flume experiments to improve numerical models of debris and their effects on structures \citep{Bonus2022, bonusTsunamiDebrisMotion2025}. 
 
 
 
 \section{Testing Methodology}
-The experiments were conducted in the Large Wave Flume at the NHERI (O.H. Hinsdale) Wave Research Laboratory at Oregon State University, a 104 m long, 3.7 m wide, and 4.6 m tall facility. A full-height piston-driven wavemaker generated tsunami-like waves In-Water depths of up to 2.0 m. Bathymetry followed layouts from \citep{winterTsunamiLikeWaveForces2020} and \citep{Shekhar2020} and can be seen in Figure {\ref{fig:waveflume}.
+The experiments were conducted in the Large Wave Flume at the NHERI (O.H. Hinsdale) Wave Research Laboratory at Oregon State University. The flume is 104 m long, 3.7 m wide, and 4.6 m tall. A full-height piston-driven wavemaker generated tsunami-like waves in water depths of up to 2.0 m. Bathymetry followed layouts from \citep{winterTsunamiLikeWaveForces2020} and \citep{Shekhar2020}. Plan and elevation views of the flume are provided in Figure~\ref{fig:waveflume}, showing the bathymetry initially sloping at 1:12 and subsequently increasing to 1:24.
  
 \begin{figure}[htbp]
   \centering
@@ -47,10 +49,9 @@ The experiments were conducted in the Large Wave Flume at the NHERI (O.H. Hinsda
   \label{fig:waveflume}
 \end{figure}
 
-Wave paddle motions were prescribed using an error function displacement , which produces highly repeatable unbroken solitary waves. The wave velocity near the structure was measured using an Acoustic Doppler Velocimeter (ADV) and found to be approximately 1.3 m/s. Debris velocity, determined through video-based tracking, averaged around 0.8 m/s.
-Repeatability was prioritized, as it ensured consistent wave conditions for comparing debris configurations. The still water level was set at 2.0 m, corresponding to a 0.25 m depth at the structure with no air gap beneath the base. The test structure was a 1.016 m square base × 0.615 m tall box constructed from sheet metal and steel framing (similar to \citep{winterTsunamiLikeWaveForces2020}), positioned 43.8 m from the wavemaker. It was mounted on low-friction bearings attached to a wall-mounted frame, allowing measurement of streamwise (x) and transverse (y) reactions.
+Wave paddle motions were prescribed using an error function displacement, which produces highly repeatable, unbroken, solitary waves. Repeatability was prioritized, as it ensured consistent wave conditions for comparing debris configurations. The flow velocity near the structure was measured using an acoustic doppler velocimeter (ADV) and found to be approximately 1.3 m/s. Debris velocity, determined through video-based tracking, averaged around 0.8 m/s. The still water level was set at 2.0 m, corresponding to a 0.25 m depth at the structure to ensure no air gap beneath the base of the test structure.
 
-The internal frame used hollow steel sections for stiffness, with additional aluminum-encased stiffeners to improve rotational resistance and load transfer. Eight load cells were installed: two streamwise, two transverse, and four vertical pancake cells, all sampled at 1200 Hz. Steel legs, 0.25 m in height, were placed below the structure but were not load bearing. Front and back view of the structure can be seen in Figure \ref{fig:teststructure_views}.
+The test structure was a 1.016 m square base × 0.615 m tall box constructed from sheet metal and steel framing (similar to \citep{winterTsunamiLikeWaveForces2020}), positioned 43.8 m from the wavemaker. It was mounted on low-friction bearings attached to a wall-mounted frame, allowing measurement of streamwise (x) and transverse (y) reactions. The internal frame used hollow steel sections for stiffness, with additional aluminum-encased stiffeners to improve rotational resistance and load transfer. Eight load cells were installed: two streamwise, two transverse, and four vertical pancake cells, all sampled at 1200 Hz. Steel legs, 0.25 m in height, were placed below the structure but were not load bearing. Front and back view of the structure can be seen in Figure \ref{fig:teststructure_views}.
 
  \begin{figure}[htbp]
     \centering
@@ -87,8 +88,7 @@ The internal frame used hollow steel sections for stiffness, with additional alu
     \label{fig:configurations_random}
 \end{figure}
 
-The debris pieces were made of high-density polyethylene (HDPE), measuring 0.50 m × 0.051 m × 0.102 m and weighing approximately 2.52 kg. The submerged portion of each piece was 0.05 m, corresponding to its draft In-Water. Configurations included longitudinal, transverse, and random configurations (Figures~\ref{fig:configurations} and \ref{fig:configurations_random}), with debris held 2 m upstream of the structure and released using lift frames modeled after \citet{Shekhar2020}. In addition to the single-size tests, multi-size configurations were also tested. These combined quarter-, half-, and full-sized debris pieces in varying proportions (see Table \ref{tab:multi_size_configs}) to examine the influence of packing ratio and size distribution on debris accumulation and loading behavior. 
-
+The debris pieces were made of high-density polyethylene (HDPE), measuring 0.50 m × 0.051 m × 0.102 m and weighing 2.52 kg. For testing protocols designed to assess the influence of individual debris size, debris pieces could be half or a quarter of the original length. The submerged portion, or draft, of each piece was 0.05 m. During an individual wave test, downstream face of the debris field was held 2 m upstream of the structure floating on the free surface by lift frames modeled after \citet{Shekhar2020}.The debris field was released manually by lifting the frame with a crane prior to the arrival of the leading wave crest. Release timing was selected to be sufficiently close to wave contact to minimize drift, ensuring that the debris field remained near its intended initial configuration at impact. 
 
 \begin{table}[h!]
 \centering
@@ -161,7 +161,14 @@ The debris pieces were made of high-density polyethylene (HDPE), measuring 0.50 
 
 
 
-A total of 29 configurations were tested in the large wave flume. These included 10 regular configurations (5 transverse and 5 longitudinal) and 16 random configurations, of which 9 were single-sized and 7 were multi-sized. To assess the influence of debris size, additional tests were conducted using a single 0.25-size debris piece, as well as one transverse and one longitudinal configuration with 0.5-size debris. Each configuration was repeated for 10 independent trials. Furthermore, 32 In-Air swing tests were performed to characterize the structural response.
+A total of 29 configurations were tested in the large wave flume.  In 13 of these configurations ("regular" configurations), the orientation of the debris at the start of the test was controlled (Table 1 and Figure 3). I this table, "L" corresponds to a longitudinal orientation, in which the longitudinal axis of the debris were aligned with the direction of flow, "T" corresponds to transverse orientation. Five of these configurations consisted of  a single piece of debris. One set of tests was carried out using a single 0.25-size debris piece, which is nearly square but is labeled as longitudinal in later figures for simplicity. An additional 8 configurations had between eight and twenty-four pieces of debris, with four of these tests corresponding to transverse orientations and 4 corresponding to longitudinal orientations. The number of debris for each of these configurations is is provided in the configuration designations (Table 1 and Figure 3).
+
+An additional 16 tests configurations with random orientation were tested, consisting of 9 configurations in which the field consisted of only full-size debris (Table 2 and Figure 4), and 7 configurations consisted of multi-sized debris (Table 3). The multi-size configurations combined quarter-, half-, and full-sized debris elements in varying proportions to evaluate the effects of packing ratio and size distribution on debris accumulation and loading behavior (Table \ref{tab:multi_size_configs}). The packing ratio is defined as the ratio of the tightly packed debris area to the total spread area. The ratio for each randome configuration is reported in tables 2 and 3, and it appears also in the configuration designation.
+
+Ten test trials were conducted for each configuration. Between each trial, the water in the flume was allowed to settle for 15 minutes to ensure no residual wave interactions from the previous trial.
+
+A total of 32 In-Air pendulum impact tests were conducted to characterize the dynamic behavior of the test structure. Each test involved suspending from a cable a single debris piece of identical dimensions to the 1L configuration and releasing it to impact the structure longitudinally in air. The debris was released from three drop-off heights (0.5, 0.75, and 1.0 m), corresponding to increasing impact velocities.
+
 \section{Data Processing}
 
 \begin{figure}[htbp]
@@ -175,14 +182,14 @@ Force time histories were decomposed with Butterworth filters: high-pass filteri
 
 \begin{figure}[h!]
     \centering
-    \begin{subfigure}[b]{0.7\textwidth}
+    \begin{subfigure}[b]{0.75\textwidth}
         \centering
         \includegraphics[width=\textwidth]{Reg_Lift_U_1_L_D__Masters_NHERIDeprisImpact2_goodtests_Reg_Lift_U_1_L_Trial04_Peak.png}
         \caption{Reaction Force Time History of a 1 L debris trial.}
         \label{fig:timehist_1L_peak}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[b]{0.7\textwidth}
+    \begin{subfigure}[b]{0.75\textwidth}
         \centering
         \includegraphics[width=\textwidth]{Reg_Lift_U_24_L_D__Masters_NHERIDeprisImpact2_goodtests_Reg_Lift_U_24_L_Trial04_Peak.png}
         \caption{Reaction Force Time History of a 24 L debris trial.}
@@ -194,7 +201,7 @@ Force time histories were decomposed with Butterworth filters: high-pass filteri
 \begin{figure}[h!]
     \centering
     % First subfigure
-    \begin{subfigure}[b]{0.7\textwidth}
+    \begin{subfigure}[b]{0.75\textwidth}
         \centering
         \includegraphics[width=\textwidth]{Reg_Lift_U_1_L_D__Masters_NHERIDeprisImpact2_goodtests_Reg_Lift_U_1_L_Trial04_Damming.png}
         \caption{Reaction Force Time History of a 1 L debris trial.}
@@ -202,7 +209,7 @@ Force time histories were decomposed with Butterworth filters: high-pass filteri
     \end{subfigure}
     \hfill
     % Second subfigure
-    \begin{subfigure}[b]{0.7\textwidth}
+    \begin{subfigure}[b]{0.75\textwidth}
         \centering
         \includegraphics[width=\textwidth]{Reg_Lift_U_24_L_D__Masters_NHERIDeprisImpact2_goodtests_Reg_Lift_U_24_L_Trial04_Damming.png}
         \caption{Reaction Force Time History of a 24 L debris trial.}
@@ -215,19 +222,18 @@ Force time histories were decomposed with Butterworth filters: high-pass filteri
 
 
 Video evidence combined with filtered force records revealed that debris impacts occur in two distinct stages. The first stage is the initial unsubmerged impact, where debris pieces strike the structure immediately upon arrival (Figure~\ref{fig:first_impact}). These impacts are characterized by a sharp peak, particularly in longitudinal configurations. The debris pieces strike simultaneously and then scatter. The second stage consists of later submerged impacts, which arise when debris recirculates downstream and strikes the structure again under submerged conditions (Figure~\ref{fig:second_impact}). Unlike the first impact, these later impacts are more scattered, chaotic, and prolonged, especially in tests involving larger numbers of debris pieces. The distinction between first and later impacts proved consistent across all debris types and configurations, underscoring the need to treat these two stages as separate mechanisms in structural analysis.
-
-Signal peaks were identified within predefined time intervals, determined from video observations of the debris motion. The first impact was detected within the initial time window before 34.2 s, while subsequent impacts were identified by considering the highest impacts after the first impact and excluding the first impact. 
+All group tests showed strong consistency in the timing of the first impact, allowing impacts in the reaction-force signal to be identified using predefined time intervals derived from video observations. The first impact consistently occurred before 34.2 s, and subsequent impacts were detected by selecting the largest peaks occurring after this initial event (Figure \ref{fig:timehist_combined}).
 
 \begin{figure}[htbp]
     \centering
-    \begin{subfigure}[b]{0.6\textwidth}
+    \begin{subfigure}[b]{0.45\textwidth}
         \centering
         \includegraphics[width=\textwidth]{first_impact.jpg}
         \caption{First unsubmerged impact.}
         \label{fig:first_impact}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[b]{0.6\textwidth}
+    \begin{subfigure}[b]{0.45\textwidth}
         \centering
         \includegraphics[width=\textwidth]{second_impact.jpg}
         \caption{Later submerged impact.}
@@ -248,7 +254,7 @@ The first impact phase corresponds to the unsubmerged debris impact on the struc
 
 where \( R_{\mathrm{impact}} \) is the measured impact force, and \( R_{1L} \) is the median impact force from the 1 L configuration.
 
-The second phase corresponds to sustained debris accumulation and flow blockage (damming), which was captured through low-pass filtering. The normalized damming force was computed using:
+The second phase corresponds to sustained debris accumulation and flow blockage (damming), which was captured through low-pass filtering (Figure \ref{fig:timehist_damming_combined}). The normalized damming force was computed using:
 
 \begin{equation}
     R_{damming,\mathrm{norm}} = 
@@ -260,15 +266,15 @@ The second phase corresponds to sustained debris accumulation and flow blockage 
 where \( R_{damming,\mathrm{max}} \) is the maximum damming force and \( R_{\mathrm{wave,max}} \) is the maximum reaction force from the unbroken wave-only reference case.
 
 
-\section{Reaction Force Response to Single Debris Pieces} 
-\subsection{Comparing In-Air to In-Water structural response} 
-A total of 32 In-Air pendulum impact tests were conducted to characterize the dynamic behavior of the test structure. Each test involved a single debris piece of identical dimensions to the 1L configuration, suspended from a cable and released to impact the structure longitudinally in air. The debris was released from three drop-off heights (0.5, 0.75, and 1.0 m), corresponding to increasing impact velocities. This setup isolates the structural response to debris impact under controlled, repeatable conditions without hydrodynamic effects. The corresponding structural response for both the in-air and in-water cases is shown in Figure~\ref{fig:normalized_forces_structure_air_water}.The reaction force signal recorded by the load cells at the back of the structure showed oscillatory behavior which corresponds to the dynamic response of several elements of the structure. Frequency spectra obtained through Fast Fourier Transform (FFT) analysis revealed three main amplification peaks, identified as the primary vibration modes of the structure, as summarized in Table \ref{tab:mode_summary}. After identifying the modes a bandwidth filter has been applied to the reaction force signal. After identifying the impacts a 0.5 seconds time window has been used to find the damping from the logarithmic decrement. These same modes were later confirmed for the 1 L configuration In-Water, where the natural frequencies decreased, which can be attributed to the added mass of water surrounding the structure. By isolating the modes in the reaction force signal, damping ratios were determined for each mode. The results showed an increase in damping when the structure was submerged, consistent with greater energy loss caused by fluid–structure interaction. The In-Air tests showed very low variability between trials in identifying the modes and damping ratios, while the in-water tests had higher standard deviations.
+\section{Comparing In-Air to In-Water structural responses} 
+
+A total of 32 In-Air pendulum impact tests were conducted to characterize the dynamic behavior of the test structure.  This setup isolates the structural response to debris impact under controlled, repeatable conditions without hydrodynamic effects. The corresponding structural response for both the In-Air and In-Water cases is shown in Figure~\ref{fig:normalized_forces_structure_air_water}. The reaction force signal recorded by the load cells at the back of the structure showed oscillatory behavior which corresponds to the dynamic response of several elements of the structure. Frequency spectra obtained through Fast Fourier Transform (FFT) analysis revealed three main amplification peaks, identified as the primary vibration modes of the structure, as summarized in Table \ref{tab:mode_summary}. After identifying the dominant modes, a bandwidth filter was applied to the reaction-force signal. The filtered spectra were then used to isolate individual impacts, and a 0.5-second time window was selected to compute damping using the logarithmic decrement method. These same modes were later confirmed for the 1L In-Water configuration, where the natural frequencies decreased. By isolating the modes in the reaction-force signal, damping ratios were obtained for each mode. The results showed an increase in damping when the structure was submerged, consistent with greater energy loss caused by fluid–structure interaction. The In-Air tests showed very low variability between trials in identifying the modes and damping ratios, while the in-water tests had higher standard deviations. This increased variance is consistent with previous observations that fluid–structure interactions introduce greater uncertainty and variability compared to In-Air conditions, underscoring the need for a deeper understanding of these effects.
 
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=\linewidth]{figures/plot_normalized_forces_in_air_vs_in_water_overlay.png}
-    \caption{Normalized force responses for the In-Air test and the In-Water test. Damping Ratio evaluation window denoted by dashed lines. Each plot is normalized by its respective maximum force.}
+    \caption{Normalized force responses for the 1 L In-Air test and In-Water test. Damping Ratio evaluation window denoted by dashed lines. Each plot is normalized by its respective maximum force.}
     \label{fig:normalized_forces_structure_air_water}
 \end{figure}
 
@@ -293,38 +299,45 @@ Mode 3 & 19.940 & 0.084 & 0.91 & 0.20 & 19.582 & 0.160 & 1.66 & 0.23 \\
 \end{table}
 
 
-\subsection{In-Water - Single Debris Trials of Varying Size} 
 
-All five single-piece configurations (10 trials each) were conducted to evaluate the effect of debris size on the reaction force. These tests aimed to characterize the behavior of individual debris pieces before examining group effects. Figure~\ref{fig:firstpeak_regular_size} shows the reaction force measured for single debris pieces with varying orientations. Higher variability is observed in the transverse orientation. 
+All five single-piece configurations (10 trials each) were conducted to evaluate the effect of debris size on the reaction force. These tests aimed to characterize the behavior of individual debris pieces before examining group effects. Figure~\ref{fig:firstpeak_regular_size} shows the reaction force measured for single debris pieces with varying orientations. 
+Because the debris elements were very small relative to the structure and to the spacing between the structure legs, these tests followed different patterns than the group cases discussed later. Most trials recorded only an initial impact, with subsequent impacts avoided as the debris passed through the leg spacing. No damming was observed in any of these trials. The debris transport also appeared to exhibit higher variability under these conditions.
+Higher variability is also observed in the transverse orientation trials, providing an initial indication of water cushioning effects noted in previous research by \cite{Derschum2018}. This topic will be examined further in the discussion of group effects.
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=\textwidth]{FirstPeak_Regular_SplitByTrial_single.png}
-    \caption{Comparison of reaction forces for various debris sizes at first impact for regular configurations. The 1L median reaction serves as the baseline for normalization.}
+    \includegraphics[width=0.75\textwidth]{FirstPeak_Regular_SplitByTrial_single.png}
+    \caption{Reaction forces for various debris sizes at first impact for regular configurations. The 1L median reaction serves as the baseline for normalization.}
     \label{fig:firstpeak_regular_size}
 \end{figure}
 
 
-\section{Group effects}
-\subsection{Regular Configurations}
-\subsubsection{Impact Reaction Forces} 
+\section{Regular Configurations}
+
+Impact Reaction Forces
+
+All five single-piece configurations (10 trials each) were conducted to evaluate the effect of debris size on the reaction force. These tests aimed to characterize the behavior of individual debris pieces before examining group effects. Figure~\ref{fig:firstpeak_regular_size} shows the reaction force measured for single debris pieces with varying orientations. 
+Because the debris elements were very small relative to the structure and to the spacing between the structure legs, these tests followed different patterns than the group cases discussed later. Most trials recorded only an initial impact, with subsequent impacts avoided as the debris passed through the leg spacing. No damming was observed in any of these trials. The debris transport also appeared to exhibit higher variability under these conditions.
+The reactions increased consistently with increasing debris size, but the increase was not proportional to the debris size.  For example, the half-size debris with a longitudinal orientation had a median reaction force equal to only xx percent of the correspnding rections for force for the full-debris size.  At full size, the median reaction force for the longitudinal and transverse orientation were similar, but the forces for the transverse orientation varied much more among the trials.  This difference is consistent with the observations that pieces of debris oriented initially in the longitudinal direction tended to stay in that orientation, wheras pieces oriented initially in the transverse orientation tended to rotate.
+
+\subsubsection*{
 Figure~\ref{fig:firstpeak_regular_split} and Figure~\ref{fig:laterpeak_regular_remap} show the impact reaction forces from the first and second impacts. The boxplot whiskers represent the minimum and maximum values, the boxes indicate the interquartile range (IQR), and the solid line within each box marks the median value.
 For specific cases such as the 24T-W and 16T-W tests, the width of the debris field exceeded the structure’s width. Consequently, not all debris pieces made contact with the structure. To address this limitation, the data was adjusted to reflect the amount of pieces impacting the structure.  Remapping makes the 24T-W case comparable to a 12T case. It is possible that the total debris count continued to affect the flume hydrodynamics via fluid–debris interactions, potentially contributing to the lower forces observed in the adjusted debris-count tests compared with the smaller-group cases.
 
-In regular configurations, the first impacts scaled approximately linearly with the number of debris pieces (Figure~\ref{fig:firstpeak_regular_split}). This relationship was clear across both longitudinal and transverse configurations. Later impacts, by contrast, exhibited nonlinear behavior, showing growth that eventually saturated as debris counts increased (Figure~\ref{fig:laterpeak_regular_remap}). This saturation suggests that once a certain number of pieces are present, additional debris no longer contributes significantly to impact loading because not all debris strike the structure simultaneously.
+In regular configurations, the first impacts scaled approximately linearly with the number of debris pieces (Figure~\ref{fig:firstpeak_regular_split}). This relationship was clear across both longitudinal and transverse configurations. Later impacts, by contrast, exhibited nonlinear behavior, showing growth that eventually saturated as debris counts increased (Figure~\ref{fig:laterpeak_regular_remap}). This saturation suggests that once a certain number of pieces are present, additional debris no longer contributes significantly to impact loading because not all debris strike the structure simultaneously. This behavior also relates to the influence of submerged conditions and the added-mass effect from the water being pushed behind the debris. Notably, for smaller debris counts, the later impact can exceed the first impact, suggesting that the water mass accumulating behind the structure contributes significantly to the observed force. As the number of debris pieces increases, this added-water contribution becomes less significant, since the volume of water pushed behind the structure remains essentially constant even as the debris count grows.
 
 Longitudinal configurations consistently produced the highest impact forces, while transverse configurations yielded smaller impacts probably due to water cushioning.
 
 \begin{figure}[htbp]
     \centering
-    \begin{subfigure}[t]{0.9\textwidth}
+    \begin{subfigure}[t]{0.75\textwidth}
         \centering
         \includegraphics[width=\textwidth]{FirstPeak_Regular_SplitByTrial.png}
         \caption{Impact reaction forces versus total number of debris pieces within the flume.}
         \label{fig:firstpeak_regular_original}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[t]{0.9\textwidth}
+    \begin{subfigure}[t]{0.75\textwidth}
         \centering
         \includegraphics[width=\textwidth]{FirstPeak_Regular_RemappedT.png}
         \caption{Impact reaction forces versus debris count of pieces making contact with the structure.}
@@ -336,57 +349,58 @@ Longitudinal configurations consistently produced the highest impact forces, whi
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.9\textwidth]{LaterPeak_Regular_RemappedT.png}
+    \includegraphics[width=0.75\textwidth]{LaterPeak_Regular_RemappedT.png}
     \caption{Later impact reaction forces versus debris count of pieces making contact with the structure.}
     \label{fig:laterpeak_regular_remap}
 \end{figure}
 
 
-\subsubsection{Damming Reaction Forces} 
+\subsubsection*{Damming Reaction Forces} 
 Damming forces were extracted from low-pass filtered signals, capturing the sustained blockage loads. For regular debris configurations, transverse configurations produced higher damming forces than longitudinal configurations (Figure~\ref{fig:damming_regular_remap}). This trend indicates that longitudinal configurations primarily influence impact peaks, whereas transverse configurations dominate sustained blockage forces. Nonlinear saturation was observed as debris counts increased: damming forces eventually plateaued, reflecting complete blockage conditions being achieved. 
+The timing of later impact and maximum damming forces coincide. Even though these quantities are derived from different frequency components of the reaction-force signal their simultaneous occurrence reflects a shared physical mechanism. Once submerged blockage conditions form, water is pushed and accelerated behind the debris, generating an added-mass effect that saturates the total force response. For smaller debris counts, this water-driven contribution plays a larger role once blockage occurs, whereas for larger debris counts its relative influence decreases because the volume of water accumulating behind the structure does not increase with added debris. Consequently, the saturated trend observed in both the filtered impact component and the damming component is controlled primarily by this submerged loading condition rather than by the debris count itself.
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.9\textwidth]{Damming_Regular_L_T_SplitByTrial_Remapped.png}
+    \includegraphics[width=0.75\textwidth]{Damming_Regular_L_T_SplitByTrial_Remapped.png}
     \caption{Damming reaction forces versus debris count of pieces making contact with the structure.}
     \label{fig:damming_regular_remap}
 \end{figure}
 
 
-\subsection{Random Configurations}
+\subsection*{Random Configurations}
 Random debris fields with irregular orientations are analyzed by impact and damming forces as functions of debris count and packing ratio. Debris was initially arranged within a rectangular frame; at lower packing ratios, increasing the debris count caused the frame to extend beyond the structure’s width. Subsequent adjustments account for this using video-derived impact probabilities. The analysis includes corrected median values and a size-based assessment that isolates the contributions of the largest debris pieces in multi-size fields, revealing the limited influence of smaller pieces on structural loading.
 
-\subsubsection{Impact Reaction Forces} 
+\subsubsection*{Impact Reaction Forces} 
 Figure~\ref{fig:random_peaks_first} and Figure~\ref{fig:random_peaks_later} show the impact reaction forces from the first and later impacts, respectively, separated by packing ratio. The solid lines represent single-size debris configurations, while the dotted lines correspond to multi-size configurations. Boxplot whiskers indicate the minimum and maximum values, the boxes show the interquartile range (IQR), and the solid line within each box marks the median value.
 
 Random debris configurations produced more scattered data compared to regular configurations. The impact magnitudes were generally smaller, but variability increased considerably. Multi-size fields consistently yielded lower impact magnitudes because smaller pieces contributed less momentum . Multi-sized vs. single-sized scenarios became more relevant with larger debris groups, as multiple debris pieces struck separately rather than together.
 
-The unaltered gradient plots show these differences most clearly. In the first impact peaks, single-sized debris fields consistently yielded higher forces than multi-sized fields, and increasing packing ratio raised the magnitude of impact (Figure~\ref{fig:random_peaks_first}). Later impact peaks, occurring after initial contact and partial submergence, showed only a slight increase with debris count (Figure~\ref{fig:random_peaks_later}). In these later impacts, packing ratio effects were visible for single-sized debris fields but largely absent in multi-sized cases.
+In the first impact peaks, single-sized debris fields consistently yielded higher forces than multi-sized fields, and increasing packing ratio raised the magnitude of impact (Figure~\ref{fig:random_peaks_first}). Later impact peaks, occurring after initial contact and partial submergence, showed only a slight increase with debris count (Figure~\ref{fig:random_peaks_later}). In these later impacts, packing ratio effects were visible for single-sized debris fields but largely absent in multi-sized cases.
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.9\textwidth]{First_Peak_Random_Single_vs_Multi_ByDensityGradient.png}
+    \includegraphics[width=0.75\textwidth]{First_Peak_Random_Single_vs_Multi_ByDensityGradient.png}
     \caption{First impact reaction forces in random debris fields versus Effective Debris Count. Single Size and Multi Size indicated by solid and dotted lines. Shading indicates Packing Ratio.}
     \label{fig:random_peaks_first}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.9\textwidth]{Later_Peak_Random_Single_vs_Multi_ByDensityGradient.png}
+    \includegraphics[width=0.75\textwidth]{Later_Peak_Random_Single_vs_Multi_ByDensityGradient.png}
     \caption{Later impact reaction forces in random debris fields versus Effective Debris Count. Single Size and Multi Size indicated by solid and dotted lines. Shading indicates Packing Ratio.}
     \label{fig:random_peaks_later}
 \end{figure}
 
-An adjustment became necessary because debris frame exceeded the structure’s width when spanning higher densities for high debris counts. This geometry meant that not all pieces would impact the structure, and some pieces were effectively excluded from impact. Video analysis of 60 video trials confirmed this by counting the number of debris pieces making contact with the structure for each trial. From these counts, an impact probability was derived, which decreased proportionally as the frame widened relative to the structure (Figure~\ref{fig:impact_probabilities}). To account for this effect, a linear correction was applied to all trials: the effective number of impacting pieces was defined as the nominal debris count multiplied by the ratio of structure width to Width of Debris Field. 
+An adjustment became necessary because debris frame exceeded the structure’s width when spanning higher densities for high debris counts. This geometry meant that not all pieces would impact the structure, and some pieces were effectively excluded from impact. Video analysis of 60 trials confirmed this by counting the number of debris pieces making contact with the structure for each trial. From these counts, an impact probability was derived, which decreased proportionally as the frame widened relative to the structure (Figure~\ref{fig:impact_probabilities}). To account for this effect, a linear correction was applied to all trials: the effective number of impacting pieces was defined as the nominal debris count multiplied by the ratio of structure width to Width of Debris Field. 
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.9\textwidth]{Impact_probabilities.png}
+    \includegraphics[width=0.75\textwidth]{Impact_probabilities.png}
     \caption{Impact probabilities across random trials for various debris field widths. Marker area reflects number of data points for each incident.}
     \label{fig:impact_probabilities}
 \end{figure}
 
-The corrected median plots reflect these adjustments. Figure~\ref{fig:random_first_median_adjusted} shows normalized first impact peaks after applying the width-based correction. Single-sized debris fields again produce higher forces than multi-sized fields, with forces rising until saturation as debris counts increase. In the analysis of multi-sized fields, an additional adjustment was performed to isolate the larger debris pieces equivalent to those in the single-sized configurations. The results indicate that these larger pieces generated only marginally higher impact peaks than the single-sized debris, whereas smaller pieces had a negligible effect. Thus, while smaller debris contributes to the loading response, impact forces are primarily governed by the larger pieces.
+The corrected median plots reflect these adjustments. Figure~\ref{fig:random_first_median_adjusted} shows normalized first impact peaks after applying the width-based correction. Single-sized debris fields again produce higher forces than multi-sized fields. In the analysis of multi-sized fields, an additional adjustment was performed to isolate the larger Full size debris pieces equivalent to those in the single-sized configurations. The results indicate that these larger pieces dominated the response, whereas smaller pieces had a negligible effect. Thus, while smaller debris contributes to the loading response, impact forces are primarily governed by the larger Full size pieces.
 
 
 \begin{figure}[htbp]
@@ -397,12 +411,12 @@ The corrected median plots reflect these adjustments. Figure~\ref{fig:random_fir
 \end{figure}
 
 
-\subsubsection{Damming Reaction Forces} 
-In random configurations, damming forces followed a different pattern compared to regular configurations. The unaltered gradient plot (Figure~\ref{fig:random_damming_gradient}) shows that single-sized debris fields generated higher sustained loads than multi-sized fields, with packing ratio promoting stronger clustering. Multi-sized fields produced lower forces, probably because they allow more flow around obstacles and weaken packing ratio effects.
+\subsubsection*{Damming Reaction Forces} 
+In random configurations, damming forces followed a different pattern compared to regular configurations. Figure~\ref{fig:random_damming_gradient} shows that single-sized debris fields generated higher sustained loads than multi-sized fields, with packing ratio promoting stronger clustering. Multi-sized fields produced lower forces, probably because they allow more flow around obstacles and weaken packing ratio effects.
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.9\textwidth]{Damming_Random_Single_vs_Multi_ByDensityGradient.png}
+    \includegraphics[width=0.75\textwidth]{Damming_Random_Single_vs_Multi_ByDensityGradient.png}
     \caption{Damming reaction forces in random debris fields versus Effective Debris Count. Single Size and Multi Size indicated by solid and dotted lines. Shading indicates Packing Ratio.}
     \label{fig:random_damming_gradient}
 \end{figure}
@@ -417,18 +431,18 @@ In random configurations, damming forces followed a different pattern compared t
 
 The corrected median values (Figure~\ref{fig:random_damming_median_adjusted}) show a noteworthy consistency: across all densities and debris counts, normalized damming forces remained close to a 100\% increase over baseline wave loading. This indicates that while packing ratio and debris size distribution influenced variability, the sustained force contribution of damming in random fields remained broadly similar across conditions. In other words, random configurations consistently doubled the baseline wave load, with single-size fields amplifying clustering effects and multi-size fields reducing them through blockage disruption.
 
-\section{Conclusions} The experiments demonstrate that debris orientation, size distribution, and packing ratio are all factors in determining the forces exerted on coastal structures. Longitudinal groups generated the largest impact peaks, while transverse groups dominated sustained damming forces. Random and multi-size fields generally produced smaller and more variable loads, highlighting their reduced capacity for synchronous impacts and stable blockages. 
+\section{Conclusions} The experiments demonstrate that debris orientation, size distribution, and packing ratio are all factors in determining the forces exerted on coastal structures. Longitudinal debris alignments (i.e., oriented parallel to the incoming flow) tend to produce larger impacts than transverse configurations. Longitudinal groups generated the largest impact peaks, while transverse groups dominated sustained damming forces. Random fields display greater variability in impact magnitudes. Similarly, single-size debris groups behave differently than multi-size fields, particularly in their ability to form blockages and generate damming forces. Finally packing ratio, defined as the ratio of tightly packed debris area to the total spread area, controls the degree of clogging and thus the overall magnitude of structural loading. Random and multi-size fields generally produced smaller and more variable loads, highlighting their reduced capacity for synchronous impacts and stable blockages. 
 
 \begin{itemize}
-    \item \textbf{Debris orientation governs loading type:} Longitudinal configurationsconsistently produced the largest impact peaks due to synchronous debris strikes, while transverse configurations generated stronger sustained damming forces.
+    \item \textbf{Debris orientation governs loading type:} Longitudinal configurations consistently produced the largest impact peaks due to synchronous debris strikes, while transverse configurations generated stronger sustained damming forces.
     
-    \item \textbf{Debris size distribution influences variability:} Single-size debris fields produced higher and more consistent forces. Multi-size fields reduced both impact and damming magnitudes.
+    \item \textbf{Debris size distribution influences Reaction Forces:} Single-size debris fields produced higher and more consistent forces. Multi-size fields reduced both impact and damming magnitudes.
     
     \item \textbf{Random fields reduce predictability:} Random orientations yielded smaller average forces but introduced significantly greater variability. Larger pieces dominated responses in mixed fields, while smaller pieces contributed only marginally.
    
     \item \textbf{Synchrony of impacts:} Simultaneous contacts amplified impact forces, especially in longitudinal configurations where multiple debris pieces struck together. Random orientations reduced synchrony, leading to lower impact forces at higher debris counts.
     
-    \item \textbf{Video-derived corrections refine debris momentum:} packing ratio did not account for the debris field width exceeding the structure. Video-based impact probabilities revealed a linear-proportional relationship between structure/Width of Debris Field and adjusted debris count. 
+    \item \textbf{Video-derived corrections refine debris momentum:} packing ratio did not account for the debris field width exceeding the structure. Video-based impact probabilities revealed a linear-proportional relationship between Structure Width/Width of Debris Field and debris count impacting the structure. 
 
 
     \item \textbf{Two-stage impact behavior is consistent:} Initial unsubmerged impacts produced sharp, short-duration impacts, while later submerged impacts were more chaotic, prolonged, and nonlinear in their scaling with debris count.
@@ -440,8 +454,12 @@ Several limitations of this study should be acknowledged. First, because of the 
 
 \bibliographystyle{plainnat}  
 \bibliography{Thesis}
+
 \section{Annex}
-\begin{table}[h!]
+
+\subsection*{Regular Impact Reaction Forces}
+
+\begin{table}[H]
 \centering
 \caption{Regular configurations: First Impact Reaction Force (N)}
 \begin{tabular}{lccccccc}
@@ -462,7 +480,7 @@ Several limitations of this study should be acknowledged. First, because of the 
 \end{tabular}
 \end{table}
 
-\begin{table}[h!]
+\begin{table}[H]
 \centering
 \caption{Regular configurations: Later Impact Reaction Force (N)}
 \begin{tabular}{lccccccc}
@@ -482,8 +500,8 @@ Several limitations of this study should be acknowledged. First, because of the 
 \bottomrule
 \end{tabular}
 \end{table}
-
-\begin{table}[h!]
+\subsection*{Random Impact Reaction Forces}
+\begin{table}[H]
 \centering
 \caption{Random Single-Sized debris configurations: First Impact Reaction Force (N)}
 \begin{tabular}{lccccccc}
@@ -503,7 +521,7 @@ Several limitations of this study should be acknowledged. First, because of the 
 \end{tabular}
 \end{table}
 
-\begin{table}[h!]
+\begin{table}[H]
 \centering
 \caption{Random Multi-Sized debris configurations: First Impact Reaction Force (N)}
 \begin{tabular}{lccccccc}
@@ -521,7 +539,7 @@ Several limitations of this study should be acknowledged. First, because of the 
 \end{tabular}
 \end{table}
 
-\begin{table}[h!]
+\begin{table}[H]
 \centering
 \caption{Random Single-Sized debris configurations: Later Impact Reaction Force (N)}
 \begin{tabular}{lccccccc}
@@ -541,7 +559,7 @@ Several limitations of this study should be acknowledged. First, because of the 
 \end{tabular}
 \end{table}
 
-\begin{table}[h!]
+\begin{table}[H]
 \centering
 \caption{Random Multi-Sized debris configurations: Later Impact Reaction Force (N)}
 \begin{tabular}{lccccccc}
@@ -559,8 +577,8 @@ Several limitations of this study should be acknowledged. First, because of the 
 \end{tabular}
 \end{table}
 
-
-\begin{table}[h!]
+\subsection*{Regular Damming Reaction Forces}
+\begin{table}[H]
 \centering
 \caption{Regular configurations: Damming Reaction Force (N)}
 \begin{tabular}{cccccccc}
@@ -580,8 +598,8 @@ Several limitations of this study should be acknowledged. First, because of the 
 \bottomrule
 \end{tabular}
 \end{table}
-
-\begin{table}[h!]
+\subsection*{Random Damming Reaction Forces}
+\begin{table}[H]
 \centering
 \caption{Random Single-Sized debris configurations: Damming Reaction Force (N)}
 \begin{tabular}{cccccccc}
@@ -601,7 +619,7 @@ Several limitations of this study should be acknowledged. First, because of the 
 \end{tabular}
 \end{table}
 
-\begin{table}[h!]
+\begin{table}[H]
 \centering
 \caption{Random Multi-Sized debris configurations: Damming Reaction Force (N)}
 \begin{tabular}{cccccccc}
@@ -618,10 +636,10 @@ Several limitations of this study should be acknowledged. First, because of the 
 \bottomrule
 \end{tabular}
 \end{table}
-
-\begin{table}[h!]
+\subsection*{Single Debris Test Impact Reaction Forces}
+\begin{table}[H]
 \centering
-\caption{Regular configurations Single debris tests: Damming Reaction Force (N)}
+\caption{Regular configurations Single debris tests: First Impact Reaction Force (N)}
 \begin{tabular}{cccccccc}
 \toprule
 \textbf{Config.} & \textbf{Orient.} & \textbf{Min} & \textbf{Q$_{25}$} & \textbf{Median} & \textbf{Q$_{75}$} & \textbf{Max} & \textbf{IQR} \\
