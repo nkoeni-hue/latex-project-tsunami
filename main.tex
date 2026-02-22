@@ -382,24 +382,25 @@ The timing of later impact and maximum damming forces coincide. Even though thes
 Random debris fields with irregular orientations are analyzed by impact and damming forces as functions of debris count and packing ratio. Debris was initially arranged within a rectangular frame; at lower packing ratios, increasing the debris count caused the frame to extend beyond the structure’s width. Subsequent adjustments account for this using video-derived impact probabilities. The analysis includes corrected median values and a size-based assessment that isolates the contributions of the largest debris pieces in multi-size fields, revealing the limited influence of smaller pieces on structural loading.
 
 \subsection*{Impact Reaction Forces} 
-Figure~\ref{fig:random_peaks_first} and Figure~\ref{fig:random_peaks_later} show the impact reaction forces from the first and later impacts, respectively, separated by packing ratio. The solid lines represent single-size debris configurations, while the dotted lines correspond to multi-size configurations. Boxplot whiskers indicate the minimum and maximum values, the boxes show the interquartile range (IQR), and the solid line within each box marks the median value.
+Figure~\ref{fig:random_peaks_first} and Figure~\ref{fig:random_peaks_adjusted} show the impact reaction forces from the first impacts,  separated by packing ratio. Boxplot whiskers indicate the minimum and maximum values, the boxes show the interquartile range (IQR), and the solid line within each box marks the median value.
 
-Random debris configurations produced more scattered data compared to regular configurations. The impact magnitudes were generally smaller, but variability increased considerably. Multi-size fields consistently yielded lower impact magnitudes because smaller pieces contributed less momentum . Multi-sized vs. single-sized scenarios became more relevant with larger debris groups, as multiple debris pieces struck separately rather than together.
+Random debris configurations produced more scattered data compared to regular configurations. The impact magnitudes were generally smaller, but variability increased considerably. 
 
-In the first impact peaks, single-sized debris fields consistently yielded higher forces than multi-sized fields, and increasing packing ratio raised the magnitude of impact (Figure~\ref{fig:random_peaks_first}). Later impact peaks, occurring after initial contact and partial submergence, showed only a slight increase with debris count (Figure~\ref{fig:random_peaks_later}). In these later impacts, packing ratio effects were visible for single-sized debris fields but largely absent in multi-sized cases.
+In the first impact peaks, single-sized debris fields consistently yielded higher forces than multi-sized fields, and increasing packing ratio raised the magnitude of impact (Figure~\ref{fig:random_peaks_first}). Later impact peaks, occurring after initial contact and partial submergence, showed only a slight increase with debris count 
+
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.9\textwidth]{First_Peak_RANDOM_Single_ONLY_Shaded.png}
-    \caption{First impact reaction forces in random debris fields versus Effective Debris Count. Single Size and Multi Size indicated by solid and dotted lines. Shading indicates Packing Ratio.}
+    \caption{First impact reaction forces in random debris fields versus Effective Debris Count. Shading indicates Packing Ratio.}
     \label{fig:random_peaks_first}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.9\textwidth]{First_Peak_RANDOM_Single_ONLY_Adjusted_NoShading.png}
-    \caption{Later impact reaction forces in random debris fields versus Effective Debris Count. Single Size and Multi Size indicated by solid and dotted lines. Shading indicates Packing Ratio.}
-    \label{fig:random_peaks_later}
+    \caption{First impact reaction forces in random debris fields versus Effective Debris Count, adjusted for Debris Field Width. Shading indicates Packing Ratio.}
+    \label{fig:random_peaks_adjusted}
 \end{figure}
 
 An adjustment became necessary because debris frame exceeded the structure’s width when spanning higher densities for high debris counts. This geometry meant that not all pieces would impact the structure, and some pieces were effectively excluded from impact. Video analysis of 60 trials confirmed this by counting the number of debris pieces making contact with the structure for each trial. From these counts, an impact probability was derived, which decreased proportionally as the frame widened relative to the structure (Figure~\ref{fig:impact_probabilities}). To account for this effect, a linear correction was applied to all trials: the effective number of impacting pieces was defined as the nominal debris count multiplied by the ratio of structure width to Width of Debris Field. 
@@ -407,11 +408,13 @@ An adjustment became necessary because debris frame exceeded the structure’s w
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.9\textwidth]{Impact_probabilities.png}
-    \caption{Impact probabilities across random trials for various debris field widths. Marker area reflects number of data points for each incident.}
+    \caption{Impact probabilities across random trials for various Debris Field Widths. Marker area reflects number of data points for each incident.}
     \label{fig:impact_probabilities}
 \end{figure}
 
-The corrected median plots reflect these adjustments. Figure~\ref{fig:random_first_median_adjusted} shows normalized first impact peaks after applying the width-based correction. Single-sized debris fields again produce higher forces than multi-sized fields. In the analysis of multi-sized fields, an additional adjustment was performed to isolate the larger Full size debris pieces equivalent to those in the single-sized configurations. The results indicate that these larger pieces dominated the response, whereas smaller pieces had a negligible effect. Thus, while smaller debris contributes to the loading response, impact forces are primarily governed by the larger Full size pieces.
+The corrected median plots reflect these adjustments. Figure~\ref{fig:random_first_median_adjusted} shows normalized first impact peaks after applying the width-based correction. Single-sized debris fields again produce higher forces than multi-sized fields. Multi-size fields consistently yielded lower impact magnitudes because smaller pieces contributed less momentum . Multi-sized vs. single-sized scenarios became more relevant with larger debris groups, as multiple debris pieces struck separately rather than together.
+
+In the analysis of multi-sized fields, an additional adjustment was performed to isolate the larger Full size debris pieces equivalent to those in the single-sized configurations. The results indicate that these larger pieces dominated the response, whereas smaller pieces had a negligible effect. Thus, while smaller debris contributes to the loading response, impact forces are primarily governed by the larger Full size pieces.
 
 
 \begin{figure}[htbp]
@@ -427,17 +430,17 @@ In random configurations, damming forces followed a different pattern compared t
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.9\textwidth]{Damming_Random_Single_vs_Multi_ByDensityGradient.png}
-    \caption{Damming reaction forces in random debris fields versus Effective Debris Count.  Shading indicates Packing Ratio.}
+    \includegraphics[width=0.9\textwidth]{Damming_RANDOM_Single_ONLY_Shaded.png}
+    \caption{Damming reaction forces in random debris fields versus Debris Count. Shading indicates Packing Ratio.}
     \label{fig:random_damming_gradient}
 \end{figure}
 
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.9\textwidth]{Damming_Random_Single_vs_Multi_ByDensityGradient.png}
-    \caption{Damming reaction forces in random debris fields versus Effective Debris Count. Shading indicates Packing Ratio.}
-    \label{fig:random_damming_gradient}
+    \includegraphics[width=0.9\textwidth]{Damming_RANDOM_Single_ONLY_Adjusted_NoShading.png}
+    \caption{Damming reaction forces in random debris fields versus Debris Count, adjusted for Debris Field Width. Shading indicates Packing Ratio.}
+    \label{fig:random_damming_gradient_adjusted}
 \end{figure}
 
 
