@@ -431,7 +431,8 @@ The effect of randomly oriented debris fields on damming reaction forces showed 
 The corrected median values (Figure~\ref{fig:random_damming_median_adjusted}) show that the normalized damming force remained close to a 100\% increase over the baseline wave loading. As observed earlier, packing ratio influenced the magnitude of the damming forces, with higher packing ratios generally promoting stronger responses. Multi-sized fields produced lower forces, likely because they allow increased flow around obstacles and weaken clustering. In other words, random configurations consistently increased the baseline low frequency load, with single-size fields amplifying clustering effects and multi-size fields reducing them through disruption of blockage.
 
 \section{A Model for first impact reaction force}
-The authors propose the following regression model for the 
+The authors propose the following regression model for the median response of the first impact reaction:
+
 \begin{equation}
 F_\mathrm{pred}(N, \text{Type}, \text{Packing Ratio}) 
 = 1 + (N-1) \,\cdot\, C_L \,\cdot\, k_\mathrm{orientation} \,\cdot\, k_\mathrm{Type} \,\cdot\, k_\mathrm{PackingRatio}
@@ -458,19 +459,19 @@ k_\mathrm{PackingRatio} &=
 \end{align*}
  
 
-The model predictions are plotted alongside the measured data, with error bars representing the standard error of the mean (SEM) for each condition. These error bars indicate the variability of the median first impact estimate across trials, providing a measure of uncertainty in the observed values. The regression lines illustrate the hierarchical model predictions, accounting for orientation, type, and Packing Ratio adjustments.
+The model predictions are plotted alongside the measured medians, with error bars representing the standard error of the mean (SEM) for each condition. These error bars indicate the variability of the median first impact estimate across trials, providing a measure of uncertainty in the observed values. The regression lines illustrate the model predictions, accounting for orientation, type, and Packing Ratio adjustments.
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/PredVSMeas.png}
-    \caption{Predicted versus measured $F(N)/F(1)$ using the model. The diagonal line represents perfect agreement between predicted and measured values.}
+    \caption{Predicted versus measured Normalized First Impact Reaction force using the model. The diagonal line represents perfect agreement between predicted and measured values.}
     \label{fig:PredVSMeas}
 \end{figure}
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/RegressionTandL.png}
-    \caption{Regression of regular L- and T-orientation trials. Markers show measured median first impacts with error bars (standard error of the median), and lines show the model fit.}
+    \caption{Model fit for regular trials (L and T). Markers show measured median first impacts with error bars (SEM), and lines show the model fit.}
     \label{fig:RegressionTandL}
 \end{figure}
 
@@ -478,14 +479,14 @@ The model predictions are plotted alongside the measured data, with error bars r
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/RegressionSingle.png}
-    \caption{Regression for Single-type trials. Markers show measured median first impacts with error bars. Solid lines indicate baseline fits, dashed lines Packing Ratio-adjusted fits for low-Packing Ratio trials.}
+    \caption{Model fit for random trials (Single-Size). Markers show measured median first impacts with error bars (SEM). Solid lines show baseline fits, dashed lines Packing Ratio-adjusted fits for low-Packing Ratio trials.}
     \label{fig:RegressionSingle}
 \end{figure}
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/RegressionMulti.png}
-    \caption{Regression for Multi-type trials. Markers show measured median first impacts with error bars. Solid lines indicate baseline fits, dashed lines Packing Ratio-adjusted fits for low-Packing Ratio trials.}
+    \caption{Model fit for random trials (Multi-Size). Markers show measured median first impacts with error bars (SEM). Solid lines indicate baseline fits, dashed lines Packing Ratio-adjusted fits for low-Packing Ratio trials.}
     \label{fig:RegressionMulti}
 \end{figure}
 
