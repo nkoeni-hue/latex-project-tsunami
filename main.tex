@@ -86,7 +86,7 @@ Front and back views of the structure can be seen in Figure \ref{fig:teststructu
     \label{fig:configurations_random}
 \end{figure}
 
-The debris pieces were made of high-density polyethylene (HDPE), measuring 0.500 m × 0.051 m × 0.102 m and weighing 2.52 kg. For testing protocols designed to assess the influence of individual debris size, some debris pieces were cut to half or a quarter of their original length. The submerged depth, or draft, of each piece was 0.05 m. During each wave trial, the downstream face of the debris field was held 2 m upstream of the test structure, floating on the free surface, by wooden frames modeled after \citet{Shekhar2020}. The debris field was released manually by lifting the frame with a crane prior to the arrival of the leading wave crest. Release timing was selected to be sufficiently close to wave contact to minimize drift, ensuring that the debris fields remained near their intended initial configurations when the wave arrived. 
+The debris pieces were made of high-Packing Ratio polyethylene (HDPE), measuring 0.500 m × 0.051 m × 0.102 m and weighing 2.52 kg. For testing protocols designed to assess the influence of individual debris size, some debris pieces were cut to half or a quarter of their original length. The submerged depth, or draft, of each piece was 0.05 m. During each wave trial, the downstream face of the debris field was held 2 m upstream of the test structure, floating on the free surface, by wooden frames modeled after \citet{Shekhar2020}. The debris field was released manually by lifting the frame with a crane prior to the arrival of the leading wave crest. Release timing was selected to be sufficiently close to wave contact to minimize drift, ensuring that the debris fields remained near their intended initial configurations when the wave arrived. 
 
 \begin{table}[h!]
 \centering
@@ -433,7 +433,7 @@ The corrected median values (Figure~\ref{fig:random_damming_median_adjusted}) sh
 \section{A Model for first impact reaction force}
 The authors propose the following regression model for the 
 \begin{equation}
-F_\mathrm{pred}(N, \text{Type}, \text{Density}) 
+F_\mathrm{pred}(N, \text{Type}, \text{Packing Ratio}) 
 = 1 + (N-1) \,\cdot\, C_L \,\cdot\, k_\mathrm{orientation} \,\cdot\, k_\mathrm{Type} \,\cdot\, k_\mathrm{PackingRatio}
 \end{equation}
 
@@ -456,47 +456,40 @@ k_\mathrm{PackingRatio} &=
 1, & \text{otherwise}
 \end{cases}
 \end{align*}
- The base slope 
-��
-��
-C
-L
-	​
+ 
 
- is computed from regular L-orientation trials, while orientation, random, type (Single/Multi), and density factors scale this slope for other conditions.
+The model predictions are plotted alongside the measured data, with error bars representing the standard error of the mean (SEM) for each condition. These error bars indicate the variability of the median first impact estimate across trials, providing a measure of uncertainty in the observed values. The regression lines illustrate the hierarchical model predictions, accounting for orientation, type, and Packing Ratio adjustments.
 
-The model predictions are plotted alongside the measured data, with error bars representing the standard error of the mean (SEM) for each condition. These error bars indicate the variability of the median first impact estimate across trials, providing a measure of uncertainty in the observed values. The regression lines illustrate the hierarchical model predictions, accounting for orientation, type, and density adjustments.
-% ================= Predicted vs Measured =================
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/PredVSMeas.png}
-    \caption{Predicted versus measured $F(N)/F(1)$ using the hierarchical factor model. The diagonal line represents perfect agreement between predicted and measured values.}
+    \caption{Predicted versus measured $F(N)/F(1)$ using the model. The diagonal line represents perfect agreement between predicted and measured values.}
     \label{fig:PredVSMeas}
 \end{figure}
 
-% ================= Regression for Regular L and T =================
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/RegressionTandL.png}
-    \caption{Regression of regular L- and T-orientation trials. Markers show measured median first impacts with error bars (standard error of the median), and lines show the hierarchical factor model fit.}
+    \caption{Regression of regular L- and T-orientation trials. Markers show measured median first impacts with error bars (standard error of the median), and lines show the model fit.}
     \label{fig:RegressionTandL}
 \end{figure}
 
-% ================= Regression for Multi =================
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.8\textwidth]{figures/RegressionMulti.png}
-    \caption{Regression for Multi-type trials. Markers show measured median first impacts with error bars. Solid lines indicate baseline fits, dashed lines density-adjusted fits for low-density trials.}
-    \label{fig:RegressionMulti}
-\end{figure}
 
-% ================= Regression for Single =================
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/RegressionSingle.png}
-    \caption{Regression for Single-type trials. Markers show measured median first impacts with error bars. Solid lines indicate baseline fits, dashed lines density-adjusted fits for low-density trials.}
+    \caption{Regression for Single-type trials. Markers show measured median first impacts with error bars. Solid lines indicate baseline fits, dashed lines Packing Ratio-adjusted fits for low-Packing Ratio trials.}
     \label{fig:RegressionSingle}
 \end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/RegressionMulti.png}
+    \caption{Regression for Multi-type trials. Markers show measured median first impacts with error bars. Solid lines indicate baseline fits, dashed lines Packing Ratio-adjusted fits for low-Packing Ratio trials.}
+    \label{fig:RegressionMulti}
+\end{figure}
+
+
 \section{Conclusions} The experiments demonstrate that debris orientation, size distribution, and packing ratio are all factors in determining the forces exerted on coastal structures in the event of a tsunami-like flow. Longitudinal debris alignments (i.e., oriented parallel to the incoming flow) tend to produce larger impacts than transverse configurations. Longitudinal groups generated the largest impact reaction force, while transverse groups dominated sustained damming forces. Random fields display greater variability in impact magnitudes. Similarly, single-size debris groups behave differently than multi-size fields, particularly in their ability to form blockages and generate damming forces. Finally packing ratio, defined as the ratio of tightly packed debris area to the total spread area, controls the degree of blockage and thus the overall magnitude of structural loading. Random and multi-size fields generally produced smaller and more variable loads, highlighting their reduced capacity for synchronous impacts and stable blockages. 
 
 \begin{itemize}
