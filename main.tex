@@ -432,26 +432,22 @@ The corrected median values (Figure~\ref{fig:random_damming_median_adjusted}) sh
 \section{A conceptual Model for First Impact Reaction Forces}
 The authors propose the following regression model for the median response of the first impact reaction:
 \begin{equation}
-F_{\mathrm{pred}}(N,\text{Orientation},\text{PackingRatio})
+F_{\mathrm{pred}}(N,\text{Orientation},\text{Packing Ratio})
 =
-1 + 0.3\,(N-1)\, k_{\mathrm{orientation}} \, k_{\mathrm{PackingRatio}}
+1 + 0.3\,(N-1)\, k_{\mathrm{Orientation}} \, k_{\mathrm{PackingRatio}}
 \end{equation}
 
 \noindent where the coefficient $0.3$ corresponds to the longitudinal reference case, and
 
 \begin{align*}
-k_{\mathrm{orientation}} &=
+k_{\mathrm{Orientation}} &=
 \begin{cases}
 1.0 & \text{Longitudinal} \\
 0.6 & \text{Transverse} \\
 0.7 & \text{Random Single} \\
-0.4 & \text{Random Multi}
+0.5 & \text{Random Multi}
 \end{cases} \\[2mm]
-k_{\mathrm{PackingRatio}} &=
-\begin{cases}
-0.7 & \text{PackingRatio} < 0.5 \\
-1.0 & \text{PackingRatio} \ge 0.5
-\end{cases}
+k_{\mathrm{Packing Ratio}} &= \frac{1 - e^{-5\zeta}}{1 - e^{-5}} \\
 \end{align*}
 
 The model predictions are plotted alongside the measured medians, with error bars representing the standard error of the mean (SEM) for each condition. These error bars indicate the variability of the median first impact estimate across trials, providing a measure of uncertainty in the observed values. The regression lines illustrate the model predictions, accounting for orientation, type (Random Single or Multi), and Packing Ratio.
