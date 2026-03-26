@@ -435,20 +435,19 @@ The authors propose the following regression model for the median response of th
 \begin{equation}
 F_{\mathrm{pred}}(N,\text{Orientation},\text{Packing Ratio})
 =
-1 + 0.3\,(N_{\mathrm{eff}}-1)\, k_{\mathrm{Orientation}} \, k_{\mathrm{PackingRatio}} \, k_{\mathrm{multi}},
+1 + k_L\,(N_{\mathrm{eff}}-1)\, k_{\mathrm{Orientation}} \, k_{\mathrm{PackingRatio}},
 \end{equation}
 
-\noindent where the coefficient $0.3$ corresponds to the longitudinal reference configuration. 
-The term $N_{\mathrm{eff}}$ denotes an effective debris count that accounts for both the number and size of debris elements, while the remaining factors capture orientation, packing, and multi-size corrections.
+\noindent where $k_L = 0.31$ corresponds to the longitudinal reference configuration. 
+The term $N_{\mathrm{eff}}$ denotes an effective debris count that accounts for both the number and size of debris elements, while $k_{\mathrm{Orientation}}$ captures the effect of debris orientation.
 
 The orientation-dependent factor is defined as
 \begin{align*}
 k_{\mathrm{Orientation}} &=
 \begin{cases}
-1.0 & \text{Longitudinal}, \\
-0.6 & \text{Transverse}, \\
-0.7 & \text{Random Single}, \\
-1.0 & \text{Random Multi (handled via $N_{\mathrm{eff}}$)}.
+1.0   & \text{Longitudinal (baseline)}, \\
+0.61 & \text{Transverse}, \\
+0.63 & \text{Random (single or multi using $N_{\mathrm{eff}}$)}.
 \end{cases}
 \end{align*}
 
@@ -457,30 +456,23 @@ For single-size configurations, the effective debris count is equal to the nomin
 N_{\mathrm{eff}} = N.
 \end{equation}
 
-For multi-size configurations, however, the debris field consists of a mixture of full-, half-, and quarter-sized elements. 
-In these cases, the effective debris count is computed as a weighted sum based on the square root of the relative size of each individual debris element,
-
+For multi-size configurations, the debris field consists of a mixture of full-, half-, and quarter-sized elements. 
+In these cases, the effective debris count is computed as a weighted sum based on the squared relative size of each debris element,
 \begin{equation}
-N_{\mathrm{eff}} = n_f \cdot 1^2 + n_h \cdot (0.5)^2 + n_q \cdot (0.25)^2
+N_{\mathrm{eff}} = n_f + (0.5)^2 n_h + (0.25)^2 n_q,
 \end{equation}
-where $n_{\mathrm{full}}$, $n_{\mathrm{half}}$, and $n_{\mathrm{quarter}}$ denote the number of full-, half-, and quarter-sized debris elements, respectively.
-This definition preserves the nominal debris count for uniform-size distributions while smoothly reducing the contribution of fragmented debris.
-
-A small multiplicative correction factor, $k_{\mathrm{multi}}$, can optionally be applied to fine-tune the multi-size fit:
-\begin{equation}
-k_{\mathrm{multi}} \approx 1.05.
-\end{equation}
-In practice, $k_{\mathrm{multi}} = 1$ corresponds to purely physics-based contributions from the effective debris count.
+where $n_f$, $n_h$, and $n_q$ denote the number of full-, half-, and quarter-sized debris elements, respectively.
+This formulation ensures that multi-size configurations are treated consistently with single-size cases, with reductions in impact response arising solely because smaller debris pieces contribute less momentum upon impact.
 
 The packing ratio effect is represented through a continuous scaling function,
-\begin{align*}
-k_{\mathrm{PackingRatio}} &= \frac{1 - e^{-5\zeta}}{1 - e^{-5}},
-\end{align*}
+\begin{equation}
+k_{\mathrm{PackingRatio}} = \frac{1 - e^{-5\zeta}}{1 - e^{-5}},
+\end{equation}
 where $\zeta$ denotes the packing ratio.
 
 The model predictions are plotted alongside the measured medians, with error bars representing the standard error of the mean (SEM) for each condition. 
 These error bars indicate the variability of the median first impact estimate across trials, providing a measure of uncertainty in the observed values. 
-The regression lines illustrate the model predictions, accounting for orientation, debris configuration (single or multi-size), packing ratio, and multi-size corrections.
+The regression lines illustrate the model predictions, accounting for orientation (including random as an orientation category), packing ratio, and multi-size effects through the effective debris count.
 
 \begin{figure}[h]
     \centering
