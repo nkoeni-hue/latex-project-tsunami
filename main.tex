@@ -136,6 +136,8 @@ The debris pieces were made of High-Packing Ratio Polyethylene (HDPE), measuring
 \end{tabular}
 \label{tab:random-debris-compact}
 \end{table}
+
+
 \begin{table}[h!]
 \centering
 \caption{Properties of multi-size debris configurations.}
@@ -144,18 +146,18 @@ The debris pieces were made of High-Packing Ratio Polyethylene (HDPE), measuring
 \hline
 \textbf{Config.} 
 & \textbf{Debris Count } 
-& \textbf{Effective Debris Count $N_{\mathrm{eff}}$} 
-& \textbf{\# 0.25 ($n_q$)} 
-& \textbf{\# 0.5 ($n_h$)} 
-& \textbf{\# 1 ($n_f$)} \\
+& \textbf{\# 0.25 (Quarter)} 
+& \textbf{\# 0.5 (Half)} 
+& \textbf{\# 1 (Full)} 
+& \textbf{Effective Debris Count $N_{\mathrm{eff}}$} \\
 \hline
-8-0.73-M  & 8  & 6.0  & 0  & 8  & 4 \\
-8-0.41-M  & 8  & 6.0  & 0  & 8  & 4 \\
-16-0.82-M & 16 & 11.0 & 16 & 8  & 8 \\
-16-0.52-M & 16 & 8.8  & 16 & 8  & 8 \\
-16-0.36-M & 16 & 7.3  & 16 & 8  & 8 \\
-24-0.78-M & 24 & 15.2 & 16 & 8  & 16 \\
-24-0.54-M & 24 & 12.7 & 16 & 8  & 16 \\
+8-0.73-M  & 8   & 0  & 8  & 4 & 6.0 \\
+8-0.41-M  & 8   & 0  & 8  & 4 & 6.0\\
+16-0.82-M & 16  & 16 & 8  & 8 & 11.0\\
+16-0.52-M & 16   & 16 & 8  & 8 & 8.8 \\
+16-0.36-M & 16   & 16 & 8  & 8 & 7.3 \\
+24-0.78-M & 24  & 16 & 8  & 16 & 15.2 \\
+24-0.54-M & 24  & 16 & 8  & 16 & 12.7\\
 \hline
 \end{tabular}
 }
@@ -377,7 +379,18 @@ The timing of later impact and maximum damming forces coincide approximately. Ev
 \section{Random Configurations}
 This section discusses the magnitudes of the impact and damming reaction forces for debris fields with random (irregular) orientations as functions of debris count and packing ratio (Table \ref{tab:random-debris-compact} and Figure \ref{fig:configurations_random}). In these tests debris was initially arranged within a rectangular frame; at lower packing ratios, increasing the debris count caused the frame to extend beyond the structure’s width. Video analysis of 60 trials was used to quantify this effect by counting the number of debris pieces making contact with the structure in each trial. From these observations, an impact probability was derived, decreasing as the debris field width increased relative to the structure (Figure~\ref{fig:impact_probabilities}). A linear correction was then applied, defining the effective number of impacting pieces as the nominal debris count multiplied by the ratio of structure width to debris field width.
 
-The analysis also includes a size-based assessment isolating the contributions of the largest debris pieces in multi-size fields, showing that smaller pieces have limited influence on structural loading.
+The analysis also includes a size-based assessment isolating the contributions of the largest debris pieces in multi-size fields, showing that smaller pieces have limited influence on structural loading. 
+
+For multi-size configurations, the debris field consists of a mixture of full-, half-, and quarter-sized elements. 
+In these cases, the effective debris count is computed as a weighted sum based on the squared relative size of each debris element,
+
+\begin{equation}
+N_{\mathrm{eff}}
+= \sum_i n_i \left( \frac{m_i}{m_f} \right)^2 ,
+\end{equation}
+
+This formulation ensures that multi-size configurations are treated consistently with single-size cases, with reductions in impact response arising solely because smaller debris pieces contribute less momentum upon impact.
+
 
 \subsection*{Impact Reaction Forces} 
 
@@ -401,7 +414,7 @@ Figure~\ref{fig:random_peaks_adjusted} shows the the width-based adjustment appl
 Random debris configurations produced more scattered data compared to regular configurations. The impact magnitudes were generally smaller, but variability increased considerably. 
 A linear trend is visible again. This underscores the previous observation that the first impact reaction force scales linearly with debris mass.  Figure~\ref{fig:random_first_median_adjusted} shows the median first impact reaction of single and multi-sized fields after adjustment. Single-sized debris fields produce higher forces than multi-sized fields. Multi-size fields consistently yielded lower impact magnitudes because smaller pieces contributed less momentum. The difference between multi-sized vs. single-sized scenarios became more relevant with larger debris groups, as multiple debris pieces struck separately rather than together reducing impact synchrony that was previously observed in regular trials.
 
-In the analysis of multi-sized fields, an additional adjustment was performed to isolate the larger full-size debris pieces in the configuration see Table \ref{tab:multi_size_configs}. This adjustment therefore accounts only for the full-size debris pieces. The results indicate that these larger pieces dominated the response, whereas smaller pieces had a negligible effect. Thus, while smaller debris contributes to the loading response, impact forces are primarily governed by the larger full-size pieces.
+In the analysis of multi-sized fields, an additional adjustment was performed to isolate the larger full-size debris pieces in the configuration see Table \ref{tab:multi_size_configs}. This adjustment therefore accounts only for the full-size debris pieces. The results indicate that these larger pieces dominated the response, whereas smaller pieces had a negligible effect. 
 
 
 \begin{figure}[htbp]
@@ -454,19 +467,6 @@ k_{\mathrm{Orientation}} &=
 \end{cases}
 \end{align*}
 
-For single-size configurations, the effective debris count is equal to the nominal debris count,
-\begin{equation}
-N_{\mathrm{eff}} = N.
-\end{equation}
-
-For multi-size configurations, the debris field consists of a mixture of full-, half-, and quarter-sized elements. 
-In these cases, the effective debris count is computed as a weighted sum based on the squared relative size of each debris element,
-\begin{equation}
-N_{\mathrm{eff}} = n_f + (0.5)^2 n_h + (0.25)^2 n_q,
-\end{equation}
-where $n_f$, $n_h$, and $n_q$ denote the number of full-, half-, and quarter-sized debris elements, respectively.
-This formulation ensures that multi-size configurations are treated consistently with single-size cases, with reductions in impact response arising solely because smaller debris pieces contribute less momentum upon impact.
-
 The packing ratio effect is represented through a continuous scaling function,
 \begin{equation}
 k_{\mathrm{PackingRatio}} = \frac{1 - e^{-3\zeta}}{1 - e^{-3}},
@@ -482,22 +482,6 @@ The regression lines illustrate the model predictions, accounting for orientatio
     \caption{Predicted versus measured Normalized First Impact Reaction force using the model. The diagonal line represents perfect agreement between predicted and measured values.}
     \label{fig:PredVSMeas}
 \end{figure}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.8\textwidth]{figures/RegressionTandL.png}
-    \caption{(3) for regular trials (L and T). Markers show measured median first impacts with error bars (SEM), and lines show the model fit.}
-    \label{fig:RegressionTandL}
-\end{figure}
-
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.8\textwidth]{figures/RegressionSingleMulti.png}
-    \caption{Model fit for random trials (Single and Multi Size). Markers show measured median first impacts with error bars (SEM), and lines show (3) for different packing ratios.}
-    \label{fig:RegressionSingle}
-\end{figure}
-
 
 
 \section{Conclusions} The experiments demonstrate that debris orientation, size distribution, and packing ratio are all factors in determining the forces exerted on coastal structures in the event of a tsunami-like flow. Longitudinal debris alignments (i.e., oriented parallel to the incoming flow) tend to produce larger impacts than transverse configurations. Longitudinal groups generated the largest impact reaction force, while transverse groups dominated sustained damming forces. Random fields display greater variability in impact magnitudes. Similarly, single-size debris groups behave differently than multi-size fields, particularly in their ability to form blockages and generate damming forces. Finally packing ratio, defined as the ratio of tightly packed debris area to the total spread area, controls the degree of blockage and thus the overall magnitude of structural loading. Random and multi-size fields generally produced smaller and more variable loads, highlighting their reduced capacity for synchronous impacts and stable blockages. 
@@ -625,7 +609,7 @@ The datasets used in this article are publicly available in \citep{motleyHydrody
 \caption{Random Single-Size Debris Configurations: First Impact Reaction Force (N)}
 \begin{tabular}{ccccccccc}
 \toprule
-\textbf{Config.} & \textbf{Adj. Debris Count} & \textbf{Width (m)} & \textbf{Min} & \textbf{Q$_{25}$} & \textbf{Median} & \textbf{Q$_{75}$} & \textbf{Max} & \textbf{IQR} \\
+\textbf{Config.} & \textbf{Eff. Debris Count} & \textbf{Width (m)} & \textbf{Min} & \textbf{Q$_{25}$} & \textbf{Median} & \textbf{Q$_{75}$} & \textbf{Max} & \textbf{IQR} \\
 \midrule
 8  & 8   & 0.75 & 319 & 331 & 367 & 484 & 517 & 153 \\
 8  & 8   & 1.00 & 236 & 285 & 341 & 409 & 488 & 124 \\
@@ -645,15 +629,15 @@ The datasets used in this article are publicly available in \citep{motleyHydrody
 \caption{Random Multi-Size Debris Configurations: First Impact Reaction Force (N)}
 \begin{tabular}{ccccccccc}
 \toprule
-\textbf{Config.} & \textbf{Adj. Debris Count} & \textbf{Width (m)} & \textbf{Min} & \textbf{Q$_{25}$} & \textbf{Median} & \textbf{Q$_{75}$} & \textbf{Max} & \textbf{IQR} \\
+\textbf{Config.} & \textbf{Eff. Debris Count} & \textbf{Width (m)} & \textbf{Min} & \textbf{Q$_{25}$} & \textbf{Median} & \textbf{Q$_{75}$} & \textbf{Max} & \textbf{IQR} \\
 \midrule
-8  & 8   & 0.75 & 249 & 300 & 400 & 453 & 615 & 154 \\
-8  & 8   & 1.00 & 160 & 236 & 328 & 450 & 707 & 214 \\
-16 & 10.7   & 1.00 & 373 & 510 & 564 & 882 & 1280 & 372 \\
-16 & 12.8   & 1.25 & 267 & 310 & 393 & 497 & 836 & 187 \\
-16 & 16   & 1.50 & 176 & 232 & 360 & 439 & 630 & 207 \\
-24 & 16   & 1.25 & 335 & 569 & 738 & 819 & 1725 & 250 \\
-24 & 19.2   & 1.50 & 326 & 478 & 503 & 653 & 1266 & 175 \\
+8  & 6.0  & 0.75 & 249 & 300 & 400 & 453 & 615 & 154 \\
+8  & 6.0  & 1.00 & 160 & 236 & 328 & 450 & 707 & 214 \\
+16 & 11.0 & 1.00 & 373 & 510 & 564 & 882 & 1280 & 372 \\
+16 & 8.8  & 1.25 & 267 & 310 & 393 & 497 & 836 & 187 \\
+16 & 7.3  & 1.50 & 176 & 232 & 360 & 439 & 630 & 207 \\
+24 & 15.2 & 1.25 & 335 & 569 & 738 & 819 & 1725 & 250 \\
+24 & 12.7 & 1.50 & 326 & 478 & 503 & 653 & 1266 & 175 \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -663,7 +647,7 @@ The datasets used in this article are publicly available in \citep{motleyHydrody
 \caption{Random Single-Size Debris Configurations: Later Impact Reaction Force (N)}
 \begin{tabular}{ccccccccc}
 \toprule
-\textbf{Config.} & \textbf{Adj. Debris Count} & \textbf{Frame Width (m)} & \textbf{Min} & \textbf{Q$_{25}$} & \textbf{Median} & \textbf{Q$_{75}$} & \textbf{Max} & \textbf{IQR} \\
+\textbf{Config.} & \textbf{Eff. Debris Count} & \textbf{Frame Width (m)} & \textbf{Min} & \textbf{Q$_{25}$} & \textbf{Median} & \textbf{Q$_{75}$} & \textbf{Max} & \textbf{IQR} \\
 \midrule
 8  & 8.00   & 0.75 & 565 & 717 & 749 & 1131 & 1168 & 414 \\
 8  & 8.00   & 1.00 & 457 & 463 & 490 & 867 & 1319 & 403 \\
@@ -683,20 +667,18 @@ The datasets used in this article are publicly available in \citep{motleyHydrody
 \caption{Random Multi-Size Debris Configurations: Later Impact Reaction Force (N)}
 \begin{tabular}{ccccccccc}
 \toprule
-\textbf{Config.} & \textbf{Adj. Debris Count} & \textbf{Frame Width (m)} & \textbf{Min} & \textbf{Q$_{25}$} & \textbf{Median} & \textbf{Q$_{75}$} & \textbf{Max} & \textbf{IQR} \\
+\textbf{Config.} & \textbf{Eff. Debris Count} & \textbf{Frame Width (m)} & \textbf{Min} & \textbf{Q$_{25}$} & \textbf{Median} & \textbf{Q$_{75}$} & \textbf{Max} & \textbf{IQR} \\
 \midrule
-8  & 8  & 0.75 & 282 & 491 & 559 & 577 & 965 & 87 \\
-8  & 8  & 1.00 & 464 & 502 & 596 & 921 & 1243 & 419 \\
-16 & 10.7  & 1.00 & 359 & 527 & 569 & 877 & 1235 & 350 \\
-16 & 12.8  & 1.25 & 311 & 396 & 664 & 799 & 953 & 403 \\
-16 & 16  & 1.50 & 627 & 649 & 757 & 912 & 1053 & 263 \\
-24 & 16  & 1.25 & 432 & 573 & 726 & 881 & 1257 & 308 \\
-24 & 19.2  & 1.50 & 524 & 569 & 664 & 853 & 1367 & 284 \\
+8  & 6.0  & 0.75 & 282 & 491 & 559 & 577 & 965 & 87 \\
+8  & 6.0  & 1.00 & 464 & 502 & 596 & 921 & 1243 & 419 \\
+16 & 11.0 & 1.00 & 359 & 527 & 569 & 877 & 1235 & 350 \\
+16 & 8.8  & 1.25 & 311 & 396 & 664 & 799 & 953 & 403 \\
+16 & 7.3  & 1.50 & 627 & 649 & 757 & 912 & 1053 & 263 \\
+24 & 15.2 & 1.25 & 432 & 573 & 726 & 881 & 1257 & 308 \\
+24 & 12.7 & 1.50 & 524 & 569 & 664 & 853 & 1367 & 284 \\
 \bottomrule
 \end{tabular}
 \end{table}
-
-
 
 \subsection*{Damming Reaction Forces for Random Configurations} 
 
@@ -705,7 +687,7 @@ The datasets used in this article are publicly available in \citep{motleyHydrody
 \caption{Random Single-Size Debris Configurations: Damming Reaction Force (N)}
 \begin{tabular}{ccccccccc}
 \toprule
-\textbf{Config.} & \textbf{Adj. Debris Count} & \textbf{Width (m)} & \textbf{Min} & \textbf{Q$_{25}$} & \textbf{Median} & \textbf{Q$_{75}$} & \textbf{Max} & \textbf{IQR} \\
+\textbf{Config.} & \textbf{Eff. Debris Count} & \textbf{Width (m)} & \textbf{Min} & \textbf{Q$_{25}$} & \textbf{Median} & \textbf{Q$_{75}$} & \textbf{Max} & \textbf{IQR} \\
 \midrule
 8  & 8   & 0.75 & 415 & 474 & 537 & 632 & 696 & 157 \\
 8  & 8   & 1.00 & 313 & 349 & 403 & 484 & 581 & 134 \\
@@ -719,21 +701,20 @@ The datasets used in this article are publicly available in \citep{motleyHydrody
 \bottomrule
 \end{tabular}
 \end{table}
-
 \begin{table}[H]
 \centering
 \caption{Random Multi-Size Debris Configurations: Damming Reaction Force (N)}
 \begin{tabular}{ccccccccc}
 \toprule
-\textbf{Config.} & \textbf{Adj. Debris Count} & \textbf{Width (m)} & \textbf{Min} & \textbf{Q$_{25}$} & \textbf{Median} & \textbf{Q$_{75}$} & \textbf{Max} & \textbf{IQR} \\
+\textbf{Config.} & \textbf{Eff. Debris Count} & \textbf{Width (m)} & \textbf{Min} & \textbf{Q$_{25}$} & \textbf{Median} & \textbf{Q$_{75}$} & \textbf{Max} & \textbf{IQR} \\
 \midrule
-8  & 8 & 0.75 & 238 & 259 & 356 & 488 & 586 & 229 \\
-8  & 8  & 1.00 & 251 & 331 & 403 & 423 & 496 & 92 \\
-16 & 10.7  & 1.00 & 310 & 340 & 377 & 452 & 596 & 112 \\
-16 & 12.8  & 1.25 & 271 & 328 & 349 & 385 & 559 & 57 \\
-16 & 16  & 1.50 & 303 & 350 & 387 & 405 & 526 & 55 \\
-24 & 16  & 1.25 & 342 & 375 & 424 & 446 & 503 & 71 \\
-24 & 19.2  & 1.50 & 320 & 343 & 435 & 514 & 527 & 171 \\
+8  & 6.0  & 0.75 & 238 & 259 & 356 & 488 & 586 & 229 \\
+8  & 6.0  & 1.00 & 251 & 331 & 403 & 423 & 496 & 92 \\
+16 & 11.0 & 1.00 & 310 & 340 & 377 & 452 & 596 & 112 \\
+16 & 8.8  & 1.25 & 271 & 328 & 349 & 385 & 559 & 57 \\
+16 & 7.3  & 1.50 & 303 & 350 & 387 & 405 & 526 & 55 \\
+24 & 15.2 & 1.25 & 342 & 375 & 424 & 446 & 503 & 71 \\
+24 & 12.7 & 1.50 & 320 & 343 & 435 & 514 & 527 & 171 \\
 \bottomrule
 \end{tabular}
 \end{table}
