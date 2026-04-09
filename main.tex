@@ -19,7 +19,7 @@
 
 \maketitle
 \begin{abstract}
-Tsunami-driven debris fields create complex and highly variable loads on coastal infrastructure, combining short-duration forces from debris impacts with longer-lasting forces from damming of the flow. This study investigates, for a simple structure, how reaction forces vary with debris number, orientation, packing ratio, and size distribution. Group effects were evaluated through 10 trials each for 29 configurations at the Oregon State University NHERI Wave Research Laboratory Large-Scale Flume. Configurations included Longitudinal, Transverse, and randomly oriented debris fields, with Single- and Multi-Sized debris subjected to tsunami-like solitary waves. High-frequency components were isolated to capture impacts, while low-frequency components represented sustained damming loads. Results show Longitudinal debris configurations produce the highest impact forces, whereas Transverse fields generate larger damming forces. Random and Multi-Size debris fields yield smaller, more variable loads. Finally, a conceptual model was developed to predict the effects of debris field first impact forces, accounting for the number of debris, their orientations, packing ratio and size distribution.
+Tsunami-driven debris fields create complex and highly variable loads on coastal infrastructure, combining short-duration forces from debris impacts with longer-lasting forces from damming of the flow. This study investigates, for a simple structure, how reaction forces vary with debris number, orientation, packing ratio, and size distribution. Group effects were evaluated through 10 trials each for 29 configurations at the Oregon State University NHERI Wave Research Laboratory Large-Scale Flume. Configurations included Longitudinal, Transverse, and randomly oriented debris fields, with Single- and multi-sized debris subjected to tsunami-like solitary waves. High-frequency components were isolated to capture impacts, while low-frequency components represented sustained damming loads. Results show Longitudinal debris configurations produce the highest impact forces, whereas Transverse fields generate larger damming forces. Random and Multi-Size debris fields yield smaller, more variable loads. Finally, a conceptual model was developed to predict the effects of debris field first impact forces, accounting for the number of debris, their orientations, packing ratio and size distribution.
 \end{abstract}
 
 \section{Introduction}
@@ -270,7 +270,7 @@ Figure \ref{fig:timehist_damming_combined} shows the effects of sustained debris
     \label{eq:damming_norm}
 \end{equation}
 
-where \( R_{damming,\mathrm{max}} \) is the maximum damming force for a particular debris field and \( R_{\mathrm{wave,max}} \) is the maximum reaction force from the unbroken wave-only reference case (xx N).
+where \( R_{damming,\mathrm{max}} \) is the maximum damming force for a particular debris field and \( R_{\mathrm{wave,max}} \) is the maximum reaction force from the unbroken wave-only reference case (213 N).
 
 
 \section{Comparing In-Air and In-Water Structural Responses} 
@@ -300,7 +300,7 @@ Note also that the identified modal properties varied more (as measured by stand
 \caption{Statistics of natural frequencies and damping ratios for In-Air (1L) and In-Water (1L) tests.}
 \begin{tabular}{c c c c c c c c c}
 \hline
-Mode & \multicolumn{4}{c}{In-Air Tests (1L)} & \multicolumn{4}{c}{In-Water Tests (1L)} \\
+Mode & \multicolumn{4}{c}{In-Air Tests} & \multicolumn{4}{c}{In-Water Tests (1L)} \\
 \cline{2-9}
  & $f$ & Stdv $f$ & $\zeta$ & Stdv $\zeta$ & $f$ & Stdv $f$ & $\zeta$ & Stdv $\zeta$ \\
  & [Hz] & [Hz] & [\%] & [\%] & [Hz] & [Hz] & [\%] & [\%] \\
@@ -417,13 +417,13 @@ where \(N_{\mathrm{eff}}\) is the effective number of debris pieces,
 \(m_f\) is the reference mass of the largest (full) piece.
 This formulation ensures that Multi-Size configurations are treated consistently with Single-Size cases, with reductions on impact response arising solely because smaller debris pieces contribute less momentum upon impact. For configurations with pieces having all the same size, the mass term is always equal to 1.0, so Neff is simply the number of debris, adjusted for field width.
 
-The medians of the normalized first impact reaction force are plotted versus the effective debris count in Figure~\ref{fig:random_first_median_adjusted}. In the figure, the effective debris account includes the adjustments in debris count described in Equation~3. These effective values are reported in Table~\ref{tab:random-debris-single} for Single-Sized fields and Table~\ref{tab:multi_size_configs} for Multi-Sized fields. The figure shows that the median first impact reaction force scales linearly with the effective debris count. Single-sized and Multi-Sized configurations no longer show a distinct separation after adjustment, indicating that the effective debris count captures the size effect in impact response. Much of the remaining spread reflects differences attributable to packing ratio, with the data identified with having a packing ratio above or below of 0.5. For example configurations 16-0.82 and 24-0.54 both have effective debris counts equal to 16, but the higher packing ratio (0.82 vs 0.54) results in a force of 5.X. Note that the higher value (5.x for $\zeta =0.82$ is similar to the value of about 5 for the three regular configurations with a debris count of 16 (Figure \ref{fig:firstpeak_regular_remap}). 
+The medians of the normalized first impact reaction force are plotted versus the effective debris count in Figure~\ref{fig:random_first_median_adjusted}. In the figure, the effective debris account includes the adjustments in debris count described in Equation~3. These effective values are reported in Table~\ref{tab:random-debris-single} for Single-Sized fields and Table~\ref{tab:multi_size_configs} for Multi-Sized fields. The figure shows that the median first impact reaction force scales linearly with the effective debris count. Single-sized and Multi-Sized configurations no longer show a distinct separation after adjustment, indicating that the effective debris count captures the size effect in impact response. Much of the remaining spread reflects differences attributable to packing ratio, with the data identified with having a packing ratio above or below of 0.6. For example configurations 16-0.82 and 24-0.54 both have effective debris counts equal to 16, but the higher packing ratio (0.82 vs 0.54) results in a force of 5.X. Note that the higher value (5.x for $\zeta =0.82$ is similar to the value of about 5 for the three regular configurations with a debris count of 16 (Figure \ref{fig:firstpeak_regular_remap}). 
 
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.9\textwidth]{RegressionSingleMulti.png}
-    \caption{Median first impact reaction forces observed in Random configurations, plotted against effective debris count and separated by a packing ratio threshold of 0.5.}
+    \caption{Median first impact reaction forces observed in Random configurations, plotted against effective debris count and separated by a packing ratio threshold of 0.6.}
     \label{fig:random_first_median_adjusted}
 \end{figure}
 
@@ -442,7 +442,7 @@ The median damming reaction forces for randomly oriented debris fields are plott
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.9\textwidth]{Damming_Median_SingleMulti.png}
-    \caption{Median damming reaction forces observed in Random configurations, plotted against effective debris count and separated by a packing ratio threshold of 0.5.}
+    \caption{Median damming reaction forces observed in Random configurations, plotted against effective debris count and separated by a packing ratio threshold of 0.6.}
     \label{fig:random_damming_median_adjusted}
 \end{figure}
 
@@ -453,16 +453,16 @@ Table \ref{tab:data-ran-DAM} show the unnormalized data.
 
 \section{A Conceptual Model for First Impact Reaction Forces}
 
-The differences between experimental and field conditions make it premature to propose an equation that can be used directly in design practice. Nonetheless it was possible to develop a conceptual model that uses observed trends to predict the median of the first impact reaction:
+The differences between experimental and field conditions make it premature to propose an equation that can be used directly in design practice. Nonetheless it was possible to develop a conceptual model that reflects the observed trends in the median of the first impact reaction force:
 \begin{equation}
-F_{\mathrm{pred}}
+F_{\mathrm{impact}}
 =
 1 + 0.3\,(N_{\mathrm{eff}}-1)\, k_{\mathrm{Orientation}} \, k_{\mathrm{PackingRatio}}
 \end{equation}
 \noindent
-The term $N_{\mathrm{eff}}$ denotes the effective debris count that accounts for both the width of the debris field (compared with that of the structure), as well as the number and size of debris elements (Eq.3),
+The term $N_{\mathrm{eff}}$ denotes the effective debris count that accounts for both the width of the debris field (compared with that of the structure), as well as the number and size distribution of debris elements (Eq.3),
 
-The orientation-dependent factor, $k_{\mathrm{Orientation}}$, captures the effect of debris orientation. and it is defined as:
+The orientation-dependent factor, $k_{\mathrm{Orientation}}$, captures the effect of debris orientation:
 \begin{align*}
 k_{\mathrm{Orientation}} &=
 \begin{cases}
@@ -472,7 +472,7 @@ k_{\mathrm{Orientation}} &=
 \end{cases}
 \end{align*}
 
-The packing ratio effect is represented through a continuous scaling function,
+The packing ratio effect is represented through a continuous function that varies from 0 to 1.0:
 \begin{equation}
 k_{\mathrm{PackingRatio}} = \frac{1 - e^{-3\zeta}}{1 - e^{-3}},
 \end{equation}
@@ -488,13 +488,13 @@ Figure~\ref{fig:PredVSMeas} shows that Equation~4 predicts the experimental data
 \end{figure}
 
 
-\section{Conclusions} The experimental program made it possible to identify key behaviors and trends that affect the measured reaction forces for a simple structure subjected to a tsunami-like wave loaded with idealized debris fields. The number of debris, debris orientation, size distribution, and packing ratio all play important roles in determining forces exerted on coastal structures
+\section{Conclusions} The experimental program identified key behaviors and trends that affect the measured reaction forces for a simple structure subjected to a tsunami-like wave loaded with idealized debris fields. The number of debris, debris orientation, size distribution, and packing ratio all play important roles in determining forces exerted on coastal structures.
 
-\textbf{In-Water Structural Properties:} Comparison of In-Air vibration response with that of single-debris In-Water tests (1L) showed that the presence of water consistently decreased the frequencies (2\%-26\%) and increased the damping ratio ( 80\% -370\%) of the first three modes of structural vibration modes. The largest changes for both quantities occurred for the second mode.
+\textbf{In-Water Structural Properties:} Comparison of In-Air vibration response with that of single-debris In-Water tests (1L) showed that the presence of water consistently decreased the frequencies (2\%-26\%) and increased the damping ratio (80\% -370\%) of the first three modes of structural vibration. For both quantities, the largest changes occurred for the second mode.
 
-\textbf{Sources of Reaction Forces:} The high-frequency components of the forces were attributed to impacts of the debris. The impact forces were further divided between those that happened as the debris field first collided with the face of the structure (initial impacts) and those that occurred as the debris pieces recirculated and collided with the supporting legs of the structure (later impacts).  Initial unsubmerged impacts produced sharp, short-duration force peaks, while subsequent submerged impacts were more chaotic, longer-lasting, and exhibited nonlinear scaling with debris count. Low-frequency components of the forces were attributed to increases in the hydraulic area of the structure due to debris (damming).
+\textbf{Sources of Reaction Forces:} The high-frequency components of the reaction forces were attributed to impacts of the debris. The impact forces were further divided between those that happened as the debris field first collided with the face of the structure (initial impacts) and those that occurred as the debris pieces recirculated and collided with the supporting legs of the structure (later impacts). Initial unsubmerged impacts produced sharp, short-duration force peaks, while subsequent submerged impacts were more chaotic, longer-lasting, and exhibited nonlinear scaling with debris count. Low-frequency components of the forces were attributed to increases in the hydraulic area of the structure due to debris accumulation (damming).
 
-\textbf{Single Debris Reactions:}  The reaction force
+\textbf{Single Debris Reactions:}  The median reaction force for initial impacts of single pieces of debris varied much more than would be indicated by considering debris mass alone.  The magnitude of the first impact appears to be 
 
 \textbf{Number of Debris:} The maximum first impact reaction, later impact reaction and damming reaction consistently increased with the number of debris.  
 
